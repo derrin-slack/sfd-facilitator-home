@@ -45,6 +45,7 @@ var ICON = {
   steps: '<rect x="10" y="12" width="10" height="10"/><path d="M26 17h28"/><rect x="10" y="28" width="10" height="10"/><path d="M26 33h28"/><rect x="10" y="44" width="10" height="10"/><path d="M26 49h28"/>',
   list: '<circle cx="16" cy="18" r="3"/><circle cx="16" cy="32" r="3"/><circle cx="16" cy="46" r="3"/><path d="M26 18h26M26 32h26M26 46h26"/>',
   map: '<path d="M8 14l16-6 16 6 16-6v42l-16 6-16-6-16 6z"/><path d="M24 8v42M40 14v42"/>',
+  camera: '<rect x="8" y="18" width="48" height="34" rx="4"/><path d="M22 18l4-6h12l4 6"/><circle cx="32" cy="35" r="9"/>',
   survey: '<rect x="14" y="10" width="36" height="46" rx="3"/><path d="M24 10V6h16v4"/><path d="M22 28l5 5 9-10M22 44h20"/>'
 };
 var GROUPS = [
@@ -52,6 +53,7 @@ var GROUPS = [
     { t: 'Dance Crew Passport', d: 'One per girl. Hers to keep.', icon: 'passport', go: 'Open PDF', href: D('1ID_7PhTHfLskfPHV0XSt1MU2NvD5c_Hd') },
     { t: 'Milestone Stickers', d: 'Print on Avery 6450 (1 inch) and 22807 (2 inch) round labels.', icon: 'sticker', go: 'Open PDF', href: D('1l4ZCwmXeulSACpHR_WvidrHsTJeTxJKj') },
     { t: 'Role Lanyard Cards', d: 'One set per crew.', icon: 'lanyard', go: 'Open PDF', href: D('1lqvnToNW92xC4gD-fChfWJCixYfgCF-P') },
+    { t: 'Media Release', d: 'One per girl. Her parent or guardian chooses yes or no to photos and video.', icon: 'camera', go: 'Open PDF', href: 'files/sfd-media-release.pdf' },
     { t: 'Club Tracker', d: 'A Google Sheet that counts for you. Make your own copy.', icon: 'sheet', go: 'Make a copy', href: 'https://docs.google.com/spreadsheets/d/1wbdRNiXUiJjmzWQQBfeAx1ZXFonrgFxC4Ens494OV-4/copy' },
     { t: 'Club Tracker (paper)', d: 'Prefer paper? Print this one instead.', icon: 'printer', go: 'Open PDF', href: D('1hbrnJCqvVgVshUy6cUM8lpIN5y_QD2ya') }
   ] },
@@ -65,7 +67,8 @@ var GROUPS = [
     { t: 'Club Student Survey', d: 'This is how SFD gets the Impact Index.', icon: 'survey', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260905277241860' }
   ] }
 ];
-if (/[?&]bare/.test(location.search)) { document.getElementById('ey').hidden = true; document.getElementById('ttl').hidden = true; }
+var framed = false; try { framed = window.self !== window.top; } catch (e) { framed = true; }
+if (framed || /[?&]bare/.test(location.search)) { document.getElementById('ey').hidden = true; document.getElementById('ttl').hidden = true; }
 var box = document.getElementById('groups');
 GROUPS.forEach(function (g) {
   var sec = document.createElement('section'); sec.className = 'group'; sec.style.setProperty('--c', g.c);
