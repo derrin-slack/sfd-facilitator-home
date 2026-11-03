@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facilitator quick links</title>
+<link rel="stylesheet" href="sfd.css">
+<style>
+body{background:var(--black)}
+.wrap{padding-top:18px;padding-bottom:18px}
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px}
+.top h1{font-size:clamp(22px,3vw,28px);line-height:1.1}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.steps{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.steps li{background:var(--card);border:2px solid var(--line);border-top:6px solid var(--c);padding:12px;display:flex;flex-direction:column;gap:6px}
+.steps b{font:700 22px/1 var(--head);color:var(--c)}
+.steps strong{font-size:16px;line-height:1.15}
+.steps span{align-self:flex-start;background:var(--c);color:var(--black);font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px}
+@media (max-width:720px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"></div>
+<main class="wrap">
+<div class="top">
+<div>
+<p class="eyebrow">Facilitator Home</p>
+<h1>Your five steps, every module</h1>
+</div>
+<nav class="links" aria-label="Facilitator quick links">
+<a class="btn" href="https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTc=" target="_top">Start Here</a>
+<a class="btn ghost" href="https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTk=" target="_top">Printables</a>
+</nav>
+</div>
+<ol class="steps">
+<li style="--c:var(--orange)"><b>1</b><strong>Set up</strong><span>Before Module 1</span></li>
+<li style="--c:var(--pink)"><b>2</b><strong>Watch &amp; listen</strong><span>Every session</span></li>
+<li style="--c:var(--lav)"><b>3</b><strong>Sticker</strong><span>When she earns it</span></li>
+<li style="--c:var(--cyan)"><b>4</b><strong>Check the box</strong><span>Same day</span></li>
+<li style="--c:var(--orange)"><b>5</b><strong>Celebrate</strong><span>End of module</span></li>
+</ol>
+</main>
+</body>
+</html>
