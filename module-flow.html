@@ -42,7 +42,8 @@ var LINKS = {
   modules: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTg=',
   milestones: D('1QhzjXgYr4fF94WUatiDzXABlyo_c3SWy'),
   survey: 'https://stemfromdance.jotform.com/260905277241860',
-  facSurvey: 'https://stemfromdance.jotform.com/260894470706868'
+  facSurvey: 'https://stemfromdance.jotform.com/260894470706868',
+  certificate: D('1UhKz9wZLkIomATlXECNE5MUXeLU7BUJA')
 };
 // top: true opens in the Disco window. Everything else opens in a new tab.
 var STEPS = [
@@ -60,7 +61,7 @@ var STEPS = [
     ctas: [{ t: 'Copy tracker', href: LINKS.tracker }] },
   { c: 'var(--orange)', short: 'Celebrate', when: 'End of module & year', title: 'Celebrate',
     text: 'Wrap up each module: stickers, tracker and the Impact Index survey. SFD Innovators get a sticker and a certificate. Then take your own Post-Module Survey.',
-    ctas: [{ t: 'Student survey', href: LINKS.survey }, { t: 'Your survey', href: LINKS.facSurvey }] }
+    ctas: [{ t: 'Student survey', href: LINKS.survey }, { t: 'Your survey', href: LINKS.facSurvey }, { t: 'Certificate', href: LINKS.certificate }] }
 ];
 var N = STEPS.length, cur = 0, tabs = document.getElementById('tabs'), panel = document.getElementById('panel');
 STEPS.forEach(function (s, i) {
