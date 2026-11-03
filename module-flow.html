@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How each module works</title>
+<link rel="stylesheet" href="sfd.css">
+<style>
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:22px 0 0}
+.tab{min-height:64px;padding:10px 12px;border:2px solid var(--line);border-bottom:6px solid var(--c);background:var(--card);color:var(--text);text-align:left;cursor:pointer;font:700 15px var(--body);display:flex;align-items:center;gap:10px}
+.tab b{font:700 26px/1 var(--head);color:var(--c)}
+.tab[aria-selected="true"]{background:var(--c);color:var(--black);border-color:var(--c)}
+.tab[aria-selected="true"] b{color:var(--black)}
+.panel{margin-top:12px;background:var(--card);border:2px solid var(--line);border-left:10px solid var(--c);padding:24px;display:flex;flex-direction:column;gap:12px;min-height:220px}
+.panel h2{font-size:clamp(24px,3.4vw,32px)}
+.panel ul{margin:0;padding-left:20px;color:var(--soft)}
+.panel li{margin:4px 0}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:14px}
+@media (max-width:620px){.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.tab span{font-size:14px}}
+</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"></div>
+<main class="wrap">
+<p class="eyebrow">For every module</p>
+<h1>How each module works</h1>
+<p class="sub">Four steps, in this order. Click a step to see what to do.</p>
+<div class="tabs" role="tablist" aria-label="Module steps" id="tabs"></div>
+<section class="panel" role="tabpanel" id="panel" tabindex="0" aria-live="polite"></section>
+<div class="nav">
+<button class="btn ghost" type="button" id="back">Back</button>
+<button class="btn" type="button" id="next">Next step</button>
+</div>
+</main>
+<script>
+// Fill these in once the Disco pages and printables exist.
+var LINKS = {
+  passports: '[PATHWAY PASSPORT PRINT LINK]',
+  modules: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTg=',
+  survey: '[IMPACT INDEX SURVEY LINK]',
+  stickers: '[MODULE STICKERS PRINT LINK]'
+};
+var STEPS = [
+  { c: 'var(--orange)', short: 'Print passports', title: 'Print Pathway Passports',
+    tips: ['Print one passport per student.', 'Do this before the module starts.', 'Students keep it for every module.'],
+    cta: 'Print passports', href: LINKS.passports },
+  { c: 'var(--pink)', short: 'Teach', title: 'Teach the module',
+    tips: ['Open your module in My Modules.', 'Use the Quick Start Guide for each lesson.', 'Print the Student Workbooks.'],
+    cta: 'My Modules', href: LINKS.modules },
+  { c: 'var(--lav)', short: 'Survey', title: 'Take the survey',
+    tips: ['After the last lesson, students take the Impact Index survey.', 'Have devices with internet ready.', 'Check that every student finishes.'],
+    cta: 'Open survey', href: LINKS.survey },
+  { c: 'var(--cyan)', short: 'Sticker', title: 'Get the sticker',
+    tips: ['Print the sticker for this module.', 'Students add it to their Pathway Passport.', 'Celebrate! Then start the next module.'],
+    cta: 'Print stickers', href: LINKS.stickers }
+];
+var cur = 0, tabs = document.getElementById('tabs'), panel = document.getElementById('panel');
+STEPS.forEach(function (s, i) {
+  var t = document.createElement('button');
+  t.type = 'button'; t.className = 'tab'; t.id = 'tab' + i; t.setAttribute('role', 'tab');
+  t.setAttribute('aria-controls', 'panel'); t.style.setProperty('--c', s.c);
+  t.innerHTML = '<b>' + (i + 1) + '</b><span></span>'; t.querySelector('span').textContent = s.short;
+  t.addEventListener('click', function () { show(i); });
+  t.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { show((i + 1) % 4); tabs.children[(i + 1) % 4].focus(); }
+    if (e.key === 'ArrowLeft') { show((i + 3) % 4); tabs.children[(i + 3) % 4].focus(); }
+  });
+  tabs.appendChild(t);
+});
+function show(i) {
+  cur = i; var s = STEPS[i];
+  [].forEach.call(tabs.children, function (t, j) { t.setAttribute('aria-selected', j === i ? 'true' : 'false'); t.tabIndex = j === i ? 0 : -1; });
+  panel.style.setProperty('--c', s.c); panel.setAttribute('aria-labelledby', 'tab' + i);
+  panel.innerHTML = '';
+  var e = document.createElement('p'); e.className = 'eyebrow'; e.textContent = 'Step ' + (i + 1) + ' of 4';
+  var h = document.createElement('h2'); h.textContent = s.title;
+  var ul = document.createElement('ul'); s.tips.forEach(function (t) { var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
+  var a = document.createElement('a'); a.className = 'btn'; a.style.alignSelf = 'flex-start'; a.textContent = s.cta; a.href = s.href; a.target = '_top'; if (/^\[/.test(s.href)) { a.removeAttribute('href'); a.setAttribute('aria-disabled','true'); a.style.opacity = '.55'; a.style.cursor = 'default'; a.textContent = s.cta + ' (coming soon)'; }
+  panel.appendChild(e); panel.appendChild(h); panel.appendChild(ul); panel.appendChild(a);
+  document.getElementById('back').disabled = i === 0;
+  document.getElementById('back').style.visibility = i === 0 ? 'hidden' : 'visible';
+  var nx = document.getElementById('next'); nx.textContent = i === 3 ? 'Start over' : 'Next step';
+}
+document.getElementById('next').addEventListener('click', function () { show(cur === 3 ? 0 : cur + 1); });
+document.getElementById('back').addEventListener('click', function () { if (cur > 0) show(cur - 1); });
+show(0);
+</script>
+</body>
+</html>

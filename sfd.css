@@ -1,0 +1,27 @@
+@font-face{font-family:"Power Grotesk";src:url("fonts/PowerGrotesk-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Gilmer";src:url("fonts/gilmer-medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Gilmer";src:url("fonts/gilmer-bold.woff2") format("woff2");font-weight:700;font-display:swap}
+:root{
+  --black:#080609;--card:#17141A;--line:#2C2830;--text:#FFFFFF;--soft:#E9E4EC;--muted:#B9B2BE;
+  --orange:#FF5700;--pink:#DA328A;--pinkText:#F07AB8;--lav:#EBB1F4;--cyan:#70E2F7;
+  --head:"Power Grotesk",Gilmer,Arial,sans-serif;--body:Gilmer,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--black);color:var(--text);font-family:var(--body);font-weight:500;font-size:16px;line-height:1.45}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 20px 32px;position:relative}
+.bar{position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--orange),var(--pink))}
+.eyebrow{margin:0 0 6px;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+h1,h2,h3{font-family:var(--head);font-weight:700;margin:0;line-height:1.05}
+h1{font-size:clamp(30px,5vw,46px)}
+h2{font-size:clamp(22px,3vw,28px)}
+p{margin:0}
+.sub{color:var(--soft);font-size:17px;margin-top:8px}
+.card{background:var(--card);border:2px solid var(--line);padding:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;border:2px solid var(--text);background:var(--text);color:var(--black);font:700 15px var(--body);text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--cyan);border-color:var(--cyan)}
+.btn.ghost{background:transparent;color:var(--text)}
+.btn.ghost:hover{background:var(--text);color:var(--black)}
+.btn:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.muted{color:var(--muted)}

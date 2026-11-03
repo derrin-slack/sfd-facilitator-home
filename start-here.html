@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start Here</title>
+<link rel="stylesheet" href="sfd.css">
+<style>
+.prog{display:flex;align-items:center;gap:14px;margin:20px 0 18px}
+.track{flex:1 1 auto;height:12px;background:var(--line)}
+.fill{height:12px;width:0;background:linear-gradient(90deg,var(--orange),var(--pink));transition:width .3s}
+.count{font-weight:700;white-space:nowrap}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.step{background:var(--card);border:2px solid var(--line);border-top:8px solid var(--c);padding:20px;display:flex;flex-direction:column;gap:12px}
+.step.done{border-color:var(--c)}
+.top{display:flex;align-items:center;gap:12px}
+.num{width:48px;height:48px;flex:0 0 48px;background:var(--c);color:var(--black);font:700 28px var(--head);display:flex;align-items:center;justify-content:center}
+.check{margin-left:auto;width:48px;height:48px;flex:0 0 48px;border:2px solid var(--text);background:transparent;color:var(--black);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.step.done .check{background:var(--c);border-color:var(--c)}
+.check svg{opacity:0}.step.done .check svg{opacity:1}
+.step p{color:var(--soft)}
+.step .btn{align-self:flex-start;margin-top:auto}
+.yay{display:none;margin-top:18px;padding:16px 20px;background:var(--card);border:2px solid var(--cyan);font-weight:700}
+.yay.show{display:block}
+</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"></div>
+<main class="wrap">
+<p class="eyebrow">New here? Start with this</p>
+<h1>Start Here</h1>
+<p class="sub">Three quick steps. About 15 minutes.</p>
+
+<div class="prog">
+<div class="track" role="progressbar" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0" aria-label="Steps done" id="track"><div class="fill" id="fill"></div></div>
+<span class="count" id="count" aria-live="polite">0 of 3 done</span>
+</div>
+
+<div class="steps" id="steps"></div>
+<p class="yay" id="yay" role="status">You did it! You are ready to run your Club. See you at Club Support Hours.</p>
+<p class="muted" style="margin-top:16px;font-size:13px">Your checkmarks save on this device.</p>
+</main>
+<script>
+// Links open in the main Disco window. Fill these in once the Disco pages exist.
+var LINKS = {
+  ask: '[DISCO ASK & SHARE URL]',
+  moduleA: 'https://sfdclubs.disco.co/p/module-a-afrobeats-ai/dashboard',
+  live: 'https://sfdclubs.disco.co/events-calendar'
+};
+var STEPS = [
+  { id: 'hi', n: 1, c: 'var(--orange)', title: 'Say hi', text: 'Post one line in Ask & Share. Tell us your name and your Club.', cta: 'Say hi', href: LINKS.ask },
+  { id: 'modA', n: 2, c: 'var(--pink)', title: 'Open Module A', text: 'Skim the Quick Start Guide for Lesson 1.', cta: 'Open Module A', href: LINKS.moduleA },
+  { id: 'date', n: 3, c: 'var(--cyan)', title: 'Save the date', text: 'Club Support Hours are every other Thursday, 2:30 to 4:30 PM ET.', cta: 'See Live Help', href: LINKS.live }
+];
+var KEY = 'sfd-start-here-v1';
+var done = {};
+try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { done = {}; }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {} }
+var box = document.getElementById('steps');
+STEPS.forEach(function (s) {
+  var el = document.createElement('article');
+  el.className = 'step';
+  el.style.setProperty('--c', s.c);
+  var top = document.createElement('div'); top.className = 'top';
+  var num = document.createElement('span'); num.className = 'num'; num.textContent = s.n; num.setAttribute('aria-hidden', 'true');
+  var h = document.createElement('h2'); h.textContent = s.title;
+  var chk = document.createElement('button'); chk.type = 'button'; chk.className = 'check';
+  chk.innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#080609" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>';
+  var p = document.createElement('p'); p.textContent = s.text;
+  var a = document.createElement('a'); a.className = 'btn'; a.textContent = s.cta; a.href = s.href; a.target = '_top'; if (/^\[/.test(s.href)) { a.removeAttribute('href'); a.setAttribute('aria-disabled','true'); a.style.opacity = '.55'; a.style.cursor = 'default'; a.textContent = s.cta + ' (coming soon)'; }
+  a.addEventListener('click', function () { done[s.id] = true; save(); render(); });
+  chk.addEventListener('click', function () { done[s.id] = !done[s.id]; save(); render(); });
+  top.appendChild(num); top.appendChild(h); top.appendChild(chk);
+  el.appendChild(top); el.appendChild(p); el.appendChild(a);
+  s.el = el; s.chk = chk;
+  box.appendChild(el);
+});
+function render() {
+  var n = 0;
+  STEPS.forEach(function (s) {
+    var d = !!done[s.id]; if (d) n++;
+    s.el.classList.toggle('done', d);
+    s.chk.setAttribute('aria-pressed', d ? 'true' : 'false');
+    s.chk.setAttribute('aria-label', (d ? 'Mark not done: ' : 'Mark done: ') + s.title);
+  });
+  document.getElementById('fill').style.width = (n / 3 * 100) + '%';
+  document.getElementById('track').setAttribute('aria-valuenow', n);
+  document.getElementById('count').textContent = n + ' of 3 done';
+  document.getElementById('yay').classList.toggle('show', n === 3);
+}
+render();
+</script>
+</body>
+</html>

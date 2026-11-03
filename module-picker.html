@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find your module</title>
+<link rel="stylesheet" href="sfd.css">
+<style>
+fieldset{border:0;padding:0;margin:20px 0 0}
+legend{font:700 18px var(--head);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip label{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:2px solid var(--line);background:var(--card);font-weight:700;cursor:pointer}
+.chip input:checked+label{background:var(--text);color:var(--black);border-color:var(--text)}
+.chip input:focus-visible+label{outline:3px solid var(--cyan);outline-offset:2px}
+.results{margin-top:24px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.mod{background:var(--card);border:2px solid var(--line);border-top:8px solid var(--c);padding:18px;display:flex;flex-direction:column;gap:8px}
+.mod.best{border-color:var(--c)}
+.mhead{display:flex;align-items:center;gap:12px}
+.letter{width:48px;height:48px;flex:0 0 48px;background:var(--c);color:var(--black);font:700 28px var(--head);display:flex;align-items:center;justify-content:center}
+.tag{align-self:flex-start;background:var(--cyan);color:var(--black);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px}
+.mod p{color:var(--soft);font-size:15px}
+.mod .btn{align-self:flex-start;margin-top:auto}
+.none{margin-top:24px;color:var(--soft)}
+</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"></div>
+<main class="wrap">
+<p class="eyebrow">Not sure where to start?</p>
+<h1>Find your module</h1>
+<p class="sub">Pick your students' grade and what they love. New to SFD? Module A is a great first step.</p>
+
+<fieldset>
+<legend>Your students' grade</legend>
+<div class="chips" id="grades"></div>
+</fieldset>
+<fieldset>
+<legend>What do they love?</legend>
+<div class="chips" id="topics"></div>
+</fieldset>
+
+<section class="results" id="results" aria-live="polite" aria-label="Matching modules"></section>
+</main>
+<script>
+// Fill each module link in once the Disco course pages are set.
+var MODS = [
+  { l: 'A', t: 'Afrobeats & AI', s: 'Music, movement and machine learning', p: 'Crews dance to an AI music track they made.', core: [6,10], adapt: [5,12], topics: ['ai'], href: 'https://sfdclubs.disco.co/p/module-a-afrobeats-ai/dashboard' },
+  { l: 'B', t: 'Reggaeton, Algorithms & Virality', s: 'How social media feeds work', p: 'Crews make a TikTok ready dance video about algorithms.', core: [6,10], adapt: [5,12], topics: ['ai'], href: 'https://sfdclubs.disco.co/p/module-b-reggaeton-algorithms-virality/dashboard' },
+  { l: 'C', t: 'Rhythm, Rotation & Radical Moves', s: 'Hoop dance and the physics of sound', p: 'Crews perform with hula hoops and instruments they made.', core: [5,8], adapt: [3,10], topics: ['science', 'build'], href: 'https://sfdclubs.disco.co/p/module-c/dashboard' },
+  { l: 'D', t: 'Break Dance Machine', s: 'Breaking meets machine learning', p: 'Crews show three trained moves in a Breaking battle.', core: [6,10], adapt: [5,12], topics: ['ai'], href: 'https://sfdclubs.disco.co/p/module-d-break-dance-machine/dashboard' },
+  { l: 'E', t: 'Carbon Footstep', s: 'Step dance for the climate', p: 'Crews perform a step routine with a chant about the planet.', core: [6,10], adapt: [5,12], topics: ['planet'], href: 'https://sfdclubs.disco.co/p/module-e-carbon-footstep/dashboard' },
+  { l: 'F', t: 'No Breath, No Justice', s: 'Breathing, clean air and speaking up', p: 'Crews perform a dance that speaks up for clean air.', core: [6,10], adapt: [5,12], topics: ['science', 'planet'], href: 'https://sfdclubs.disco.co/p/module-f-no-breath-no-justice/dashboard' },
+  { l: 'G', t: 'Speakerboxx', s: 'Sound you can feel and build', p: 'Crews build a paper plate speaker and test it.', core: [6,10], adapt: [5,12], topics: ['science', 'build'], href: 'https://sfdclubs.disco.co/p/module-g-speakerboxx/dashboard' },
+  { l: 'H', t: 'Dance Shoe Design', s: 'Engineering the perfect dance shoe', p: 'Crews design a dance shoe and pitch it.', core: [6,10], adapt: [5,12], topics: ['build'], href: 'https://sfdclubs.disco.co/p/module-h-dance-shoe-design/dashboard' },
+  { l: 'I', t: 'ChoreoGPT', s: 'AI and the stories only you can tell', p: 'Crews create a dance with help from AI.', core: [6,10], adapt: [5,12], topics: ['ai'], href: 'https://sfdclubs.disco.co/p/module-i-choreogpt/dashboard' }
+];
+var GRADES = [
+  { id: 'g34', label: 'Grades 3 to 4', lo: 3, hi: 4 },
+  { id: 'g5', label: 'Grade 5', lo: 5, hi: 5 },
+  { id: 'g68', label: 'Grades 6 to 8', lo: 6, hi: 8 },
+  { id: 'g910', label: 'Grades 9 to 10', lo: 9, hi: 10 },
+  { id: 'g1112', label: 'Grades 11 to 12', lo: 11, hi: 12 }
+];
+var TOPICS = [
+  { id: 'all', label: 'Show me all' },
+  { id: 'ai', label: 'AI and tech' },
+  { id: 'science', label: 'Science and the body' },
+  { id: 'planet', label: 'Climate and justice' },
+  { id: 'build', label: 'Building and design' }
+];
+var COLORS = ['var(--orange)', 'var(--pink)', 'var(--lav)', 'var(--cyan)'];
+var state = { grade: 'g68', topic: 'all' };
+function chips(boxId, list, key) {
+  var box = document.getElementById(boxId);
+  list.forEach(function (o) {
+    var w = document.createElement('div'); w.className = 'chip';
+    var i = document.createElement('input'); i.type = 'radio'; i.name = key; i.id = key + '-' + o.id; i.value = o.id; i.checked = state[key] === o.id;
+    var lb = document.createElement('label'); lb.htmlFor = i.id; lb.textContent = o.label;
+    i.addEventListener('change', function () { state[key] = o.id; render(); });
+    w.appendChild(i); w.appendChild(lb); box.appendChild(w);
+  });
+}
+function fit(m, g) {
+  if (g.lo >= m.core[0] && g.hi <= m.core[1]) return 'core';
+  if (g.lo >= m.adapt[0] && g.hi <= m.adapt[1]) return 'adapt';
+  return null;
+}
+function render() {
+  var g = GRADES.filter(function (x) { return x.id === state.grade; })[0];
+  var out = document.getElementById('results'); out.innerHTML = '';
+  var list = MODS.map(function (m, i) { return { m: m, i: i, f: fit(m, g) }; }).filter(function (x) {
+    return x.f && (state.topic === 'all' || x.m.topics.indexOf(state.topic) > -1);
+  });
+  list.sort(function (a, b) { return (a.f === 'core' ? 0 : 1) - (b.f === 'core' ? 0 : 1) || a.i - b.i; });
+  if (!list.length) {
+    var n = document.createElement('p'); n.className = 'none';
+    n.textContent = 'No module fits that mix yet. Try "Show me all", or email partnerships@stemfromdance.org for help.';
+    out.appendChild(n); return;
+  }
+  list.forEach(function (x, k) {
+    var m = x.m, c = COLORS[x.i % 4];
+    var a = document.createElement('article'); a.className = 'mod' + (k === 0 ? ' best' : ''); a.style.setProperty('--c', c);
+    var hd = document.createElement('div'); hd.className = 'mhead';
+    var l = document.createElement('span'); l.className = 'letter'; l.textContent = m.l; l.setAttribute('aria-hidden', 'true');
+    var h = document.createElement('h2'); h.style.fontSize = '22px'; h.textContent = 'Module ' + m.l + ': ' + m.t;
+    hd.appendChild(l); hd.appendChild(h); a.appendChild(hd);
+    if (k === 0) { var t = document.createElement('span'); t.className = 'tag'; t.textContent = 'Best match'; a.appendChild(t); }
+    var s = document.createElement('p'); s.textContent = m.s + '. ' + m.p; a.appendChild(s);
+    var f = document.createElement('p'); f.style.fontSize = '13px'; f.style.color = 'var(--muted)';
+    f.textContent = x.f === 'core' ? 'Made for these grades.' : 'Works for these grades with small changes.';
+    a.appendChild(f);
+    var b = document.createElement('a'); b.className = 'btn'; b.textContent = 'Open module'; b.href = m.href; b.target = '_top'; a.appendChild(b);
+    out.appendChild(a);
+  });
+}
+chips('grades', GRADES, 'grade');
+chips('topics', TOPICS, 'topic');
+render();
+</script>
+</body>
+</html>
