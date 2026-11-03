@@ -47,6 +47,7 @@ var ICON = {
   map: '<path d="M8 14l16-6 16 6 16-6v42l-16 6-16-6-16 6z"/><path d="M24 8v42M40 14v42"/>',
   camera: '<rect x="8" y="18" width="48" height="34" rx="4"/><path d="M22 18l4-6h12l4 6"/><circle cx="32" cy="35" r="9"/>',
   chat: '<path d="M10 14h44v28H30l-12 10V42h-8z"/><path d="M20 25h24M20 33h16"/>',
+  award: '<circle cx="32" cy="24" r="14"/><path d="M32 16l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.2-4.1 5.8-.8z"/><path d="M23 35l-5 21 9-5 5 7 5-7 9 5-5-21"/>',
   survey: '<rect x="14" y="10" width="36" height="46" rx="3"/><path d="M24 10V6h16v4"/><path d="M22 28l5 5 9-10M22 44h20"/>'
 };
 var GROUPS = [
@@ -64,9 +65,10 @@ var GROUPS = [
     { t: 'Map for Your Team', d: 'What happens when, for facilitators, staff and partners.', icon: 'map', go: 'Open PDF', href: D('13WtyBY1P1sedV5HVjVQTLD4go5oPzYYE') },
     { t: 'Map for Families', d: 'Share it with girls and their families.', icon: 'map', go: 'Open PDF', href: D('1zoOa8M6L-GA1bjBjQeyQIX9wiY8O56Ie') }
   ] },
-  { title: 'End of every module', c: 'var(--cyan)', note: 'Two quick surveys when a module wraps up: one for students, one for you.', items: [
+  { title: 'Wrap up and celebrate', c: 'var(--cyan)', note: 'Two quick surveys at the end of every module, plus a certificate for each new SFD Innovator.', items: [
     { t: 'Club Student Survey', d: 'Students take this. It is how SFD gets the Impact Index.', icon: 'survey', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260905277241860' },
-    { t: 'Post-Module Survey', d: 'For you, the facilitator. Tell SFD how the module went.', icon: 'chat', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260894470706868' }
+    { t: 'Post-Module Survey', d: 'For you, the facilitator. Tell SFD how the module went.', icon: 'chat', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260894470706868' },
+    { t: 'SFD Innovator Certificate', d: 'Optional. Make a copy, type her name and your Club over the [brackets], then print and sign. Needs a Google account.', icon: 'award', go: 'Make a copy', href: 'https://docs.google.com/document/d/1Tz7e69TitPfGaO0ugsnaAhgH4IzqoxHdOjejykQ_syY/copy' }
   ] }
 ];
 var framed = false; try { framed = window.self !== window.top; } catch (e) { framed = true; }
