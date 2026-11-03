@@ -40,6 +40,7 @@ var LINKS = {
   printables: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTk=',
   tracker: 'https://docs.google.com/spreadsheets/d/1wbdRNiXUiJjmzWQQBfeAx1ZXFonrgFxC4Ens494OV-4/copy',
   modules: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTg=',
+  paperTracker: D('1hbrnJCqvVgVshUy6cUM8lpIN5y_QD2ya'),
   milestones: D('1QhzjXgYr4fF94WUatiDzXABlyo_c3SWy'),
   survey: 'https://stemfromdance.jotform.com/260905277241860',
   facSurvey: 'https://stemfromdance.jotform.com/260894470706868',
@@ -58,7 +59,7 @@ var STEPS = [
     ctas: [{ t: 'Milestone Guide', href: LINKS.milestones }] },
   { c: 'var(--cyan)', short: 'Check the box', when: 'Same day', title: 'Check the box',
     text: 'Check her box on your Club Tracker. The sheet shows “Where she is” on the way to SFD Innovator.',
-    ctas: [{ t: 'Copy tracker', href: LINKS.tracker }] },
+    ctas: [{ t: 'Copy tracker', href: LINKS.tracker }, { t: 'Paper tracker', href: LINKS.paperTracker }] },
   { c: 'var(--orange)', short: 'Celebrate', when: 'End of module & year', title: 'Celebrate',
     text: 'Wrap up each module: stickers, tracker and the Impact Index survey. SFD Innovators get a sticker and a certificate. Then take your own Post-Module Survey.',
     ctas: [{ t: 'Student survey', href: LINKS.survey }, { t: 'Your survey', href: LINKS.facSurvey }, { t: 'Certificate', href: LINKS.certificate }] }

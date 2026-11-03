@@ -11,12 +11,24 @@ body{background:var(--black)}
 .top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px}
 .top h1{font-size:clamp(22px,3vw,28px);line-height:1.1}
 .links{display:flex;flex-wrap:wrap;gap:10px}
-.steps{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
-.steps li{background:var(--card);border:2px solid var(--line);border-top:6px solid var(--c);padding:12px;display:flex;flex-direction:column;gap:6px}
-.steps b{font:700 22px/1 var(--head);color:var(--c)}
-.steps strong{font-size:16px;line-height:1.15}
-.steps span{align-self:flex-start;background:var(--c);color:var(--black);font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px}
-@media (max-width:720px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.steps{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:1.45fr repeat(4,minmax(0,1fr));gap:8px}
+.steps>li{background:var(--card);border:2px solid var(--line);border-top:6px solid var(--c);padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.hd{display:flex;align-items:baseline;gap:8px}
+.hd b{font:700 22px/1 var(--head);color:var(--c)}
+.hd strong{font-size:16px;line-height:1.15}
+.when{align-self:flex-start;background:var(--c);color:var(--black);font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px}
+.go{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.go a{display:flex;align-items:center;gap:8px;min-height:34px;padding:5px 8px;border:2px solid var(--line);color:var(--text);text-decoration:none;font-weight:700;font-size:13px;line-height:1.15}
+.go a:hover{border-color:var(--c);background:var(--c);color:var(--black)}
+.go a:hover .tag{background:var(--black);color:var(--c)}
+.go a:hover svg{stroke:var(--black)}
+.go a span.t{flex:1 1 auto;min-width:0}
+.go svg{flex:0 0 14px;stroke:var(--muted)}
+.tag{flex:0 0 auto;min-width:26px;height:22px;padding:0 4px;display:inline-flex;align-items:center;justify-content:center;background:var(--c);color:var(--black);font:700 12px var(--body)}
+.go small{display:block;font-weight:500;font-size:11px;color:var(--muted)}
+.go a:hover small{color:var(--black)}
+@media (max-width:820px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.steps>li:first-child{grid-column:1/-1}}
+@media (max-width:420px){.steps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -24,21 +36,87 @@ body{background:var(--black)}
 <main class="wrap">
 <div class="top">
 <div>
-<p class="eyebrow">Facilitator Home</p>
+<p class="eyebrow" id="eyebrow">Facilitator Home</p>
 <h1>Your five steps, every module</h1>
 </div>
 <nav class="links" aria-label="Facilitator quick links">
 <a class="btn" href="https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTc=" target="_top">Start Here</a>
 <a class="btn ghost" href="https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTk=" target="_top">Printables</a>
+<a class="btn ghost" href="https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MjM=" target="_top">Live Help</a>
 </nav>
 </div>
-<ol class="steps">
-<li style="--c:var(--orange)"><b>1</b><strong>Set up</strong><span>Before Module 1</span></li>
-<li style="--c:var(--pink)"><b>2</b><strong>Watch &amp; listen</strong><span>Every session</span></li>
-<li style="--c:var(--lav)"><b>3</b><strong>Sticker</strong><span>When she earns it</span></li>
-<li style="--c:var(--cyan)"><b>4</b><strong>Check the box</strong><span>Same day</span></li>
-<li style="--c:var(--orange)"><b>5</b><strong>Celebrate</strong><span>End of module</span></li>
-</ol>
+<ol class="steps" id="steps"></ol>
 </main>
+<script>
+// One file serves every module. Add ?m=B (and so on) to the embed link,
+// then fill in that module's three guides below.
+var D = function (id) { return 'https://drive.google.com/file/d/' + id + '/view'; };
+var DL = function (id) { return 'https://drive.google.com/uc?export=download&id=' + id; };
+var MODULES = {
+  A: { name: 'Module A: Afrobeats & AI',
+       qsg: DL('164hAzIKz7wIB8TnTtm7fI07GeUDO1QBW'),
+       guide: DL('1Wg2w4hF0gSZLYliBm2ZSRZBFwIPkIahQ'),
+       workbook: DL('169Nk2fygpzj3XX3R2rxqj7bV8SGDbhsm') }
+};
+var LINKS = {
+  printables: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTk=',
+  milestones: D('1QhzjXgYr4fF94WUatiDzXABlyo_c3SWy'),
+  stickers: D('1l4ZCwmXeulSACpHR_WvidrHsTJeTxJKj'),
+  tracker: 'https://docs.google.com/spreadsheets/d/1wbdRNiXUiJjmzWQQBfeAx1ZXFonrgFxC4Ens494OV-4/copy',
+  paperTracker: D('1hbrnJCqvVgVshUy6cUM8lpIN5y_QD2ya'),
+  survey: 'https://stemfromdance.jotform.com/260905277241860',
+  facSurvey: 'https://stemfromdance.jotform.com/260894470706868',
+  certificate: D('1UhKz9wZLkIomATlXECNE5MUXeLU7BUJA')
+};
+var key = (new URLSearchParams(location.search).get('m') || 'A').toUpperCase();
+var M = MODULES[key] || {};
+if (M.name) { document.getElementById('eyebrow').textContent = 'Facilitator Home · ' + M.name; }
+
+// tag: short label in the colored box. dl: a file download. top: opens in the Disco window.
+var STEPS = [
+  { c: 'var(--orange)', title: 'Set up', when: 'Before Module 1', go: [
+    { tag: '1', t: 'Quick Start Guide', s: 'Track 1: STEM teachers', href: M.qsg, dl: true },
+    { tag: '2', t: 'Facilitator Guide', s: 'Track 2: volunteers', href: M.guide, dl: true },
+    { tag: 'Girls', t: 'Student Workbook', s: 'Optional', href: M.workbook, dl: true },
+    { t: 'Printables', href: LINKS.printables, top: true } ] },
+  { c: 'var(--pink)', title: 'Watch & listen', when: 'Every session', go: [
+    { t: 'Milestone Guide', href: LINKS.milestones } ] },
+  { c: 'var(--lav)', title: 'Sticker', when: 'When she earns it', go: [
+    { t: 'Sticker sheets', href: LINKS.stickers } ] },
+  { c: 'var(--cyan)', title: 'Check the box', when: 'Same day', go: [
+    { t: 'Copy tracker', href: LINKS.tracker },
+    { t: 'Paper tracker', href: LINKS.paperTracker } ] },
+  { c: 'var(--orange)', title: 'Celebrate', when: 'End of module', go: [
+    { t: 'Student survey', href: LINKS.survey },
+    { t: 'Your survey', href: LINKS.facSurvey },
+    { t: 'Certificate', href: LINKS.certificate } ] }
+];
+var ICON_DL = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="3" aria-hidden="true"><path d="M12 3v13M6 11l6 6 6-6M4 21h16"/></svg>';
+var ICON_GO = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+var ol = document.getElementById('steps');
+STEPS.forEach(function (s, i) {
+  var li = document.createElement('li'); li.style.setProperty('--c', s.c);
+  var hd = document.createElement('div'); hd.className = 'hd';
+  var b = document.createElement('b'); b.textContent = i + 1;
+  var st = document.createElement('strong'); st.textContent = s.title;
+  hd.appendChild(b); hd.appendChild(st);
+  var w = document.createElement('span'); w.className = 'when'; w.textContent = s.when;
+  var ul = document.createElement('ul'); ul.className = 'go';
+  s.go.forEach(function (g) {
+    if (!g.href) { return; }
+    var a = document.createElement('a'); a.href = g.href;
+    if (g.top) { a.target = '_top'; } else { a.target = '_blank'; a.rel = 'noopener'; }
+    if (g.tag) { var tg = document.createElement('span'); tg.className = 'tag'; tg.textContent = g.tag; a.appendChild(tg); }
+    var t = document.createElement('span'); t.className = 't'; t.textContent = g.t;
+    if (g.s) { var sm = document.createElement('small'); sm.textContent = g.s; t.appendChild(sm); }
+    a.appendChild(t);
+    a.insertAdjacentHTML('beforeend', g.dl ? ICON_DL : ICON_GO);
+    if (g.dl) { a.setAttribute('aria-label', 'Download ' + g.t + (g.s ? ', ' + g.s : '')); }
+    var item = document.createElement('li'); item.appendChild(a); ul.appendChild(item);
+  });
+  li.appendChild(hd); li.appendChild(w); li.appendChild(ul);
+  ol.appendChild(li);
+});
+</script>
 </body>
 </html>
