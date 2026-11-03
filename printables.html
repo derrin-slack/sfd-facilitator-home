@@ -65,7 +65,7 @@ var GROUPS = [
     { t: 'Club Student Survey', d: 'This is how SFD gets the Impact Index.', icon: 'survey', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260905277241860' }
   ] }
 ];
-if (/[?&]bare/.test(location.search)) { document.getElementById('ey').hidden = true; document.getElementById('ttl').hidden = true; document.querySelector('.group').style.marginTop = '18px'; }
+if (/[?&]bare/.test(location.search)) { document.getElementById('ey').hidden = true; document.getElementById('ttl').hidden = true; }
 var box = document.getElementById('groups');
 GROUPS.forEach(function (g) {
   var sec = document.createElement('section'); sec.className = 'group'; sec.style.setProperty('--c', g.c);
