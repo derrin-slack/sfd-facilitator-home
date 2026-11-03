@@ -29,8 +29,8 @@ a.card2:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
 <body>
 <div class="bar" aria-hidden="true"></div>
 <main class="wrap">
-<p class="eyebrow">Print and go</p>
-<h1>Printables</h1>
+<p class="eyebrow" id="ey">Print and go</p>
+<h1 id="ttl">Printables</h1>
 <p class="sub">Click a card to open it. Everything happens in your Club. Nothing to log, upload or send in.</p>
 <div id="groups"></div>
 </main>
@@ -65,6 +65,7 @@ var GROUPS = [
     { t: 'Club Student Survey', d: 'This is how SFD gets the Impact Index.', icon: 'survey', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260905277241860' }
   ] }
 ];
+if (/[?&]bare/.test(location.search)) { document.getElementById('ey').hidden = true; document.getElementById('ttl').hidden = true; document.querySelector('.group').style.marginTop = '18px'; }
 var box = document.getElementById('groups');
 GROUPS.forEach(function (g) {
   var sec = document.createElement('section'); sec.className = 'group'; sec.style.setProperty('--c', g.c);
