@@ -41,7 +41,8 @@ var LINKS = {
   tracker: 'https://docs.google.com/spreadsheets/d/1wbdRNiXUiJjmzWQQBfeAx1ZXFonrgFxC4Ens494OV-4/copy',
   modules: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTg=',
   milestones: D('1QhzjXgYr4fF94WUatiDzXABlyo_c3SWy'),
-  survey: 'https://stemfromdance.jotform.com/260905277241860'
+  survey: 'https://stemfromdance.jotform.com/260905277241860',
+  facSurvey: 'https://stemfromdance.jotform.com/260894470706868'
 };
 // top: true opens in the Disco window. Everything else opens in a new tab.
 var STEPS = [
@@ -58,8 +59,8 @@ var STEPS = [
     text: 'Check her box on your Club Tracker. The sheet shows “Where she is” on the way to SFD Innovator.',
     ctas: [{ t: 'Copy tracker', href: LINKS.tracker }] },
   { c: 'var(--orange)', short: 'Celebrate', when: 'End of module & year', title: 'Celebrate',
-    text: 'Wrap up each module: stickers, tracker and the Impact Index survey. SFD Innovators get a sticker and a certificate.',
-    ctas: [{ t: 'Open survey', href: LINKS.survey }] }
+    text: 'Wrap up each module: stickers, tracker and the Impact Index survey. SFD Innovators get a sticker and a certificate. Then take your own Post-Module Survey.',
+    ctas: [{ t: 'Student survey', href: LINKS.survey }, { t: 'Your survey', href: LINKS.facSurvey }] }
 ];
 var N = STEPS.length, cur = 0, tabs = document.getElementById('tabs'), panel = document.getElementById('panel');
 STEPS.forEach(function (s, i) {
