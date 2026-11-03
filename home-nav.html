@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facilitator Home links</title>
+<link rel="stylesheet" href="sfd.css">
+<style>
+body{background:var(--black)}
+nav{display:flex;align-items:center;gap:8px;padding:12px 14px 10px;overflow-x:auto;scrollbar-width:none;position:relative}
+nav::-webkit-scrollbar{display:none}
+.lbl{flex:0 0 auto;font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-right:6px}
+nav a{flex:0 0 auto;display:inline-flex;align-items:center;min-height:38px;padding:6px 12px;border:2px solid var(--line);color:var(--text);text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap}
+nav a:hover{border-color:var(--text)}
+nav a.home{background:var(--text);border-color:var(--text);color:var(--black)}
+nav a.home:hover{background:var(--cyan);border-color:var(--cyan)}
+nav a[aria-current="page"]{border-color:var(--pink);color:var(--pinkText)}
+</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"></div>
+<nav aria-label="Facilitator Home" id="nav"><span class="lbl">Facilitator Home</span></nav>
+<script>
+// Add ?here=printables (or modules, live, welcome) to the embed link to mark the current page.
+var P = 'https://sfdclubs.disco.co/page-app/';
+var ITEMS = [
+  { id: 'start', t: 'Start Here', href: P + 'UHJvZHVjdEFwcDozODI2MTc=', home: true },
+  { id: 'welcome', t: 'Welcome', href: P + 'UHJvZHVjdEFwcDozODI2MTY=' },
+  { id: 'modules', t: 'My Modules', href: P + 'UHJvZHVjdEFwcDozODI2MTg=' },
+  { id: 'printables', t: 'Printables', href: P + 'UHJvZHVjdEFwcDozODI2MTk=' },
+  { id: 'live', t: 'Live Help', href: P + 'UHJvZHVjdEFwcDozODI2MjM=' },
+  { id: 'share', t: 'Share & Learn', href: 'https://sfdclubs.disco.co/feed/RmVlZDo0NTE2MQ==/posts' },
+  { id: 'ask', t: 'Ask SFD', href: 'https://sfdclubs.disco.co/channel/Q2hhdENoYW5uZWw6MjMyMzMz' }
+];
+var here = new URLSearchParams(location.search).get('here');
+var nav = document.getElementById('nav');
+ITEMS.forEach(function (it) {
+  if (it.id === here && !it.home) { return; }
+  var a = document.createElement('a'); a.href = it.href; a.target = '_top'; a.textContent = it.t;
+  if (it.home) { a.className = 'home'; }
+  nav.appendChild(a);
+});
+</script>
+</body>
+</html>
