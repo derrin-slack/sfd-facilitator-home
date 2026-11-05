@@ -20,6 +20,7 @@ a{color:#B0216B}a:hover{color:#080609}
 .send:hover{background:#FFFFFF !important;color:#080609 !important}
 .back:hover{background:#FFFFFF !important;color:#080609 !important}
 input:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid #70E2F7;outline-offset:2px}
+.more:hover{background:#FFF0F7 !important}
 </style>
 <script src="dc-lite.js"></script>
 </head>
@@ -54,19 +55,19 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px soli
 <p style="margin: 0; font-family: 'Power Grotesk', Gilmer, sans-serif; font-size: 22px; font-weight: 700">Today</p>
 <p style="margin: 0; display: flex; align-items: baseline; gap: 8px"><b style="font-family: 'Power Grotesk', Gilmer, sans-serif; font-size: 64px; line-height: 1; color: #D14800">27</b><span style="font-size: 16px; color: #3A3740">clicks</span></p>
 <div role="img" aria-label="14 onboarding clicks plus 13 more" style="display: flex; height: 16px; background: #E9E6EA"><span style="width: 51.9%; background: #8A8590"></span><span style="width: 48.1%; background: #FF5700"></span></div>
-<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #3A3740">14 in onboarding, 13 more to their first module, plus about 51 minutes of required videos and reading.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #3A3740">14 in onboarding, 13 more to a module, plus about 51 minutes of required content.</p>
 </article>
 <article style="background: #FFFFFF; border: 2px solid #080609; border-top: 8px solid #70E2F7; padding: 20px; display: flex; flex-direction: column; gap: 12px">
 <p style="margin: 0; font-family: 'Power Grotesk', Gilmer, sans-serif; font-size: 22px; font-weight: 700">Option A · one column</p>
 <p style="margin: 0; display: flex; align-items: baseline; gap: 8px"><b style="font-family: 'Power Grotesk', Gilmer, sans-serif; font-size: 64px; line-height: 1; color: #080609">7</b><span style="font-size: 16px; color: #3A3740">clicks</span></p>
 <div role="img" aria-label="2 onboarding clicks plus 5 more" style="display: flex; height: 16px; background: #E9E6EA"><span style="width: 7.4%; background: #8A8590"></span><span style="width: 18.5%; background: #3A2ABF"></span></div>
-<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #3A3740">2 in onboarding, 5 more to the module they choose. Start Here takes about 20 minutes, in any order.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #3A3740">2 in onboarding, 5 more to the module they choose.</p>
 </article>
 <article style="background: #FFFFFF; border: 2px solid #080609; border-top: 8px solid #EBB1F4; padding: 20px; display: flex; flex-direction: column; gap: 12px">
 <p style="margin: 0; font-family: 'Power Grotesk', Gilmer, sans-serif; font-size: 22px; font-weight: 700">Option B · two columns</p>
 <p style="margin: 0; display: flex; align-items: baseline; gap: 8px"><b style="font-family: 'Power Grotesk', Gilmer, sans-serif; font-size: 64px; line-height: 1; color: #080609">7</b><span style="font-size: 16px; color: #3A3740">clicks</span></p>
 <div role="img" aria-label="2 onboarding clicks plus 5 more" style="display: flex; height: 16px; background: #E9E6EA"><span style="width: 7.4%; background: #8A8590"></span><span style="width: 18.5%; background: #3A2ABF"></span></div>
-<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #3A3740">Same path as Option A, with Jump Back In, events and posts beside Start Here.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.45; color: #3A3740">Same path as Option A, with a second column.</p>
 </article>
 </div>
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px">
@@ -83,28 +84,30 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px soli
 <p style="margin: 6px 0 0; font-size: 17px; line-height: 1.5; color: #3A3740">Mark yes on the ones you're ready for, and add any comments below.</p>
 </div>
 <sc-for list="{{ decisions }}" as="d" hint-placeholder-count="3">
-<article style="background: #FFFFFF; border: 2px solid {{ d.edge }}; display: flex; flex-wrap: wrap">
-<div style="flex: 1 1 520px; padding: 22px; display: flex; flex-direction: column; gap: 12px">
+<article style="background: #FFFFFF; border: 2px solid {{ d.edge }}; padding: 22px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; align-items: center; gap: 14px">
 <span style="width: 44px; height: 44px; flex: 0 0 44px; display: flex; align-items: center; justify-content: center; background: #080609; color: #FFFFFF; font-family: 'Power Grotesk', Gilmer, sans-serif; font-weight: 700; font-size: 24px">{{ d.n }}</span>
 <h3 style="margin: 0; font-family: 'Power Grotesk', Gilmer, sans-serif; font-weight: 700; font-size: 24px; line-height: 1.15">{{ d.title }}</h3>
 </div>
-<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 16px; line-height: 1.45">
-<sc-for list="{{ d.points }}" as="pt" hint-placeholder-count="3"><li>{{ pt }}</li></sc-for>
-</ul>
+<p style="margin: 0; font-size: 17px; line-height: 1.45">{{ d.sum }}</p>
 <div style="display: flex; flex-wrap: wrap; gap: 6px">
 <span style="font-size: 13px; font-weight: 700; padding: 5px 9px; background: #E9E6EA">{{ d.effort }}</span>
 <span style="font-size: 13px; font-weight: 700; padding: 5px 9px; background: #E9E6EA">{{ d.who }}</span>
 <span style="font-size: 13px; font-weight: 700; padding: 5px 9px; background: #FFE3D1; color: #8A2E00">SFD decides: {{ d.decides }}</span>
 </div>
-</div>
-<div style="flex: 1 1 340px; padding: 22px; background: #FCF6F5; border-left: 2px solid #E9E6EA; display: flex; flex-direction: column; gap: 14px">
-<dl style="margin: 0; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 8px 12px; font-size: 15px; line-height: 1.4">
+<sc-if value="{{ d.open }}" hint-placeholder-val="{{ false }}"><div style="display: flex; flex-wrap: wrap; gap: 16px 32px; padding-top: 14px; border-top: 2px solid #E9E6EA">
+<ul style="flex: 1 1 420px; margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.45">
+<sc-for list="{{ d.points }}" as="pt" hint-placeholder-count="3"><li>{{ pt }}</li></sc-for>
+</ul>
+<dl style="flex: 1 1 300px; margin: 0; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 8px 12px; font-size: 15px; line-height: 1.4">
 <dt style="font-weight: 700; color: #B0216B">Girls</dt><dd style="margin: 0; color: #3A3740">{{ d.girls }}</dd>
 <dt style="font-weight: 700; color: #B0216B">Facilitators</dt><dd style="margin: 0; color: #3A3740">{{ d.fac }}</dd>
 <dt style="font-weight: 700; color: #B0216B">SFD</dt><dd style="margin: 0; color: #3A3740">{{ d.sfd }}</dd>
 </dl>
-<button type="button" class="yes" role="checkbox" aria-checked="{{ d.on }}" onClick="{{ d.toggle }}" style="margin-top: auto; min-height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 16px; border: 2px solid #080609; background: {{ d.btnBg }}; color: {{ d.btnFg }}; font-family: inherit; font-weight: 700; font-size: 16px; cursor: pointer">
+</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<button type="button" class="more" onClick="{{ d.toggleOpen }}" aria-expanded="{{ d.open }}" style="min-height: 52px; padding: 0 18px; border: 2px solid #080609; background: #FFFFFF; color: #080609; font-family: inherit; font-weight: 700; font-size: 16px; cursor: pointer">{{ d.openLabel }}</button>
+<button type="button" class="yes" role="checkbox" aria-checked="{{ d.on }}" onClick="{{ d.toggle }}" style="min-height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 16px; border: 2px solid #080609; background: {{ d.btnBg }}; color: {{ d.btnFg }}; font-family: inherit; font-weight: 700; font-size: 16px; cursor: pointer">
 <span aria-hidden="true" style="width: 26px; height: 26px; flex: 0 0 26px; border: 2px solid currentColor; display: flex; align-items: center; justify-content: center"><sc-if value="{{ d.on }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square"><path d="M4 12l5 5L20 6"></path></svg></sc-if></span>Yes, move forward</button>
 </div>
 </article>
@@ -128,7 +131,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px soli
 <span aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 6px; background: linear-gradient(45deg, #FF5700 0%, #DA328A 100%)"></span>
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #70E2F7">THE WHY</p>
 <p style="margin: 0; max-width: 900px; font-family: 'Power Grotesk', Gilmer, Impact, sans-serif; font-weight: 700; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.08">Modules A to I are ready. Now facilitators need a simple way in.</p>
-<p style="margin: 0; max-width: 820px; font-size: 18px; line-height: 1.55; color: #E9E4EC">Today more than half of registered facilitators never finish onboarding, so the curriculum never reaches their girls. One front door, one welcome and the same module layout every time let facilitators onboard themselves, start their Clubs sooner and lean on SFD for coaching, not directions.</p>
+<p style="margin: 0; max-width: 820px; font-size: 18px; line-height: 1.55; color: #E9E4EC">More than half of registered facilitators never finish onboarding. A simpler start gets more of them to Lesson 1.</p>
 <a class="back" href="index.html" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 2px solid #FFFFFF; color: #FFFFFF; font-weight: 700; text-decoration: none">Back to Why</a>
 </section>
 
@@ -139,19 +142,19 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px soli
 class Component extends DCLogic {
   constructor(props) {
     super(props);
-    this.state = { on: {}, name: '', notes: '', sent: false };
+    this.state = { on: {}, open: {}, name: '', notes: '', sent: false };
   }
   renderVals() {
     const D = [
-      { id: 'door', title: 'Make Start Here the one front door', points: [
+      { id: 'door', title: 'Make Start Here the one front door', sum: 'Onboarding becomes one step, and Start Here is the first thing facilitators see.', points: [
           'Disco onboarding becomes one step: accept the terms, then land on Start Here.',
           'Start Here on For You (Option A or B) replaces the current onboarding course and the Welcome page. Step 5 leads to Your Five Steps, where they pick any module.',
-          'A new 1-minute welcome and a 4-chapter tour, made with Victoria.'],
+          'A 1-minute welcome video, plus a shorter tour video made with Victoria.'],
         girls: 'Clubs start sooner, with facilitators who feel ready.',
         fac: '7 clicks and about 20 minutes to get going, not 27 clicks and an hour.',
         sfd: 'More registered facilitators reach the curriculum. Today 41% finish onboarding.',
-        effort: 'About 1 day to build, plus about 1 week for the videos', who: 'Derrin, with Victoria for the videos', decides: 'Option A or B, and what happens to the current course' },
-      { id: 'layout', title: 'Give every module the same simple layout', points: [
+        effort: 'About 1 day to build, plus time with Victoria on the video', who: 'Derrin, with Victoria', decides: 'Option A or B, and the tour video format' },
+      { id: 'layout', title: 'Give every module the same simple layout', sum: 'Every module gets the Module A layout: Your five steps at the top, then Before You Teach.', points: [
           'The Module A layout on Modules B to I: the Your five steps header at the top of every module, so facilitators can always find their way back, then Before You Teach.',
           'A quick Facilitator Expectations check-off in each module’s Before You Teach.',
           'A ready check on each Module Overview, so SFD can see who prepped.'],
@@ -159,7 +162,7 @@ class Component extends DCLogic {
         fac: 'The same layout every time, with guides one click away.',
         sfd: 'A record of who reviewed the expectations and prepped each module.',
         effort: 'Overnight', who: 'Derrin', decides: 'the wording of the expectations check-off' },
-      { id: 'launch', title: 'Go live overnight, with a gentle rollout', points: [
+      { id: 'launch', title: 'Go live overnight, with a gentle rollout', sum: 'I build overnight so running Clubs aren’t disrupted, then share a quick demo with current facilitators.', points: [
           'I build overnight, so Clubs already running aren’t disrupted.',
           'Once it’s live, a click-through demo like this one gives current facilitators a quick on-ramp.',
           'Optional: a 3 to 5 email series and social posts from SFD over 2 to 4 weeks.'],
@@ -172,7 +175,9 @@ class Component extends DCLogic {
     const n = D.filter((d) => on[d.id]).length;
     return {
       decisions: D.map((d, k) => ({
-        n: k + 1, title: d.title, points: d.points, girls: d.girls, fac: d.fac, sfd: d.sfd,
+        n: k + 1, title: d.title, sum: d.sum, points: d.points,
+        open: !!this.state.open[d.id], openLabel: this.state.open[d.id] ? 'Hide details' : 'Show details',
+        toggleOpen: () => { const o = Object.assign({}, this.state.open); o[d.id] = !o[d.id]; this.setState({ open: o }); }, girls: d.girls, fac: d.fac, sfd: d.sfd,
         effort: d.effort, who: d.who, decides: d.decides,
         on: !!on[d.id],
         edge: on[d.id] ? '#DA328A' : '#080609',

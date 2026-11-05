@@ -54,7 +54,7 @@ a{color:#B0216B}a:hover{color:#080609}
 <aside style="flex: 1 1 340px; max-width: 420px; box-sizing: border-box; padding: 24px; border-right: 2px solid #080609; display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #B0216B">PROPOSED · OPTION B</p>
 <h1 style="margin: 0; font-family: 'Power Grotesk', Gilmer, Impact, sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1">Two columns, the same 7 clicks</h1>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A3740">Option B keeps everything in Option A and adds a second column on For You: Jump Back In, events and posts beside Start Here. Click the aqua box, or use Back and Next stop.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A3740">Option A plus a second column: Jump Back In, events and posts. Click the aqua box, or use Next stop.</p>
 <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px">
 <sc-for list="{{ stops }}" as="s" hint-placeholder-count="3">
 <li><button type="button" class="stop" onClick="{{ s.pick }}" aria-current="{{ s.cur }}" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 12px; padding: 8px 10px; text-align: left; font-family: inherit; font-size: 15px; color: #080609; cursor: pointer; background: {{ s.bg }}; border: {{ s.border }}"><span style="width: 28px; height: 28px; flex: 0 0 28px; display: flex; align-items: center; justify-content: center; background: #080609; color: #FFFFFF; font-weight: 700; font-size: 14px">{{ s.n }}</span><span style="flex: 1 1 auto; font-weight: 700">{{ s.title }}</span><span style="font-weight: 700; color: #3A2ABF; white-space: nowrap">{{ s.clicksLabel }}</span></button></li>
@@ -115,9 +115,9 @@ class Component extends DCLogic {
   }
   renderVals() {
     const S = [
-      { kind: 'shot', img: 'img/optB_top.jpg', title: 'For You in two columns', c: 2, hl: true, hs: [21.5, 31.2, 49.5, 12.3], lab: 'Scroll to step 5', cap: 'The same one-step onboarding lands them here. Start Here stays on the left. Jump Back In, upcoming events and community posts sit on the right, so returning facilitators see them right away.', stat: 'Start Here plus a second column' },
-      { kind: 'shot', img: 'img/optB_steps.jpg', title: 'Start Here, step 5', c: 1, hs: [24.61, 80.42, 11.17, 3.58], cap: 'The same five Start Here steps as Option A. Step 5, Launch your Club, opens their five steps.', stat: 'Same steps as Option A' },
-      { kind: 'same', title: 'Everything else matches A', c: 4, cap: 'Your five steps, Pick your module, their module page and Before You Teach work the same way in both options.', stat: '7 clicks in total' }
+      { kind: 'shot', img: 'img/optB_top.jpg', title: 'For You in two columns', c: 2, hl: true, hs: [21.5, 31.2, 49.5, 12.3], lab: 'Scroll to step 5', cap: 'Start Here on the left. Jump Back In, events and posts on the right.', stat: 'Start Here plus a second column' },
+      { kind: 'shot', img: 'img/optB_steps.jpg', title: 'Start Here, step 5', c: 1, hs: [24.61, 80.42, 11.17, 3.58], cap: 'Same Start Here as Option A. Step 5 opens their five steps.', stat: 'Same steps as Option A' },
+      { kind: 'same', title: 'Everything else matches A', c: 4, cap: 'The rest works the same as Option A.', stat: '7 clicks in total' }
     ];
     const i = this.state.i;
     let run = 0;

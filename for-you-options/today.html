@@ -53,7 +53,7 @@ a{color:#B0216B}a:hover{color:#080609}
 <aside style="flex: 1 1 340px; max-width: 420px; box-sizing: border-box; padding: 24px; border-right: 2px solid #080609; display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #B0216B">TODAY · THE CURRENT PATH</p>
 <h1 style="margin: 0; font-family: 'Power Grotesk', Gilmer, Impact, sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1">27 clicks before their first module</h1>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A3740">Plus 4 typed answers and about 51 minutes of required videos and reading. Two ways through: click the pink box on each screen, where a facilitator would click, or use Back and Next stop. You can also pick any stop in this list.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3A3740">Plus 4 typed answers and about 51 minutes of required videos and reading. Click the pink box, or use Next stop.</p>
 <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px">
 <sc-for list="{{ stops }}" as="s" hint-placeholder-count="8">
 <li><button type="button" class="stop" onClick="{{ s.pick }}" aria-current="{{ s.cur }}" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 12px; padding: 8px 10px; text-align: left; font-family: inherit; font-size: 15px; color: #080609; cursor: pointer; background: {{ s.bg }}; border: {{ s.border }}"><span style="width: 28px; height: 28px; flex: 0 0 28px; display: flex; align-items: center; justify-content: center; background: #080609; color: #FFFFFF; font-weight: 700; font-size: 14px">{{ s.n }}</span><span style="flex: 1 1 auto; font-weight: 700">{{ s.title }}</span><span style="font-weight: 700; color: #B0216B; white-space: nowrap">{{ s.clicksLabel }}</span></button></li>
@@ -107,14 +107,14 @@ class Component extends DCLogic {
   }
   renderVals() {
     const S = [
-      { img: 'img/s1b.jpg', title: 'Onboarding: Welcome', c: 1, hs: [46.28, 88.5, 6.38, 3.98], cap: 'Disco onboarding opens with a welcome message and a 1-minute video. One click to continue.', stat: 'Step 1 of 7 onboarding steps' },
-      { img: 'img/s2.jpg', title: 'Accept the guidelines', c: 1, hs: [49.57, 88.62, 10.36, 4.11], cap: 'They read and accept the community guidelines before moving on.', stat: 'Required to continue' },
-      { img: 'img/s3b.jpg', title: 'Profile and Club questions', c: 12, hs: [46.81, 67.37, 6.38, 4.09], cap: 'Profile, four required Club questions with typed answers, calendar, mobile app, then Let’s Start Learning.', stat: '4 required answers to type' },
-      { img: 'img/s4.jpg', title: 'Lands on For You', c: 1, hs: [27.21, 51.53, 56.79, 15.49], cap: 'No first steps on this page. What a brand-new facilitator sees here, and how they find the onboarding course, needs SFD to confirm: the pathway and the course are assigned separately. This count assumes one click to the course.', stat: 'SFD to confirm', warn: true },
-      { img: 'img/s5.jpg', title: 'The Club Experience', c: 0, hs: [83.21, 76.41, 10.43, 4.11], cap: 'Launch Your SFD Club! is the prerequisite for every module in the pathway.', stat: '162 registered · 67 finished (41%)' },
-      { img: 'img/s6.jpg', title: 'Launch Your SFD Club!', c: 8, hs: [27.5, 24.77, 68.21, 10.56], cap: 'They open the course and complete all 7 items in order: about 51 minutes of videos and reading, including Victoria’s 12-minute tour.', stat: '85 haven’t started · 37 never opened it' },
-      { img: 'img/s7.jpg', title: 'Facilitator Expectations', c: 0, hs: [69.14, 94.25, 2.57, 4.23], cap: 'Locked until the first section is done. These two videos are counted in the course clicks.', stat: 'Locked until section 1 is done' },
-      { img: 'img/s8.jpg', title: 'Module A prep', c: 4, hs: [28.45, 27.35, 66.27, 10.61], go: 'Options.dc.html', cap: 'Back out of the course, open Module A, open START HERE and the first prep item. They have arrived.', stat: '26 registered · 3 completed Module A' }
+      { img: 'img/s1b.jpg', title: 'Onboarding: Welcome', c: 1, hs: [46.28, 88.5, 6.38, 3.98], cap: 'A welcome message and a 1-minute video.', stat: 'Step 1 of 7 onboarding steps' },
+      { img: 'img/s2.jpg', title: 'Accept the guidelines', c: 1, hs: [49.57, 88.62, 10.36, 4.11], cap: 'They accept the community guidelines.', stat: 'Required to continue' },
+      { img: 'img/s3b.jpg', title: 'Profile and Club questions', c: 12, hs: [46.81, 67.37, 6.38, 4.09], cap: 'Profile, four typed Club answers, calendar and app setup.', stat: '4 required answers to type' },
+      { img: 'img/s4.jpg', title: 'Lands on For You', c: 1, hs: [27.21, 51.53, 56.79, 15.49], cap: 'No next step here. SFD to confirm what a brand-new facilitator sees. I count one click to the course.', stat: 'SFD to confirm', warn: true },
+      { img: 'img/s5.jpg', title: 'The Club Experience', c: 0, hs: [83.21, 76.41, 10.43, 4.11], cap: 'Launch Your SFD Club! unlocks every module.', stat: '162 registered · 67 finished (41%)' },
+      { img: 'img/s6.jpg', title: 'Launch Your SFD Club!', c: 8, hs: [27.5, 24.77, 68.21, 10.56], cap: 'Seven required items, about 51 minutes, including Victoria’s 12-minute tour.', stat: '85 haven’t started · 37 never opened it' },
+      { img: 'img/s7.jpg', title: 'Facilitator Expectations', c: 0, hs: [69.14, 94.25, 2.57, 4.23], cap: 'Locked until section 1 is done.', stat: 'Locked until section 1 is done' },
+      { img: 'img/s8.jpg', title: 'Module A prep', c: 4, hs: [28.45, 27.35, 66.27, 10.61], go: 'Options.dc.html', cap: 'They back out, open Module A, then Start Here. They have arrived.', stat: '26 registered · 3 completed Module A' }
     ];
     const i = this.state.i;
     let run = 0;
