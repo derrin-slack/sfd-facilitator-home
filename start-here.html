@@ -54,7 +54,7 @@ var STEPS = [
   { id: 'hi', n: 1, c: 'var(--orange)', title: 'Say hi', text: 'Post one line in Share & Learn. Tell us your name and your Club.', cta: 'Say hi', href: LINKS.ask },
   { id: 'date', n: 2, c: 'var(--cyan)', title: 'Save the date', text: 'Club Support Hours are every other Thursday, 2:30 to 4:30 PM ET.', cta: 'See Live Help', href: LINKS.live },
   { id: 'steps', n: 3, c: 'var(--lav)', title: 'Review the 5 steps', text: 'See how to run the Innovator Pathway so you can recognize and celebrate your girls.', cta: 'See the steps', href: LINKS.steps, scroll: true },
-  { id: 'modA', n: 4, c: 'var(--pink)', title: 'Open Module A', text: 'Download your guide and skim Lesson 1. Your five steps are at the top of every module.', cta: 'Open Module A', href: LINKS.moduleA }
+  { id: 'modA', n: 4, c: 'var(--pink)', title: 'Open Module A', text: 'Download your guide and skim Lesson 1. Your five steps are at the top of every module.', cta: 'Open Module A', href: LINKS.moduleA, alt: 'Compare modules', altNote: 'Not sure which module fits?', altHref: 'files/sfd-choosing-your-first-module.pdf' }
 ];
 var KEY = 'sfd-start-here-v1';
 var done = {};
@@ -80,6 +80,12 @@ STEPS.forEach(function (s) {
   chk.addEventListener('click', function () { done[s.id] = !done[s.id]; save(); render(); });
   top.appendChild(num); top.appendChild(h); top.appendChild(chk);
   el.appendChild(top); el.appendChild(p); el.appendChild(a);
+  if (s.alt) {
+    var row = document.createElement('p'); row.style.cssText = 'margin-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px';
+    var note = document.createElement('span'); note.className = 'muted'; note.textContent = s.altNote;
+    var dl = document.createElement('a'); dl.className = 'btn ghost'; dl.textContent = s.alt; dl.href = s.altHref; dl.target = '_blank'; dl.rel = 'noopener'; dl.setAttribute('download', '');
+    row.appendChild(note); row.appendChild(dl); el.appendChild(row);
+  }
   s.el = el; s.chk = chk;
   box.appendChild(el);
 });
