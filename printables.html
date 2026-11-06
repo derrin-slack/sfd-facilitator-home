@@ -48,9 +48,13 @@ var ICON = {
   camera: '<rect x="8" y="18" width="48" height="34" rx="4"/><path d="M22 18l4-6h12l4 6"/><circle cx="32" cy="35" r="9"/>',
   chat: '<path d="M10 14h44v28H30l-12 10V42h-8z"/><path d="M20 25h24M20 33h16"/>',
   award: '<circle cx="32" cy="24" r="14"/><path d="M32 16l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.2-4.1 5.8-.8z"/><path d="M23 35l-5 21 9-5 5 7 5-7 9 5-5-21"/>',
+  compass: '<circle cx="32" cy="32" r="22"/><path d="M40 24l-5 11-11 5 5-11z"/>',
   survey: '<rect x="14" y="10" width="36" height="46" rx="3"/><path d="M24 10V6h16v4"/><path d="M22 28l5 5 9-10M22 44h20"/>'
 };
 var GROUPS = [
+  { title: 'Choose your module', c: 'var(--lav)', note: 'Not sure where to start? Begin here.', items: [
+    { t: 'Choosing Your First Module', d: 'Three quick questions, plus all nine modules on three pages.', icon: 'compass', go: 'Open PDF', href: 'files/sfd-choosing-your-first-module.pdf' }
+  ] },
   { title: 'Print for your Club', c: 'var(--orange)', note: 'Print these before Module 1.', items: [
     { t: 'Pathway Passport', d: 'One per girl. Hers to keep.', icon: 'passport', go: 'Open PDF', href: D('1ID_7PhTHfLskfPHV0XSt1MU2NvD5c_Hd') },
     { t: 'Milestone Stickers', d: 'Print on Avery 6450 (1 inch) and 22807 (2 inch) round labels.', icon: 'sticker', go: 'Open PDF', href: D('1l4ZCwmXeulSACpHR_WvidrHsTJeTxJKj') },
