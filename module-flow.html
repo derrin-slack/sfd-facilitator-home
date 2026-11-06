@@ -41,6 +41,8 @@ var LINKS = {
   tracker: 'https://docs.google.com/spreadsheets/d/1wbdRNiXUiJjmzWQQBfeAx1ZXFonrgFxC4Ens494OV-4/copy',
   modules: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTg=',
   paperTracker: D('1hbrnJCqvVgVshUy6cUM8lpIN5y_QD2ya'),
+  passport: D('1ID_7PhTHfLskfPHV0XSt1MU2NvD5c_Hd'),
+  lanyards: D('1lqvnToNW92xC4gD-fChfWJCixYfgCF-P'),
   milestones: D('1tFT7N9o0RVCOWF3tgpRBuL0U7pMOs94P'),
   survey: 'https://stemfromdance.jotform.com/260905277241860',
   facSurvey: 'https://stemfromdance.jotform.com/260894470706868',
@@ -49,8 +51,8 @@ var LINKS = {
 // top: true opens in the Disco window. Everything else opens in a new tab.
 var STEPS = [
   { c: 'var(--orange)', short: 'Set up', when: 'Before Module 1', title: 'Set up',
-    text: 'Your site prints a Passport for each girl, plus stickers and lanyards. Make your copy of the Club Tracker.',
-    ctas: [{ t: 'Printables', href: LINKS.printables, top: true }, { t: 'Copy tracker', href: LINKS.tracker }] },
+    text: 'Print a media release and a Pathway Passport for each girl, plus a set of role lanyards for each crew.',
+    ctas: [{ t: 'Media release', href: 'files/sfd-media-release.pdf' }, { t: 'Passports', href: LINKS.passport }, { t: 'Lanyards', href: LINKS.lanyards }] },
   { c: 'var(--pink)', short: 'Watch & listen', when: 'Every session', title: 'Watch & listen',
     text: 'Follow the Milestone Moments on each Module Overview. They tell you when to watch for each milestone.',
     ctas: [{ t: 'My Modules', href: LINKS.modules, top: true }] },
