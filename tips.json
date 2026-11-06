@@ -1,0 +1,25 @@
+{
+  "A": {
+    "1": {
+      "plan": {
+        "title": "4 tips for your first time",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Read the Crew Roles script word for word the first time. It's written to land.",
+          "Explain AI as \"a friend who's never seen the picture.\" The clearer the words, the better the result.",
+          "If a pair gets stuck, suggest one change: add a color word, or say where things are.",
+          "Don't fix their prompts. The struggle is the lesson."
+        ]
+      },
+      "warmup": {
+        "title": "3 tips for this step",
+        "sub": "",
+        "tips": [
+          "Read the role scripts word for word the first time.",
+          "Call the AI \"a friend who's never seen the picture.\"",
+          "If a pair is stuck, suggest adding a color word."
+        ]
+      }
+    }
+  }
+}
