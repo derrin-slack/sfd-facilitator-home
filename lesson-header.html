@@ -77,7 +77,7 @@ h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;line-h
     ORDER.forEach(function (k, i) {
       var st = les.steps[k]; var a = link(base + st.id); a.className = 'tab' + (k === s ? ' on' : '');
       if (k === s) { a.style.background = C[k]; a.setAttribute('aria-current', 'step'); }
-      a.textContent = (i + 1) + ' · ' + st.label; tabs.appendChild(a);
+      a.textContent = (i + 1) + ' · ' + st.label + (st.sub ? ': ' + st.sub : ''); tabs.appendChild(a);
     });
     app.appendChild(tabs);
     var row = el('div', 'row');
