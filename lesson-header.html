@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson header</title>
+<style>
+@font-face{font-family:"Power Grotesk";src:url("fonts/PowerGrotesk-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Gilmer";src:url("fonts/gilmer-medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Gilmer";src:url("fonts/gilmer-bold.woff2") format("woff2");font-weight:700;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#080609;color:#fcf6f5;font-family:Gilmer,Arial,sans-serif;font-weight:500;overflow:auto}
+a{color:inherit}
+.wrap{min-height:100%;padding:22px clamp(16px,3vw,28px);display:flex;flex-direction:column;gap:16px}
+.eyebrow{margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#70e2f7}
+h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;line-height:1}
+.q{margin:0;font-size:18px;line-height:1.45;color:rgba(252,246,245,.8)}
+.bar{display:flex;flex-wrap:wrap;gap:6px}
+.seg{min-width:140px;min-height:84px;padding:12px 14px;color:#080609;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
+.seg b{font-size:17px}.seg span{font-size:14px}
+.seg:hover,.tab:hover{filter:brightness(1.08)}
+.seg:focus-visible,.tab:focus-visible{outline:3px solid #fcf6f5;outline-offset:2px}
+.tabs{display:flex;flex-wrap:wrap;gap:4px}
+.tab{flex:1 1 110px;min-height:40px;padding:8px 12px;font-size:14px;text-decoration:none;display:flex;align-items:center;border:2px solid #2c2830;color:#e9e4ec}
+.tab.on{color:#080609;font-weight:700;border-color:transparent}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px}
+.min{display:flex;flex-direction:column;gap:2px}
+.min b{font-family:"Power Grotesk",Gilmer,sans-serif;font-size:72px;line-height:1}
+.min span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.goal{flex:1 1 300px;display:flex;flex-direction:column;gap:6px}
+.goal p{margin:0;font-size:18px;line-height:1.45}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+(function () {
+  var C = { warmup: '#ff5700', learn: '#70e2f7', tryit: '#da328a', reflect: '#ebb1f4' };
+  var ORDER = ['warmup', 'learn', 'tryit', 'reflect'];
+  var q = new URLSearchParams(location.search);
+  var m = q.get('m') || 'A', l = q.get('l') || '1', s = q.get('s') || 'plan';
+  var app = document.getElementById('app');
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function link(href) { var a = document.createElement('a'); a.href = href; a.target = '_top'; return a; }
+  fetch('lessons.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
+    var mod = d[m], les = mod && mod.lessons[l];
+    if (!les) { app.appendChild(el('p', 'q', 'Lesson not found.')); return; }
+    var base = mod.base;
+    if (s === 'plan') {
+      app.appendChild(el('p', 'eyebrow', 'Lesson ' + l + ' of ' + mod.count + ' · ' + les.minutes + ' minutes'));
+      var h = el('h1', null, les.name); h.style.fontSize = 'clamp(30px,4.2vw,48px)'; app.appendChild(h);
+      if (les.question) app.appendChild(el('p', 'q', les.question));
+      app.appendChild(el('p', 'eyebrow', 'How this session runs · click a step to open it'));
+      var bar = el('div', 'bar');
+      ORDER.forEach(function (k, i) {
+        var st = les.steps[k]; var a = link(base + st.id); a.className = 'seg';
+        a.style.background = C[k]; a.style.flex = st.min + ' 1 0';
+        a.appendChild(el('b', null, (i + 1) + ' · ' + st.label + (st.sub ? ': ' + st.sub : '')));
+        a.appendChild(el('span', null, st.min + ' min · ' + st.blurb));
+        bar.appendChild(a);
+      });
+      app.appendChild(bar);
+      return;
+    }
+    var cur = les.steps[s];
+    var tabs = el('div', 'tabs'); tabs.setAttribute('aria-label', 'Session steps');
+    var plan = link(base + les.planId); plan.className = 'tab'; plan.textContent = 'Lesson Plan'; tabs.appendChild(plan);
+    ORDER.forEach(function (k, i) {
+      var st = les.steps[k]; var a = link(base + st.id); a.className = 'tab' + (k === s ? ' on' : '');
+      if (k === s) { a.style.background = C[k]; a.setAttribute('aria-current', 'step'); }
+      a.textContent = (i + 1) + ' · ' + st.label; tabs.appendChild(a);
+    });
+    app.appendChild(tabs);
+    var row = el('div', 'row');
+    var mn = el('div', 'min'); var b = el('b', null, String(cur.min)); b.style.color = C[s]; mn.appendChild(b); mn.appendChild(el('span', null, 'minutes')); row.appendChild(mn);
+    var g = el('div', 'goal');
+    g.appendChild(el('p', 'eyebrow', 'Lesson ' + l + ' · Step ' + (ORDER.indexOf(s) + 1) + ' of 4'));
+    var t = el('h1', null, cur.label + (cur.sub ? ': ' + cur.sub : '')); t.style.fontSize = 'clamp(30px,3.6vw,42px)'; g.appendChild(t);
+    g.appendChild(el('p', null, 'Goal: ' + cur.goal));
+    row.appendChild(g); app.appendChild(row);
+  }).catch(function () { app.appendChild(el('p', 'q', 'Could not load this header.')); });
+})();
+</script>
+</body>
+</html>

@@ -1,25 +1,89 @@
 {
   "A": {
     "1": {
-      "plan": {
-        "title": "4 tips for your first time",
-        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
-        "tips": [
-          "Read the Crew Roles script word for word the first time. It's written to land.",
-          "Explain AI as \"a friend who's never seen the picture.\" The clearer the words, the better the result.",
-          "If a pair gets stuck, suggest one change: add a color word, or say where things are.",
-          "Don't fix their prompts. The struggle is the lesson."
-        ]
-      },
-      "warmup": {
-        "title": "3 tips for this step",
-        "sub": "",
-        "tips": [
-          "Read the role scripts word for word the first time.",
-          "Call the AI \"a friend who's never seen the picture.\"",
-          "If a pair is stuck, suggest adding a color word."
-        ]
-      }
+      "plan": {"title": "4 tips for your first time", "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.", "tips": [
+        "Read the Crew Roles script word for word the first time. It's written to land.",
+        "Explain AI as \"a friend who's never seen the picture.\" The clearer the words, the better the result.",
+        "If a pair gets stuck, suggest one change: add a color word, or say where things are.",
+        "Don't fix their prompts. The struggle is the lesson."]},
+      "warmup": {"title": "3 tips for this step", "sub": "", "tips": [
+        "Read the role scripts word for word the first time.",
+        "Call the AI \"a friend who's never seen the picture.\"",
+        "If a pair is stuck, suggest adding a color word."]},
+      "learn": {"title": "3 tips for this step", "sub": "", "tips": [
+        "Share your own \"Me\" connection first, in under 30 seconds, to show the depth you want.",
+        "Point to the sentence starter when a girl gets stuck.",
+        "If you hear \"she's a woman like me,\" ask what about her path stands out."]},
+      "tryit": {"title": "3 tips for this step", "sub": "", "tips": [
+        "After each video pause, ask one question: \"What did the video just say AI uses to learn?\"",
+        "Let girls disagree on \"Is it intelligent?\" You don't need to settle it.",
+        "For MusicFX, offer one prompt shape: \"[Genre] song with [instrument] in the style of [artist].\""]},
+      "reflect": {"title": "2 tips for this step", "sub": "", "tips": [
+        "Give two quiet minutes to write before anyone talks.",
+        "Ask for volunteers on the last question. Don't call on anyone for it."]}
+    },
+    "2": {
+      "plan": {"title": "4 tips for this lesson", "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.", "tips": [
+        "Expect high energy in MusicFX and a dip during Marmoset. Use the Hype Squad to bridge it.",
+        "Girls will want to skip the mind map. Don't let them: the mind map is the prompt engineering.",
+        "Show 2 or 3 Marmoset examples on the projector before girls explore.",
+        "Tracks that miss the genre are useful. They teach prompting."]},
+      "warmup": {"title": "3 tips for this step", "sub": "", "tips": [
+        "Accept any wording during the recall.",
+        "If a crew is stuck, give a starter: \"AI learns by looking at lots of ___.\"",
+        "Keep a simple sheet of who has held each role."]},
+      "learn": {"title": "3 tips for this step", "sub": "", "tips": [
+        "Say: \"Computers can't hear music, so people give them words to describe it.\"",
+        "Show 2 or 3 Marmoset searches before girls explore.",
+        "Think out loud while you build the prompt, mistakes included."]},
+      "tryit": {"title": "3 tips for this step", "sub": "", "tips": [
+        "Check mind maps at the 5-minute mark. If one is blank, fill it in together: \"What instruments do you hear?\"",
+        "For the Afrobeats map, offer starter words: drums, percussion, energetic, joyful, building. Girls add one of their own.",
+        "Mind map before MusicFX, every round."]},
+      "reflect": {"title": "2 tips for this step", "sub": "", "tips": [
+        "Write KEEP / TRY / CHANGE on the board.",
+        "If a girl is stuck, offer: \"Keep the drums. Try a faster tempo. Change the mood word from chill to energetic.\""]}
+    },
+    "3": {
+      "plan": {"title": "4 tips for this lesson", "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.", "tips": [
+        "Build a sample model yourself before class. It takes 10 minutes.",
+        "Webcams fail? Switch to the Image Project and train on photos.",
+        "Push crews for variety: one dancer in one outfit means the model only knows her.",
+        "Watch for crews training on faces instead of poses."]},
+      "warmup": {"title": "2 tips for this step", "sub": "", "tips": [
+        "Stuck crews: \"AI is great at dogs because there are millions of dog photos online. It's bad at left-handed scissors because nobody photographs them.\"",
+        "Don't explain bias yet. Let the examples sit."]},
+      "learn": {"title": "3 tips for this step", "sub": "", "tips": [
+        "Say \"examples\" instead of \"samples\" and \"groups\" instead of \"classes.\"",
+        "Explain the percentage: \"The AI is guessing, and it tells you how sure it is.\"",
+        "Walk through every button on screen."]},
+      "tryit": {"title": "3 tips for this step", "sub": "", "tips": [
+        "At 10 minutes, check sample counts. Under 20 per move? Add 10 more with a different dancer.",
+        "Catch crews training on faces instead of poses.",
+        "When the model guesses wrong, ask: \"What does the AI think this is? Why?\""]},
+      "reflect": {"title": "2 tips for this step", "sub": "", "tips": [
+        "Stay with their own example: \"If your AI only saw one person dancing, it wouldn't recognize anyone else.\"",
+        "Then connect it: the same thing happens when face recognition is trained on one kind of face."]}
+    },
+    "4": {
+      "plan": {"title": "4 tips for this lesson", "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.", "tips": [
+        "Your energy sets the tone. This is a celebration, not a test.",
+        "Announce each crew yourself and lead the clap-in.",
+        "Keep transitions between crews under 30 seconds.",
+        "Celebrate every crew equally, mistakes included."]},
+      "warmup": {"title": "2 tips for this step", "sub": "", "tips": [
+        "Let each crew pick its own performance length.",
+        "Keep the brief on the board all lesson."]},
+      "learn": {"title": "2 tips for this step", "sub": "", "tips": [
+        "Offer 3 shapes: everyone in unison; a solo, then the crew joins one by one; or two pairs doing call-and-response.",
+        "Coach in four steps: pick moves, practice slowly, add the music, practice the order."]},
+      "tryit": {"title": "3 tips for this step", "sub": "", "tips": [
+        "Announce each crew and lead the clap-in.",
+        "If a Speaker freezes on the AI part, prompt: \"Tell us one prompt word your crew used.\"",
+        "If she freezes on the intro: \"Tell us your crew name.\""]},
+      "reflect": {"title": "2 tips for this step", "sub": "", "tips": [
+        "Put sentence starters on the board for the reflection form.",
+        "Keep it celebratory. Every girl stands for her role."]}
     }
   }
 }

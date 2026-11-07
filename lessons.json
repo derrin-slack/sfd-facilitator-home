@@ -1,0 +1,48 @@
+{
+  "A": {
+    "count": 4,
+    "base": "https://sfdclubs.disco.co/p/module-a-afrobeats-ai-facilitator-home-demo/curriculum/overview?drawerTab=module&u=",
+    "lessons": {
+      "1": {
+        "name": "Woman vs. Machine", "minutes": 90, "planId": "a934f440-a98f-4648-b151-6828d1069f56",
+        "question": "What is AI, and what role do humans play in shaping what it creates?",
+        "steps": {
+          "warmup": {"id": "edcd936a-db63-4e79-84ae-17d399da9bed", "label": "Warm up", "min": 20, "blurb": "crews and roles, Say What You See", "goal": "Crews form, pick roles, and see how AI reads their words."},
+          "learn": {"id": "c2341469-dbdb-464a-a2f1-eb3302f2e263", "label": "Learn", "min": 10, "blurb": "meet Mira Murati", "goal": "Girls meet a woman who leads in AI and see themselves in her story."},
+          "tryit": {"id": "27a7affe-054e-409e-85a4-33369ad02d2d", "label": "Try it", "min": 50, "blurb": "How AI Works video, Semantris, MusicFX", "goal": "Girls see that AI learns from patterns, then test it with Semantris and a first MusicFX track."},
+          "reflect": {"id": "08917697-15c3-471d-8e52-e8d007191b44", "label": "Reflect", "min": 10, "blurb": "AI as co-pilot", "goal": "Girls name how they steer AI. It's a co-pilot, not an autopilot."}
+        }
+      },
+      "2": {
+        "name": "AI Meets Afrobeats", "minutes": 90, "planId": "8cb8355a-a9d1-4ab8-9e25-9ff09f14fe66",
+        "question": "How can I prompt AI to create music in a specific genre?",
+        "steps": {
+          "warmup": {"id": "425a4b06-dcc1-4d5b-a612-6d17b7259df8", "label": "Warm up", "min": 10, "blurb": "role rotation, recall", "goal": "Crews rotate roles and recall how AI learns."},
+          "learn": {"id": "88f45e26-8522-4004-a217-19c93762816f", "label": "Learn", "min": 25, "blurb": "Marmoset tags, mind map model", "goal": "Girls see how the music industry describes songs for computers, then watch you build a prompt."},
+          "tryit": {"id": "4f66399c-bd5e-4920-bb75-1a9d921f7211", "label": "Try it", "min": 45, "blurb": "MusicFX rounds, Afrobeats track", "goal": "Crews revise their prompts and make the Afrobeats track they'll dance to in Lesson 4."},
+          "reflect": {"id": "634b1e06-ed36-49ae-9a83-b3e29daec8d6", "label": "Reflect", "min": 10, "blurb": "Keep, Try, Change", "goal": "Girls give and use specific feedback on their tracks."}
+        }
+      },
+      "3": {
+        "name": "Teach the Machine", "minutes": 90, "planId": "3653b4df-6be3-4ba9-af36-d50b9c7f827e",
+        "question": "What does it take to train an AI? And what does that mean for who builds AI?",
+        "steps": {
+          "warmup": {"id": "eb1902bf-6412-4a52-8452-63668a793ee4", "label": "Warm up", "min": 15, "blurb": "what AI can learn", "goal": "Crews rotate roles and spot what AI is good and bad at recognizing."},
+          "learn": {"id": "1e20a042-ef3e-425d-b998-3a4cbf3170ac", "label": "Learn", "min": 15, "blurb": "training video, live demo", "goal": "Girls learn the three steps of training: show examples, label them, test."},
+          "tryit": {"id": "76a17ca0-ca55-4fe1-900e-09a937a87529", "label": "Try it", "min": 40, "blurb": "train a 4-move model", "goal": "Each crew trains a 4-move dance model, tests it and makes it better."},
+          "reflect": {"id": "0519fb59-0485-4577-b2e7-ced6986e9e9e", "label": "Reflect", "min": 20, "blurb": "bias, 3-2-1", "goal": "Girls connect their training data to bias and to who builds AI."}
+        }
+      },
+      "4": {
+        "name": "Let's Dance Showcase", "minutes": 90, "planId": "b8c83b36-e716-4363-a2b8-4f9222dea7b4",
+        "question": "How do we bring AI, music and movement together in one performance?",
+        "steps": {
+          "warmup": {"id": "fd34d96c-047e-4d87-a661-e13cec58b7f4", "label": "Warm up", "min": 15, "blurb": "roles, Petit Afro, the brief", "goal": "Crews take performance roles and set their performance brief."},
+          "learn": {"id": "330fb017-1734-45f0-8bdd-801e340f8e69", "label": "Learn", "sub": "Rehearse", "min": 40, "blurb": "plan, learn moves, run it", "goal": "Crews plan, build and rehearse their routine."},
+          "tryit": {"id": "04a2cdd1-683c-4c07-a952-45b35dcd1542", "label": "Try it", "sub": "Showcase", "min": 25, "blurb": "the performances", "goal": "Every crew explains its AI track and performs."},
+          "reflect": {"id": "d7b620d5-65bd-49e6-9c8b-952758704352", "label": "Reflect", "sub": "Celebrate", "min": 10, "blurb": "reflection, assessment", "goal": "Girls reflect, take the Module Assessment and celebrate."}
+        }
+      }
+    }
+  }
+}
