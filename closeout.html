@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Close out</title>
+<style>
+@font-face{font-family:"Power Grotesk";src:url("fonts/PowerGrotesk-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Gilmer";src:url("fonts/gilmer-medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Gilmer";src:url("fonts/gilmer-bold.woff2") format("woff2");font-weight:700;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#080609;color:#fcf6f5;font-family:Gilmer,Arial,sans-serif;font-weight:500;overflow:auto}
+.wrap{min-height:100%;padding:18px clamp(16px,3vw,28px)}
+.head{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.min{display:flex;flex-direction:column;align-items:center;gap:2px}
+.min b{font-family:"Power Grotesk",Gilmer,sans-serif;font-size:72px;line-height:.95;color:#70e2f7}
+.min span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.goal{flex:1 1 300px;display:flex;flex-direction:column;gap:6px}
+.eyebrow{margin:0;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#70e2f7}
+h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;font-size:clamp(28px,3.6vw,38px);line-height:1}
+.goal p.g{margin:0;font-size:18px;line-height:1.45;color:rgba(252,246,245,.85)}
+.card{border-top:6px solid #da328a;padding-top:18px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px}
+.card img{width:180px;height:180px;background:#fff;padding:8px}
+.card .e{color:#ebb1f4}
+.card h2{margin:6px 0 0;font-family:"Power Grotesk",Gilmer,sans-serif;font-size:26px;line-height:1.1}
+.card .u{margin:8px 0 16px;font-size:15px;color:#c9c3ce;word-break:break-all}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 26px;border-radius:999px;background:linear-gradient(45deg,#ff5700,#da328a);color:#fff;font-weight:700;font-size:17px;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}.btn:focus-visible{outline:3px solid #fcf6f5;outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+(function () {
+  var DATA = {
+    student: { n: 1, title: 'Club Student Survey', min: 10, goal: 'Every girl shares how the Club went for her.',
+      url: 'https://stemfromdance.jotform.com/260905277241860', qr: 'files/qr-club-student-survey.png' },
+    fac: { n: 2, title: 'Post-Module Survey', min: 10, goal: 'Tell SFD how the module went for you and your Club.',
+      url: 'https://stemfromdance.jotform.com/260894470706868', qr: 'files/qr-post-module-survey.png' }
+  };
+  var q = new URLSearchParams(location.search);
+  var m = (q.get('m') || 'A').toUpperCase(), d = DATA[q.get('i') || 'student'], part = q.get('part') || 'header';
+  var app = document.getElementById('app');
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  if (!d) { app.textContent = 'Could not load this page.'; return; }
+  if (part === 'card') {
+    var c = el('div', 'card'); var img = el('img'); img.src = d.qr; img.alt = 'QR code for the ' + d.title; c.appendChild(img);
+    var t = el('div'); t.appendChild(el('p', 'eyebrow e', 'Scan or click')); t.appendChild(el('h2', null, d.title));
+    t.appendChild(el('p', 'u', d.url.replace('https://', '')));
+    var a = el('a', 'btn', 'Open survey'); a.href = d.url; a.target = '_blank'; a.rel = 'noopener'; a.setAttribute('aria-label', 'Open the ' + d.title + ' in a new tab'); t.appendChild(a);
+    c.appendChild(t); app.appendChild(c); return;
+  }
+  var h = el('div', 'head');
+  var mn = el('div', 'min'); mn.appendChild(el('b', null, String(d.min))); mn.appendChild(el('span', null, 'minutes')); h.appendChild(mn);
+  var g = el('div', 'goal'); g.appendChild(el('p', 'eyebrow', 'Close out Module ' + m + ' · ' + d.n + ' of 2'));
+  g.appendChild(el('h1', null, d.title)); g.appendChild(el('p', 'g', 'Goal: ' + d.goal)); h.appendChild(g);
+  app.appendChild(h);
+})();
+</script>
+</body>
+</html>
