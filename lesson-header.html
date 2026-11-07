@@ -11,12 +11,12 @@
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;background:#080609;color:#fcf6f5;font-family:Gilmer,Arial,sans-serif;font-weight:500;overflow:auto}
 a{color:inherit}
-.wrap{min-height:100%;padding:18px clamp(16px,3vw,28px);display:flex;flex-direction:column;gap:12px}
+.wrap{min-height:100%;padding:16px clamp(16px,3vw,28px);display:flex;flex-direction:column;gap:10px}
 .eyebrow{margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#70e2f7}
 h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;line-height:1}
 .q{margin:0;font-size:17px;line-height:1.45;color:rgba(252,246,245,.8)}
 .bar{display:flex;flex-wrap:wrap;gap:6px}
-.seg{min-width:140px;min-height:76px;padding:10px 14px;color:#080609;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
+.seg{min-width:140px;min-height:72px;padding:10px 14px;color:#080609;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
 .seg b{font-size:17px}.seg span{font-size:14px}
 .seg:hover,.tab:hover{filter:brightness(1.08)}
 .seg:focus-visible,.tab:focus-visible{outline:3px solid #fcf6f5;outline-offset:2px}
@@ -49,7 +49,7 @@ h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;line-h
     var base = mod.base;
     if (s === 'plan') {
       app.appendChild(el('p', 'eyebrow', 'Lesson ' + l + ' of ' + mod.count + ' · ' + les.minutes + ' minutes'));
-      var h = el('h1', null, les.name); h.style.fontSize = 'clamp(30px,4.2vw,48px)'; app.appendChild(h);
+      var h = el('h1', null, les.name); h.style.fontSize = 'clamp(28px,4vw,42px)'; app.appendChild(h);
       if (les.question) app.appendChild(el('p', 'q', les.question));
       app.appendChild(el('p', 'eyebrow', 'How this session runs · click a step to open it'));
       var bar = el('div', 'bar');
