@@ -29,6 +29,7 @@ h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;line-h
 .min span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 .goal{flex:1 1 300px;display:flex;flex-direction:column;gap:6px}
 .goal p{margin:0;font-size:18px;line-height:1.45}
+.print{align-self:flex-start;font-size:14px;font-weight:700;color:#70e2f7}
 </style>
 </head>
 <body>
@@ -60,6 +61,7 @@ h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;line-h
         bar.appendChild(a);
       });
       app.appendChild(bar);
+      var pr = document.createElement('a'); pr.href = 'files/sfd-how-to-run-a-session.pdf'; pr.target = '_blank'; pr.rel = 'noopener'; pr.className = 'print'; pr.textContent = 'Print session steps'; app.appendChild(pr);
       return;
     }
     var cur = les.steps[s];

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Start Here</title>
+<title>Five Steps to Launch</title>
 <link rel="stylesheet" href="sfd.css">
 <style>
 .prog{display:flex;align-items:center;gap:14px;margin:20px 0 18px}
@@ -32,7 +32,7 @@
 <div class="bar" aria-hidden="true"></div>
 <main class="wrap">
 <p class="eyebrow">New here? Start with this</p>
-<h1>Start Here</h1>
+<h1>Five Steps to Launch</h1>
 <p class="sub">Five quick steps. About 20 minutes.</p>
 
 <div class="prog">
@@ -56,8 +56,8 @@ var STEPS = [
   { id: 'mark', n: 1, c: 'var(--lav)', title: 'Bookmark Disco', text: 'Save this page so you can get back in one click. Press Ctrl+D, or Cmd+D on a Mac.' },
   { id: 'hi', n: 2, c: 'var(--orange)', title: 'Say hi', text: 'Post one line in Share & Learn. Tell us your name and your Club.', cta: 'Say hi', href: LINKS.ask },
   { id: 'date', n: 3, c: 'var(--cyan)', title: 'Save the date', text: 'Club Support Hours are every other Thursday, 2:30 to 4:30 PM ET.', cta: 'See Live Help', href: LINKS.live },
-  { id: 'steps', n: 4, c: 'var(--orange)', title: 'Review the 5 steps', text: 'See how to run the Innovator Pathway so you can recognize and celebrate your girls.', cta: 'See the steps', href: LINKS.steps, scroll: true },
-  { id: 'modA', n: 5, c: 'var(--pink)', title: 'Open Module A', text: 'Download your guide and skim Lesson 1. Your five steps are at the top of every module.', cta: 'Open Module A', href: LINKS.moduleA, alt: 'Compare modules', altNote: 'Not sure which module fits?', altHref: 'files/sfd-choosing-your-first-module.pdf' }
+  { id: 'steps', n: 4, c: 'var(--orange)', title: 'See how a module runs', text: 'Run the Pathway: five steps you repeat in every module so you can recognize and celebrate your girls.', cta: 'See the Pathway', href: LINKS.steps, scroll: 'module-flow' },
+  { id: 'pick', n: 5, c: 'var(--pink)', title: 'Pick your module', text: 'Compare the nine modules and open the one that fits your Club. Every module starts with Before You Teach.', cta: 'Pick a module', href: 'module-picker.html', scroll: 'module-picker' }
 ];
 var KEY = 'sfd-start-here-v1';
 var done = {};
@@ -78,7 +78,7 @@ STEPS.forEach(function (s) {
   if (s.scroll) { a.target = '_blank'; a.rel = 'noopener'; }
   a.addEventListener('click', function (ev) {
     done[s.id] = true; save(); render();
-    if (s.scroll && scrollToGuide()) { ev.preventDefault(); }
+    if (s.scroll && scrollToGuide(s.scroll)) { ev.preventDefault(); }
   });
   chk.addEventListener('click', function () { done[s.id] = !done[s.id]; save(); render(); });
   top.appendChild(num); top.appendChild(chk);
@@ -108,12 +108,12 @@ function render() {
 // The five-step guide sits lower on the same Disco page in its own frame.
 // Both frames come from this site, so this one can find it and scroll it into view.
 // If that is not possible, the button opens the guide in a new tab instead.
-function scrollToGuide() {
+function scrollToGuide(name) {
   try {
     var f = window.parent.frames;
     for (var i = 0; i < f.length; i++) {
       try {
-        if (f[i] !== window && /module-flow/.test(f[i].location.pathname)) {
+        if (f[i] !== window && f[i].location.pathname.indexOf(name) > -1) {
           f[i].document.body.scrollIntoView({ behavior: 'smooth', block: 'start' });
           return true;
         }
