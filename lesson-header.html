@@ -11,12 +11,12 @@
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;background:#080609;color:#fcf6f5;font-family:Gilmer,Arial,sans-serif;font-weight:500;overflow:auto}
 a{color:inherit}
-.wrap{min-height:100%;padding:22px clamp(16px,3vw,28px);display:flex;flex-direction:column;gap:16px}
+.wrap{min-height:100%;padding:18px clamp(16px,3vw,28px);display:flex;flex-direction:column;gap:12px}
 .eyebrow{margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#70e2f7}
 h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;line-height:1}
-.q{margin:0;font-size:18px;line-height:1.45;color:rgba(252,246,245,.8)}
+.q{margin:0;font-size:17px;line-height:1.45;color:rgba(252,246,245,.8)}
 .bar{display:flex;flex-wrap:wrap;gap:6px}
-.seg{min-width:140px;min-height:84px;padding:12px 14px;color:#080609;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
+.seg{min-width:140px;min-height:76px;padding:10px 14px;color:#080609;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
 .seg b{font-size:17px}.seg span{font-size:14px}
 .seg:hover,.tab:hover{filter:brightness(1.08)}
 .seg:focus-visible,.tab:focus-visible{outline:3px solid #fcf6f5;outline-offset:2px}
@@ -29,7 +29,7 @@ h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;line-h
 .min span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 .goal{flex:1 1 300px;display:flex;flex-direction:column;gap:6px}
 .goal p{margin:0;font-size:18px;line-height:1.45}
-.print{align-self:flex-start;font-size:14px;font-weight:700;color:#70e2f7}
+.links{display:flex;flex-wrap:wrap;gap:6px 22px}.links a{font-size:14px;font-weight:700;color:#70e2f7}
 </style>
 </head>
 <body>
@@ -61,7 +61,14 @@ h1{margin:0;font-family:"Power Grotesk",Gilmer,sans-serif;font-weight:700;line-h
         bar.appendChild(a);
       });
       app.appendChild(bar);
-      var pr = document.createElement('a'); pr.href = 'files/sfd-how-to-run-a-session.pdf'; pr.target = '_blank'; pr.rel = 'noopener'; pr.className = 'print'; pr.textContent = 'Print session steps'; app.appendChild(pr);
+      var lk = el('div', 'links');
+      [['Print session steps', 'files/sfd-how-to-run-a-session.pdf'],
+       ['Facilitator pages', les.files && les.files.facilitator],
+       ['Student pages', les.files && les.files.student]].forEach(function (x) {
+        if (!x[1]) return;
+        var a = document.createElement('a'); a.href = x[1]; a.target = '_blank'; a.rel = 'noopener'; a.textContent = x[0]; lk.appendChild(a);
+      });
+      app.appendChild(lk);
       return;
     }
     var cur = les.steps[s];
