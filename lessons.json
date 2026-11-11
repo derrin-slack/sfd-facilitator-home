@@ -1011,5 +1011,158 @@
         }
       }
     }
+  },
+  "G": {
+    "count": 4,
+    "base": "https://sfdclubs.disco.co/p/module-g-speakerboxx-new-layout-draft/curriculum/overview?drawerTab=module&u=",
+    "lessons": {
+      "1": {
+        "name": "Sound You Can Feel",
+        "minutes": 85,
+        "planId": "b9dd065b-7cea-4b2f-a623-80f3488d033b",
+        "question": "How does sound, or the absence of it, change how your body feels and how you move?",
+        "steps": {
+          "warmup": {
+            "id": "197e3dd4-9c53-4e1a-9a7b-c05bfc9b0321",
+            "label": "Warm up",
+            "min": 25,
+            "blurb": "crews and roles, feel the tone generator",
+            "goal": "Crews form and girls feel sound in their bodies before any teaching."
+          },
+          "learn": {
+            "id": "c1b95c20-a02f-4420-a03e-956656cc63ba",
+            "label": "Learn",
+            "min": 20,
+            "blurb": "infrasound video, knowledge check, debrief",
+            "goal": "Girls learn what infrasound is and connect what they felt to the science."
+          },
+          "tryit": {
+            "id": "980ccf67-50fb-4590-92b5-abc2c3a65adc",
+            "label": "Try it",
+            "min": 30,
+            "blurb": "Jigsaw: expert groups, then teach each other",
+            "goal": "Girls become experts on one sound topic and teach it to their group."
+          },
+          "reflect": {
+            "id": "5a123f60-98af-48d6-831f-9d0d8fc35748",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "final discussion",
+            "goal": "Girls connect sound to how they feel and move."
+          }
+        }
+      },
+      "2": {
+        "name": "Sound You Can Build",
+        "minutes": 90,
+        "planId": "85f692d0-4036-4843-9276-12b313301f62",
+        "question": "If sound comes from vibration, what's the least you need to make something vibrate on command?",
+        "steps": {
+          "warmup": {
+            "id": "f767e4b8-89b2-43fb-98d2-135a13cbef95",
+            "label": "Warm up",
+            "min": 10,
+            "blurb": "crews and roles, what do you remember?",
+            "goal": "Crews form and girls bring back what they learned about sound and the body."
+          },
+          "learn": {
+            "id": "16c96851-6f6a-44f2-bde7-e827848c72cb",
+            "label": "Learn",
+            "min": 20,
+            "blurb": "how speakers work video and notes",
+            "goal": "Girls learn that every speaker has one part that vibrates to make sound."
+          },
+          "tryit": {
+            "id": "be0ede62-8f65-4ae9-acc0-075fbcf33d39",
+            "label": "Try it",
+            "min": 45,
+            "blurb": "build your speaker: parts 1 and 2",
+            "goal": "Groups build the voice coil and speaker cone."
+          },
+          "reflect": {
+            "id": "24e8cbba-287b-4d86-8843-a1a14bd921c3",
+            "label": "Reflect",
+            "min": 15,
+            "blurb": "clean up, make a prediction",
+            "goal": "Groups store their work safely and predict what will make a speaker better."
+          }
+        }
+      },
+      "3": {
+        "name": "Speaker Showdown",
+        "minutes": 85,
+        "planId": "28e4e047-c054-4820-9238-d3b48e9c810f",
+        "question": "A finished speaker isn't the goal. Can you explain why it works, or why it doesn't?",
+        "steps": {
+          "warmup": {
+            "id": "42306984-96d9-4a86-b325-6d85f6e384f0",
+            "label": "Warm up",
+            "min": 10,
+            "blurb": "crews and roles, what do you remember?",
+            "goal": "Crews form and girls recall how a speaker works."
+          },
+          "learn": {
+            "id": "6ce9f0f5-ee9f-474c-aa72-9ddbb4e1f29c",
+            "label": "Learn",
+            "sub": "Finish the Build",
+            "min": 40,
+            "blurb": "finish the speaker: parts 3, 4 and 5",
+            "goal": "Groups finish building and troubleshoot their speakers."
+          },
+          "tryit": {
+            "id": "7ba4580e-3339-4964-a897-b3086e46fe5c",
+            "label": "Try it",
+            "sub": "Speaker Showdown",
+            "min": 25,
+            "blurb": "test volume and accuracy, present the design",
+            "goal": "Every group tests its speaker and presents the design."
+          },
+          "reflect": {
+            "id": "8f209224-14b1-4d3b-8da6-76ca52df603c",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "final reflection, forms",
+            "goal": "Girls reflect on their speaker and how to improve it."
+          }
+        }
+      },
+      "4": {
+        "name": "Traditions of Sound",
+        "minutes": 90,
+        "planId": "23b435e0-af45-42e9-801b-82dac2f9c5b8",
+        "question": "What if the speaker you built is a modern version of something bodies and instruments have done for centuries?",
+        "steps": {
+          "warmup": {
+            "id": "619c3848-1c7b-43b8-bceb-beee57f4dbad",
+            "label": "Warm up",
+            "min": 15,
+            "blurb": "crews and roles, the big connection, tradition previews",
+            "goal": "Girls see that people solved the physics of sound with their bodies long ago."
+          },
+          "learn": {
+            "id": "3e6bd629-f4dc-4f27-8fb3-38ae878ab619",
+            "label": "Learn",
+            "min": 25,
+            "blurb": "choose a tradition, watch, research, connect",
+            "goal": "Groups find the vibrating object in their tradition and match it to a speaker part."
+          },
+          "tryit": {
+            "id": "4cdd3223-f6e6-4456-9458-49ddbaf80070",
+            "label": "Try it",
+            "min": 15,
+            "blurb": "build a movement exploration",
+            "goal": "Groups create a 60 to 90 second movement piece that shows the physics."
+          },
+          "reflect": {
+            "id": "e846fa4b-f857-423c-971b-13d9568cd15f",
+            "label": "Reflect",
+            "sub": "Showcase",
+            "min": 35,
+            "blurb": "Traditions of Sound showcase, surveys",
+            "goal": "Every group performs and the module closes."
+          }
+        }
+      }
+    }
   }
 }

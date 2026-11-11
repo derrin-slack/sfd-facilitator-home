@@ -1128,5 +1128,168 @@
         ]
       }
     }
+  },
+  "G": {
+    "1": {
+      "plan": {
+        "title": "4 tips for your first time",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Test the tone generator on your speaker before class.",
+          "Ask about sound sensitivity before playing the tones.",
+          "Give the Jigsaw its full 30 minutes.",
+          "Post the extension choices before class."
+        ]
+      },
+      "warmup": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Take the full 8 minutes for roles in Lesson 1.",
+          "Write the girls' own words on the board."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Accept every answer in the debrief."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Keep the 2-minute timer for each expert.",
+          "Use the sentence frame for stuck groups."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Invite one girl to show a move inspired by a tone."
+        ]
+      }
+    },
+    "2": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Order magnets and wire a week ahead.",
+          "Strip the wire ends before class.",
+          "Watch the build video yourself first."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Push girls into roles they haven't had yet."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Use the simple version: coil, magnet, vibrating cone."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Play the full build video before anyone starts.",
+          "Check every coil at the 10-minute mark."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Label and bag every part. Nothing loose."
+        ]
+      }
+    },
+    "3": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "A speaker that doesn't work is still a lesson.",
+          "Check the coil first, then the wire ends.",
+          "Give the apps to the Rhythm Keepers."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Let a girl who gets it explain it to the room."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Troubleshoot before you explain."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Every group presents, working speaker or not.",
+          "Celebrate first, then ask what they'd fix."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Leave time for the assessment forms."
+        ]
+      }
+    },
+    "4": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "One real physics link is enough.",
+          "Have kathak prompts ready.",
+          "Keep groups to 4 per tradition."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Treat each tradition as a living culture."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Ask: what moves, and what makes it louder?"
+        ]
+      },
+      "tryit": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Ask each group what physics they'll name."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Keep each group to 5 minutes so everyone performs."
+        ]
+      }
+    }
   }
 }
