@@ -167,5 +167,158 @@
         }
       }
     }
+  },
+  "B": {
+    "count": 4,
+    "base": "https://sfdclubs.disco.co/p/module-b-reggaeton-algorithms-virality-new-layout-draft/curriculum/overview?drawerTab=module&u=",
+    "lessons": {
+      "1": {
+        "name": "Going Viral",
+        "minutes": 90,
+        "planId": "f90d8775-dea0-455e-856e-4bd0fb8c7add",
+        "question": "What makes content go viral, and who decides what we see?",
+        "steps": {
+          "warmup": {
+            "id": "3467e8bb-cbb5-4fdd-bee5-79fbb9eb4d3a",
+            "label": "Warm up",
+            "min": 20,
+            "blurb": "crews and roles, why things go viral",
+            "goal": "Crews form, pick roles, and name why people share what they share."
+          },
+          "learn": {
+            "id": "bb103c0a-31a5-49fe-bb6f-491725cfc7c2",
+            "label": "Learn",
+            "min": 40,
+            "blurb": "case studies, two algorithms, PBS video",
+            "goal": "Girls see how algorithms score posts, and why some push angry posts further."
+          },
+          "tryit": {
+            "id": "2178f65e-547a-48fa-88f5-c9aea5ecff49",
+            "label": "Try it",
+            "min": 20,
+            "blurb": "Canva infographic",
+            "goal": "Crews make an infographic about what makes posts go viral, or how algorithms can do harm."
+          },
+          "reflect": {
+            "id": "37c744e2-9fb4-4011-9ce3-98d367d73b64",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "gallery walk",
+            "goal": "Girls share their infographics and name one thing they learned."
+          }
+        }
+      },
+      "2": {
+        "name": "Not So Despacito",
+        "minutes": 90,
+        "planId": "f3fef80d-c930-49da-af2d-4ba39f407a47",
+        "question": "How do algorithms shape who becomes famous?",
+        "steps": {
+          "warmup": {
+            "id": "45522d76-f609-40ac-a5f7-cf88068aea0e",
+            "label": "Warm up",
+            "min": 12,
+            "blurb": "role rotation, Just Dance",
+            "goal": "Crews rotate roles, dance to Despacito and ask why it went viral."
+          },
+          "learn": {
+            "id": "36b2d684-db16-4ce1-9c77-b3a07f3cfdbe",
+            "label": "Learn",
+            "min": 30,
+            "blurb": "TikTok hits, the project, Reggaeton",
+            "goal": "Girls see who shapes a viral hit, choose a driving question and learn where Reggaeton comes from."
+          },
+          "tryit": {
+            "id": "fe397033-7ef0-4ae9-aa32-95805016a9fa",
+            "label": "Try it",
+            "min": 35,
+            "blurb": "three Reggaeton moves",
+            "goal": "Every girl learns three Reggaeton moves, and each crew shows one."
+          },
+          "reflect": {
+            "id": "22ba9635-632a-4dc2-896e-40d6b7c7277f",
+            "label": "Reflect",
+            "min": 13,
+            "blurb": "video brainstorm",
+            "goal": "Crews choose a driving question and brainstorm their video's message and opening."
+          }
+        }
+      },
+      "3": {
+        "name": "Tune the Feed",
+        "minutes": 90,
+        "planId": "f08b1164-f71d-4a11-aed2-13e138e89547",
+        "question": "If you built the algorithm, what would your feed look like?",
+        "steps": {
+          "warmup": {
+            "id": "00f523ec-24f2-4129-af70-2689ac507b9a",
+            "label": "Warm up",
+            "min": 12,
+            "blurb": "role rotation, what's in your feed",
+            "goal": "Crews rotate roles and notice what their feeds show them."
+          },
+          "learn": {
+            "id": "0c68bd25-262d-420f-a04c-72e180cafbe3",
+            "label": "Learn",
+            "min": 13,
+            "blurb": "signals times weights",
+            "goal": "Girls learn that a feed ranks posts by signals times weights, and that the platform picks the weights."
+          },
+          "tryit": {
+            "id": "80ad85b9-3133-46b2-8e2b-fe63669b2aaf",
+            "label": "Try it",
+            "min": 45,
+            "blurb": "card sort, Teachable Machine",
+            "goal": "Crews design and test their own algorithm, then train an AI to sort posts."
+          },
+          "reflect": {
+            "id": "6b4d3517-9c30-4c3d-a4a3-53e022930bb7",
+            "label": "Reflect",
+            "min": 20,
+            "blurb": "what feeds should reward, 3-2-1",
+            "goal": "Girls weigh what algorithms should reward, and who should design them."
+          }
+        }
+      },
+      "4": {
+        "name": "Improving Algorithms Showcase",
+        "minutes": 90,
+        "planId": "c80dc700-1fbc-40cf-a8e6-c9468f97eac3",
+        "question": "How do we share a message about algorithms in a short video?",
+        "steps": {
+          "warmup": {
+            "id": "54595f31-cda8-4bec-9568-141d29e20030",
+            "label": "Warm up",
+            "min": 10,
+            "blurb": "showcase roles, Just Dance, the brief",
+            "goal": "Crews take showcase roles, warm up and hear the video brief."
+          },
+          "learn": {
+            "id": "ed8234a3-0e42-469c-b28e-309ede4b83d8",
+            "label": "Learn",
+            "sub": "Film",
+            "min": 50,
+            "blurb": "storyboard, film",
+            "goal": "Crews plan their video panel by panel, then film it."
+          },
+          "tryit": {
+            "id": "146fde02-06a0-4015-95cd-ed5231467c3e",
+            "label": "Try it",
+            "sub": "Showcase",
+            "min": 20,
+            "blurb": "video premieres",
+            "goal": "Every crew premieres its video and explains its message."
+          },
+          "reflect": {
+            "id": "b612e731-0662-474d-8c4b-30645779578d",
+            "label": "Reflect",
+            "sub": "Celebrate",
+            "min": 10,
+            "blurb": "reflection, celebration",
+            "goal": "Girls reflect on the module and celebrate."
+          }
+        }
+      }
+    }
   }
 }
