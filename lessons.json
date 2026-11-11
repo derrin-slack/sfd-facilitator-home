@@ -857,5 +857,159 @@
         }
       }
     }
+  },
+  "F": {
+    "count": 4,
+    "base": "https://sfdclubs.disco.co/p/module-f-no-breath-no-justice-new-layout-draft/curriculum/overview?drawerTab=module&u=",
+    "lessons": {
+      "1": {
+        "name": "And Breathe",
+        "minutes": 85,
+        "planId": "30eadf9e-98b1-4aa2-b11d-4f95050c06c1",
+        "question": "What parts of your body work together to help you breathe, and how does dancing change that?",
+        "steps": {
+          "warmup": {
+            "id": "73b457de-9d1c-4ba7-8cf5-1b07a3103607",
+            "label": "Warm up",
+            "min": 20,
+            "blurb": "crews and roles, Just Dance, what helps us breathe",
+            "goal": "Crews form, dance and notice what their bodies do when they breathe hard."
+          },
+          "learn": {
+            "id": "2f63139b-8dd2-4731-a497-f426aebdb81a",
+            "label": "Learn",
+            "min": 10,
+            "blurb": "respiratory system video, knowledge check",
+            "goal": "Girls learn the main parts of the respiratory system."
+          },
+          "tryit": {
+            "id": "32eba44f-6084-4743-9bec-46ed614556aa",
+            "label": "Try it",
+            "min": 40,
+            "blurb": "build a lung model",
+            "goal": "Pairs build a working model of the respiratory system."
+          },
+          "reflect": {
+            "id": "df64f592-942b-403a-b9d7-6e205bd6deb9",
+            "label": "Reflect",
+            "min": 15,
+            "blurb": "gallery walk, think pair share",
+            "goal": "Girls compare models and think about what happens when breath runs out."
+          }
+        }
+      },
+      "2": {
+        "name": "Out of Breath",
+        "minutes": 90,
+        "planId": "8d248b07-8d3e-45b5-9bca-71dbadd3f33a",
+        "question": "If dance changes how hard your body works, can you design an experiment to prove it?",
+        "steps": {
+          "warmup": {
+            "id": "519a0038-24eb-4a6a-bab6-3627f95a4132",
+            "label": "Warm up",
+            "min": 15,
+            "blurb": "role rotation, resting rate, Waka Waka",
+            "goal": "Girls measure their resting breathing rate and compare it after dancing."
+          },
+          "learn": {
+            "id": "ffd81aea-9e53-440d-9bb7-8b031dbe255c",
+            "label": "Learn",
+            "min": 10,
+            "blurb": "heart and lung connection",
+            "goal": "Girls learn how the heart and lungs work as a team."
+          },
+          "tryit": {
+            "id": "c7db52ed-9568-4c50-a044-417208964529",
+            "label": "Try it",
+            "min": 50,
+            "blurb": "design the experiment, collect data, graph",
+            "goal": "Groups design and run an experiment, then graph the results."
+          },
+          "reflect": {
+            "id": "6963f1c9-58c8-41b8-be8b-46b1b182ded7",
+            "label": "Reflect",
+            "min": 15,
+            "blurb": "I used to think, now I think",
+            "goal": "Girls describe how their thinking about dance and breathing changed."
+          }
+        }
+      },
+      "3": {
+        "name": "No Breath, No Justice",
+        "minutes": 90,
+        "planId": "5dbca178-6051-44ee-a004-4f8ea6bf6057",
+        "question": "Why do some communities have less clean air, and what can dance do about it?",
+        "steps": {
+          "warmup": {
+            "id": "d8c18cf8-c640-45fd-824e-44fc92ae65b2",
+            "label": "Warm up",
+            "min": 15,
+            "blurb": "role rotation, Just Dance with a straw",
+            "goal": "Girls feel what restricted breathing is like while they dance."
+          },
+          "learn": {
+            "id": "0952acbe-8b68-4fd6-93ed-b2d88291a2ce",
+            "label": "Learn",
+            "min": 20,
+            "blurb": "what's in the air, AQI model",
+            "goal": "Girls learn what's in the air and what changes the Air Quality Index."
+          },
+          "tryit": {
+            "id": "ae489fa2-6b66-416f-9c3c-7985d80c7587",
+            "label": "Try it",
+            "min": 25,
+            "blurb": "choose a source, mind map, I used to think",
+            "goal": "Girls study real evidence about air, race and poverty and map what they learn."
+          },
+          "reflect": {
+            "id": "cf4ca2b0-f85e-428a-849a-df5fbcdcad96",
+            "label": "Reflect",
+            "sub": "Plan",
+            "min": 30,
+            "blurb": "plan the advocacy routine",
+            "goal": "Groups choose a song and start planning their advocacy routine."
+          }
+        }
+      },
+      "4": {
+        "name": "Just Dance",
+        "minutes": 90,
+        "planId": "3a306b18-16b9-4ce5-9ff9-588fccc69410",
+        "question": "What does it look like when science becomes art, and art becomes advocacy?",
+        "steps": {
+          "warmup": {
+            "id": "8c7c4f03-993d-4dd8-9494-ba1aabec2c54",
+            "label": "Warm up",
+            "min": 10,
+            "blurb": "role rotation, warm-up dance",
+            "goal": "Crews set roles and warm up for performance day."
+          },
+          "learn": {
+            "id": "2aeb0d98-0b9c-495f-adcc-d97de54580cb",
+            "label": "Learn",
+            "sub": "Storyboard",
+            "min": 15,
+            "blurb": "plan the routine on paper",
+            "goal": "Each group storyboards its routine before anyone moves."
+          },
+          "tryit": {
+            "id": "cc4008e7-297b-4d0e-ad4c-53e437bc33ce",
+            "label": "Try it",
+            "sub": "Build and refine",
+            "min": 40,
+            "blurb": "build, peer check, refine",
+            "goal": "Groups build the routine, get peer feedback and polish it."
+          },
+          "reflect": {
+            "id": "9e587824-fc5e-4657-8a0c-6f666d72a73b",
+            "label": "Reflect",
+            "sub": "Perform",
+            "min": 25,
+            "blurb": "performances, surveys",
+            "goal": "Every group performs its message and the module closes."
+          }
+        }
+      }
+    }
   }
 }

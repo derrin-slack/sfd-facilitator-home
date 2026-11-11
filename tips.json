@@ -966,5 +966,167 @@
         ]
       }
     }
+  },
+  "F": {
+    "1": {
+      "plan": {
+        "title": "4 tips for your first time",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Pre-cut every bottle before class.",
+          "Give the model build its full 40 minutes.",
+          "Don't answer the opening question. Let the video do it.",
+          "Keep breathing exercises optional."
+        ]
+      },
+      "warmup": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Take the full 8 minutes for roles in Lesson 1.",
+          "Write every answer on the board, right or wrong."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Cross off and circle. That comparison is the lesson."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Play the whole build video before anyone starts.",
+          "Sticky tac fixes most straw problems."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "The gallery walk is learning time, not cleanup time. Keep both groups moving."
+        ]
+      }
+    },
+    "2": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Model counting one breath before the experiment.",
+          "Test MetaChart.com before class.",
+          "Protect the hypothesis step."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Push girls into roles they haven't had yet."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Use the team picture: heart and lungs working together."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Check each group's data table at 5 minutes.",
+          "Chart paper works if MetaChart fails."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Save the Mae Jemison video for groups that finish early."
+        ]
+      }
+    },
+    "3": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Set a safe tone before the content starts.",
+          "Frame the straw as a picture, not a test.",
+          "You don't need to fix it. Hold the space."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Hand out straws without explaining. Let the dance do it."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Start with the cars slider, then try rain."
+        ]
+      },
+      "tryit": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Ask how the source connects to last lesson's experiment."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Make sure every group agrees on the same song version."
+        ]
+      }
+    },
+    "4": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Never skip the storyboard.",
+          "Use the timer so you don't have to.",
+          "Pair weaker groups with stronger ones for the peer check."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Let the whole song play."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Every group checks in before building."
+        ]
+      },
+      "tryit": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Send drifting groups back to the storyboard."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "A group can present its storyboard out loud if it truly isn't ready."
+        ]
+      }
+    }
   }
 }
