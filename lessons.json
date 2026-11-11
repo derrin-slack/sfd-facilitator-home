@@ -320,5 +320,197 @@
         }
       }
     }
+  },
+  "C": {
+    "count": 5,
+    "base": "https://sfdclubs.disco.co/p/module-c-rhythm-rotation-radical-moves-new-layout-draft/curriculum/overview?drawerTab=module&u=",
+    "lessons": {
+      "1": {
+        "name": "Humans in the Hoop",
+        "minutes": 90,
+        "planId": "7ae0a51a-cf85-4f62-b26e-787f0be2f17d",
+        "question": "What keeps a hula hoop up?",
+        "steps": {
+          "warmup": {
+            "id": "7f26c06a-4943-41b3-9385-df1d6fb8c81c",
+            "label": "Warm up",
+            "min": 20,
+            "blurb": "crews and roles, hoop stories, See Think Wonder",
+            "goal": "Crews form, pick roles and get curious about hoop dance."
+          },
+          "learn": {
+            "id": "dbcac463-1ba3-4b47-bb03-bfb386523060",
+            "label": "Learn",
+            "min": 30,
+            "blurb": "Hoop Challenge, science of the spin",
+            "goal": "Crews collect data on hoop sizes and learn what keeps a hoop up."
+          },
+          "tryit": {
+            "id": "6ad9bba7-d249-44b3-ac66-8e23169e7f2d",
+            "label": "Try it",
+            "min": 30,
+            "blurb": "hoop tutorial, challenge levels",
+            "goal": "Every girl practices hoop moves at a level that stretches her."
+          },
+          "reflect": {
+            "id": "9e7e9ba6-bfa0-4bf5-b1ed-648f567ba9c4",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "3-2-1",
+            "goal": "Girls name the science words and facts they learned."
+          }
+        }
+      },
+      "2": {
+        "name": "Old School Beats",
+        "minutes": 90,
+        "planId": "bee29286-15e1-4d58-9afd-55851b592e28",
+        "question": "How do drums create the rhythms that power dance?",
+        "steps": {
+          "warmup": {
+            "id": "0d787659-4036-4a29-8841-fd37a52f95fc",
+            "label": "Warm up",
+            "min": 20,
+            "blurb": "role rotation, song share, name that instrument",
+            "goal": "Crews rotate roles and start listening closely to sound."
+          },
+          "learn": {
+            "id": "590e0b28-0d34-4331-a802-a289f6921c77",
+            "label": "Learn",
+            "min": 30,
+            "blurb": "sound waves, oscilloscope",
+            "goal": "Girls see that pitch comes from frequency and volume comes from amplitude."
+          },
+          "tryit": {
+            "id": "78446fb1-2c0f-4d45-bbb7-38eda2d2bd0d",
+            "label": "Try it",
+            "min": 30,
+            "blurb": "Sound Scavenger Hunt, drum design talk",
+            "goal": "Crews find and sort sounds, then connect them to how drums are built."
+          },
+          "reflect": {
+            "id": "29542106-0a12-4397-88c7-12e6a9bd10ad",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "reflection, preview",
+            "goal": "Girls connect sound waves to dance and music."
+          }
+        }
+      },
+      "3": {
+        "name": "Build the Beat",
+        "minutes": 90,
+        "planId": "6ead8212-70e7-4c56-9753-b6162719df37",
+        "question": "How can I build an instrument that makes the sound I want?",
+        "steps": {
+          "warmup": {
+            "id": "4596e1ca-98c3-410f-bbf8-abff1b780958",
+            "label": "Warm up",
+            "min": 15,
+            "blurb": "role rotation, STOMP, the challenge",
+            "goal": "Crews rotate roles and take on the instrument design challenge."
+          },
+          "learn": {
+            "id": "518cbda5-9aa1-47c0-9417-891f88702a99",
+            "label": "Learn",
+            "min": 15,
+            "blurb": "design cycle, plans",
+            "goal": "Crews plan their instrument before they build."
+          },
+          "tryit": {
+            "id": "f53ebffd-fdf2-49a4-a9c9-da698708199e",
+            "label": "Try it",
+            "min": 50,
+            "blurb": "build, test, refine",
+            "goal": "Crews build, test and improve their instruments."
+          },
+          "reflect": {
+            "id": "2ae5a1b3-8538-4c16-90bf-833cb5889ab9",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "sound check, reflection",
+            "goal": "Crews show their instruments and reflect on the design cycle."
+          }
+        }
+      },
+      "4": {
+        "name": "Rehearsal & Refinement",
+        "minutes": 90,
+        "planId": "2421bcb2-8c90-4ff3-9401-6c8772f1f044",
+        "question": "How do we bring science and dance together in one performance?",
+        "steps": {
+          "warmup": {
+            "id": "f51bb622-9d04-41c2-b6b9-544472ffd6f1",
+            "label": "Warm up",
+            "min": 15,
+            "blurb": "performance roles, planning",
+            "goal": "Crews take performance roles and plan their routine."
+          },
+          "learn": {
+            "id": "658d37ca-ea0c-4a4e-87e5-1cd86f6763cb",
+            "label": "Learn",
+            "sub": "Refine",
+            "min": 15,
+            "blurb": "tune the instruments",
+            "goal": "Crews improve their instruments using what they know about sound."
+          },
+          "tryit": {
+            "id": "a0e8e01f-1679-459b-aa1b-5deb0fb0fe77",
+            "label": "Try it",
+            "sub": "Rehearse",
+            "min": 40,
+            "blurb": "choreograph and rehearse",
+            "goal": "Crews build and rehearse a 60 to 90 second routine."
+          },
+          "reflect": {
+            "id": "933e0291-f44a-49da-a995-8981bd6cf27f",
+            "label": "Reflect",
+            "sub": "Preview",
+            "min": 20,
+            "blurb": "run-through previews",
+            "goal": "Crews preview their routines and get feedback."
+          }
+        }
+      },
+      "5": {
+        "name": "Showcase",
+        "minutes": 75,
+        "planId": "447fb8ab-0bc7-4156-ba9e-fe9c355ab6ae",
+        "question": "How do we celebrate everything we've learned?",
+        "steps": {
+          "warmup": {
+            "id": "5a4b3b69-e179-4c93-bc2d-d2217f0bb583",
+            "label": "Warm up",
+            "min": 15,
+            "blurb": "showcase roles, final warm-up",
+            "goal": "Crews confirm roles and run their routine one last time."
+          },
+          "learn": {
+            "id": "99194296-4c3d-4197-9626-c2f4c5c05c2d",
+            "label": "Learn",
+            "sub": "Showcase",
+            "min": 40,
+            "blurb": "performances",
+            "goal": "Every crew performs and explains its science."
+          },
+          "tryit": {
+            "id": "e2d1b069-5b7d-445b-94dc-22e5aaaf0648",
+            "label": "Try it",
+            "sub": "Reflect",
+            "min": 10,
+            "blurb": "module reflection",
+            "goal": "Girls reflect on what they learned across the module."
+          },
+          "reflect": {
+            "id": "ee4cf886-e2b0-4107-99ce-450a6ff61a56",
+            "label": "Reflect",
+            "sub": "Celebrate",
+            "min": 10,
+            "blurb": "celebration",
+            "goal": "Girls celebrate their growth as scientists, engineers and dancers."
+          }
+        }
+      }
+    }
   }
 }

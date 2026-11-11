@@ -369,5 +369,220 @@
         ]
       }
     }
+  },
+  "C": {
+    "1": {
+      "plan": {
+        "title": "4 tips for your first time",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Share your own hoop struggle first. It gives girls permission to be beginners.",
+          "Celebrate effort over skill during the Hoop Challenge.",
+          "Centripetal force is the big moment. Slow down and let it land.",
+          "Protect Reflect, even if you run behind."
+        ]
+      },
+      "warmup": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Read the role scripts word for word the first time.",
+          "Keep your own hoop story under 30 seconds."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "At 3 minutes, point to the data sheet and ask, \"What number goes in this box?\"",
+          "Say \"push\" if \"centripetal\" feels like too much. It's the scientist's word for the inward push."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Offer arm hooping or partner hooping to anyone who struggles.",
+          "Let every girl choose her own level."
+        ]
+      },
+      "reflect": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Give quiet writing time before anyone shares.",
+          "Save the \"1 question\" answers to open Lesson 2."
+        ]
+      }
+    },
+    "2": {
+      "plan": {
+        "title": "4 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Test the oscilloscope and microphone permission before class.",
+          "Keep the science talk short. The sliders do the teaching.",
+          "Pair up girls if a device fails.",
+          "Energy dips during the science. Use the Hype Squad."
+        ]
+      },
+      "warmup": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Use thumbs up or sideways to check who's sure of the instrument.",
+          "Push girls to try a new role today."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Move one slider at a time.",
+          "Skip \"Hz\" if it feels like too much. Say \"faster wiggles, higher sound.\""
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Give every crew the same four starting sounds: loud, quiet, high, low.",
+          "Keep the drum questions open. There are many right answers."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Ask what instrument they'd design. It sets up Lesson 3."
+        ]
+      }
+    },
+    "3": {
+      "plan": {
+        "title": "4 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Set the quiet signal before building starts.",
+          "No building without an approved plan.",
+          "Run testing in set windows so you keep control of the room.",
+          "Set out trash bags for scraps."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Let crews pick drum, shaker or both on their own."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Use three steps: plan, build, test, improve.",
+          "Post the science word bank where everyone can see it."
+        ]
+      },
+      "tryit": {
+        "title": "3 tips for this step",
+        "sub": "",
+        "tips": [
+          "Walk the room every 5 minutes.",
+          "Offer one suggestion, then step back.",
+          "Use finger-tap testing at first to keep the noise down."
+        ]
+      },
+      "reflect": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Lead applause after every demo.",
+          "Decide where instruments live until the Showcase."
+        ]
+      }
+    },
+    "4": {
+      "plan": {
+        "title": "4 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Your energy sets the tone. Rehearsal can feel chaotic, and that's normal.",
+          "Have backup supplies for broken instruments.",
+          "Check in at 15 and 30 minutes.",
+          "Let crews keep their performance roles for the Showcase."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Offer three routine shapes if a crew is stuck."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Cap instrument fixes at 15 minutes."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "By 30 minutes, every crew should be running the routine.",
+          "Ask, \"Where does the audience hear the science?\""
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Use the same feedback pattern for every crew: one win, one polish, one hype line."
+        ]
+      }
+    },
+    "5": {
+      "plan": {
+        "title": "4 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "This is a celebration, not a test.",
+          "Draw the performance order ahead of time.",
+          "Have a plan if a crew freezes.",
+          "Lead applause after every crew, equally."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Give a 2-minute warning before the show starts."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Announce each crew yourself.",
+          "Keep changeovers under 30 seconds."
+        ]
+      },
+      "tryit": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Offer sentence starters to girls who get stuck."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Name what each girl did as you hand out her sticker."
+        ]
+      }
+    }
   }
 }
