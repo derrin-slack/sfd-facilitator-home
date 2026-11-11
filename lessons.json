@@ -666,5 +666,196 @@
         }
       }
     }
+  },
+  "E": {
+    "count": 5,
+    "base": "https://sfdclubs.disco.co/p/module-e-carbon-footstep-new-layout-draft/curriculum/overview?drawerTab=module&u=",
+    "lessons": {
+      "1": {
+        "name": "Take Space, Make Space",
+        "minutes": 90,
+        "planId": "8b622bd3-4580-4c82-b00b-eecc5ce91bb2",
+        "question": "What does my lifestyle cost the atmosphere, and what would I change if I knew?",
+        "steps": {
+          "warmup": {
+            "id": "aa504c12-d652-4cf3-b23a-2a9e2eb20c22",
+            "label": "Warm up",
+            "min": 18,
+            "blurb": "crews and roles, take up space",
+            "goal": "Crews form, pick roles and practice taking up space."
+          },
+          "learn": {
+            "id": "ca01f29b-7af5-4aee-ab75-c1171ef7f15f",
+            "label": "Learn",
+            "min": 12,
+            "blurb": "what a carbon footprint is",
+            "goal": "Girls learn what a carbon footprint is and its four main sources."
+          },
+          "tryit": {
+            "id": "18c3daf1-b301-4e34-a9bc-914b504fdcb9",
+            "label": "Try it",
+            "min": 40,
+            "blurb": "footprint worksheet, compare in crews",
+            "goal": "Each girl estimates her footprint on paper and her crew compares results."
+          },
+          "reflect": {
+            "id": "cf3e9d76-c39b-440e-adfd-ab20c19bd8f0",
+            "label": "Reflect",
+            "min": 20,
+            "blurb": "commitment card, module preview",
+            "goal": "Each girl makes a specific commitment and hears where the module is going."
+          }
+        }
+      },
+      "2": {
+        "name": "This Is Step",
+        "minutes": 90,
+        "planId": "54a12313-e594-46b5-943b-b0961b577082",
+        "question": "How does a dance tradition built to claim space carry a message?",
+        "steps": {
+          "warmup": {
+            "id": "a723018c-00ca-4f48-b981-93bb7d87baee",
+            "label": "Warm up",
+            "min": 13,
+            "blurb": "role rotation, the first beat",
+            "goal": "Crews rotate roles and try to make one sound together."
+          },
+          "learn": {
+            "id": "6b12a0b7-fad8-4e71-abe6-1723ee6768e7",
+            "label": "Learn",
+            "min": 37,
+            "blurb": "where step came from, four elements",
+            "goal": "Girls learn where step came from and name its four elements."
+          },
+          "tryit": {
+            "id": "e42dfd5a-1401-44aa-bd05-10d356cbbed6",
+            "label": "Try it",
+            "min": 30,
+            "blurb": "basic step rhythm, add one element",
+            "goal": "Every crew learns the basic rhythm and adds the element it chose."
+          },
+          "reflect": {
+            "id": "fa971b0e-403d-4e25-9a54-6b3b1b6d9206",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "reflection, chant preview",
+            "goal": "Girls reflect on step and get ready to write a chant."
+          }
+        }
+      },
+      "3": {
+        "name": "Choreographing Change",
+        "minutes": 90,
+        "planId": "c4b1f65e-909c-4ccc-99e3-e8790b014ee2",
+        "question": "What does your crew want the audience to hear, and how does the body deliver it?",
+        "steps": {
+          "warmup": {
+            "id": "aca95d69-f1dc-485c-ade4-730f73714b39",
+            "label": "Warm up",
+            "min": 13,
+            "blurb": "role rotation, first lines",
+            "goal": "Crews rotate roles and brainstorm phrases for the chant."
+          },
+          "learn": {
+            "id": "966926c9-c7ff-49cc-95a4-b912b76240e3",
+            "label": "Learn",
+            "min": 35,
+            "blurb": "sample chants, write the chant",
+            "goal": "Crews study what makes a chant work and write their own."
+          },
+          "tryit": {
+            "id": "912925fc-fd81-425a-833c-59f6528f3143",
+            "label": "Try it",
+            "min": 30,
+            "blurb": "one move per line",
+            "goal": "Crews build a first pass of the routine, one move per line."
+          },
+          "reflect": {
+            "id": "d20b2f1e-c891-416b-a421-e5d3d9a335bd",
+            "label": "Reflect",
+            "min": 12,
+            "blurb": "first-pass demos, preview",
+            "goal": "Every crew shows its first pass and hears what's next."
+          }
+        }
+      },
+      "4": {
+        "name": "Practice Makes Powerful",
+        "minutes": 90,
+        "planId": "5e8f5d48-9d6f-49a7-8fb6-94b601d9129e",
+        "question": "What one fix makes your routine land for the audience?",
+        "steps": {
+          "warmup": {
+            "id": "c50412c5-1d77-4244-b77c-361f8c2a15fa",
+            "label": "Warm up",
+            "min": 10,
+            "blurb": "role rotation, run-through warm-up",
+            "goal": "Crews rotate roles and warm up with their routine."
+          },
+          "learn": {
+            "id": "62ab5adc-5388-4348-901f-5397196bb042",
+            "label": "Learn",
+            "sub": "Cycle 1",
+            "min": 20,
+            "blurb": "independent rehearsal",
+            "goal": "Crews rehearse on their own and spot what needs work."
+          },
+          "tryit": {
+            "id": "47ea7957-49e7-4fc3-a147-03ee21ee937b",
+            "label": "Try it",
+            "sub": "Cycles 2 and 3",
+            "min": 45,
+            "blurb": "one-fix feedback, locked run-through",
+            "goal": "Each crew gets one fix, applies it and locks the routine."
+          },
+          "reflect": {
+            "id": "447d29c6-5311-425b-9d9e-c628d4e76e24",
+            "label": "Reflect",
+            "min": 15,
+            "blurb": "confidence check, Showcase plan",
+            "goal": "Crews check their confidence and learn the Showcase plan."
+          }
+        }
+      },
+      "5": {
+        "name": "Sustainable Step Showcase",
+        "minutes": 90,
+        "planId": "563a7112-8434-4b16-ac14-8a107aaaa027",
+        "question": "What did we build, and where does this voice go next?",
+        "steps": {
+          "warmup": {
+            "id": "23b91f15-85e4-4ced-9582-026e248f9bf8",
+            "label": "Warm up",
+            "min": 20,
+            "blurb": "pre-show warm-up, welcome the audience",
+            "goal": "Crews warm up, set performance roles and welcome the audience."
+          },
+          "learn": {
+            "id": "fe66c68d-f3f4-4108-9e8a-20a748ba825d",
+            "label": "Learn",
+            "sub": "Showcase",
+            "min": 45,
+            "blurb": "crew performances",
+            "goal": "Every crew performs its routine and delivers its message."
+          },
+          "tryit": {
+            "id": "57cc0552-ef39-4662-953b-cd43a1142ef0",
+            "label": "Try it",
+            "sub": "Respond",
+            "min": 15,
+            "blurb": "audience response, reflection",
+            "goal": "Crews hear what landed and reflect on their message."
+          },
+          "reflect": {
+            "id": "b1602eed-ef9e-4b8d-a9dc-8d137c108269",
+            "label": "Reflect",
+            "sub": "Celebrate",
+            "min": 10,
+            "blurb": "commitments, surveys, celebrate",
+            "goal": "Girls revisit their commitments, take the survey and celebrate."
+          }
+        }
+      }
+    }
   }
 }

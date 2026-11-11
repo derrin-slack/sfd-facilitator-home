@@ -756,5 +756,215 @@
         ]
       }
     }
+  },
+  "E": {
+    "1": {
+      "plan": {
+        "title": "4 tips for your first time",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "No girl has to share her number.",
+          "If a girl says this is pointless, agree that one person can't fix it alone, then point to the Showcase: her message reaches people.",
+          "When girls see their number, pause and let the silence sit.",
+          "Push commitments to be specific."
+        ]
+      },
+      "warmup": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Take the full 8 minutes for roles in Lesson 1.",
+          "Lead the take-up-space move with full energy."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Use the balloon picture if CO2e feels abstract.",
+          "Say \"16 vs. 4\" twice. It's the number they'll use later."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Say, \"This isn't a leaderboard.\"",
+          "Don't moralize about flights or meat. Move on."
+        ]
+      },
+      "reflect": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Cheer specific commitments loudly.",
+          "Every girl keeps her Commitment Card for Lesson 5."
+        ]
+      }
+    },
+    "2": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Name the lineage clearly and with respect.",
+          "Encourage volume. Quiet step isn't step.",
+          "Tell girls the clips are advanced. Today is the foundation."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Model loud, then soft, if crews are shy."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "You don't need to name all nine organizations. Trust the video.",
+          "Chant the four elements like a list until it sticks."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Lead slow before fast.",
+          "Let crews demo just three rounds."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Ask which element felt strongest."
+        ]
+      }
+    },
+    "3": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Protect the chant writing time.",
+          "Push past slogans: what does your chant say that no other crew's would?",
+          "Climate worry may come up. Put it into the words."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Write down every phrase, even the odd ones."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Start from the phrase list, not a blank page.",
+          "Offer the four-line frame at 10 minutes, not before."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Four or five moves is plenty.",
+          "Ask, \"Does the move match the meaning of the line?\""
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Applause only. Feedback comes in Lesson 4."
+        ]
+      }
+    },
+    "4": {
+      "plan": {
+        "title": "4 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "The work is in the reps. Don't over-teach.",
+          "One fix per crew. Specific beats complete.",
+          "Plan a Hype Squad pump-up mid-class.",
+          "Watching yourself dance feels weird at first. Say so."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Let crews rebuild from the Planning Sheet."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Stay out of the way. Take notes for Cycle 2."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Pick from the one-fix list if you're unsure: volume, sync, hit-line intensity, eye contact or a strong start.",
+          "Keep waiting crews rehearsing."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Share Showcase details in writing too."
+        ]
+      }
+    },
+    "5": {
+      "plan": {
+        "title": "4 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Arrive early and test the sound.",
+          "Brief the audience: they cheer, not just clap.",
+          "Have the freeze script ready.",
+          "Protect the last 10 minutes."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Keep roles fixed all lesson."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Announce every crew yourself.",
+          "Lead applause after every crew."
+        ]
+      },
+      "tryit": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Read audience comments that name a line or a number."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Start the survey on time so girls finish before lanyards come off."
+        ]
+      }
+    }
   }
 }
