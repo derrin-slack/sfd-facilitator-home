@@ -584,5 +584,177 @@
         ]
       }
     }
+  },
+  "D": {
+    "1": {
+      "plan": {
+        "title": "4 tips for your first time",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Linger on \"How does it know?\" after the game. Don't rush to the answer.",
+          "Use the dog example if \"machine learning\" feels big.",
+          "The moment the model gets fooled is the best teaching moment. Name it.",
+          "Make sure every crew leaves with its Pose Cards."
+        ]
+      },
+      "warmup": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Take the full 8 minutes for roles in Lesson 1.",
+          "Receive every theory without correcting it."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Stay with the dog example. That's enough.",
+          "If the video runs over, cut the share-out, not the notes."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Give stuck crews the starter card: Hand Up, one hand above the head, left, right or both, close and far.",
+          "Aim for 3 minutes per crew. Cards you don't reach go first in Lesson 2."
+        ]
+      },
+      "reflect": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Ask for the crew whose card was hardest to fool.",
+          "Spotlight Speakers keep the cards. They're the most important thing in this module."
+        ]
+      }
+    },
+    "2": {
+      "plan": {
+        "title": "4 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Energy runs high from the B-Girl video on. Set hard timers.",
+          "Redirect power moves to clean, repeatable moves.",
+          "Let the most experienced dancer be Movement Captain.",
+          "Hold girls in the writing. The card is the spec."
+        ]
+      },
+      "warmup": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Stop the Sarah Bee clip at 3:11.",
+          "Accept simple labels. The real names come next."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Keep the history to 30 seconds, then ask the room.",
+          "Never ask one girl to speak for a community."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Use an 8-minute hard stop for choosing moves.",
+          "If a card is vague during recording, ask the crew to fix it out loud."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Check that every Spotlight Speaker has all 3 cards."
+        ]
+      }
+    },
+    "3": {
+      "plan": {
+        "title": "4 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "The first version of any Pose Card is a draft. Say so.",
+          "Keep a visible timer so crews know when they're up.",
+          "Protect the outsider test.",
+          "The break is real. Don't skip it."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Name any partial answer as right."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Ask \"Which angles?\" when a card says \"different angles.\"",
+          "Short on time? Drop to 4 minutes per crew and test later."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Ask, \"What did the model get wrong? What didn't the card say?\"",
+          "When the outsider fails, say it isn't the crew's fault. The model did what it learned."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Check every crew's 3 labeled cards before lanyards come off."
+        ]
+      }
+    },
+    "4": {
+      "plan": {
+        "title": "4 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Your energy sets the tone. Hype it from the first second.",
+          "No cards, no cypher. Check every Spotlight Speaker.",
+          "Brief the audience fully. It keeps the scoring sharp.",
+          "Don't let the cypher run long."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "A simple clap-stomp beat is enough."
+        ]
+      },
+      "learn": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Practice the sample row twice with the audience.",
+          "Your only job during the cypher is energy: \"Big applause! Next up...\""
+        ]
+      },
+      "tryit": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Let the Hype Squad present every award."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Start the surveys on time so girls finish before lanyards come off."
+        ]
+      }
+    }
   }
 }

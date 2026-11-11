@@ -512,5 +512,159 @@
         }
       }
     }
+  },
+  "D": {
+    "count": 4,
+    "base": "https://sfdclubs.disco.co/p/module-d-break-dance-machine-new-layout-draft/curriculum/overview?drawerTab=module&u=",
+    "lessons": {
+      "1": {
+        "name": "Teachable Machines",
+        "minutes": 90,
+        "planId": "b82e253b-40ec-42de-98c9-8dfb93618121",
+        "question": "How does a computer learn from examples?",
+        "steps": {
+          "warmup": {
+            "id": "f8cef067-7607-43d5-8048-734002ea2893",
+            "label": "Warm up",
+            "min": 23,
+            "blurb": "crews and roles, Emoji Scavenger Hunt",
+            "goal": "Crews form, pick roles and wonder how a game can recognize objects."
+          },
+          "learn": {
+            "id": "4c5d4543-7bf8-43bf-bda3-6f13527e1b10",
+            "label": "Learn",
+            "min": 30,
+            "blurb": "machine learning video, Sorting Marshmallows",
+            "goal": "Girls learn that a computer learns from examples, not rules."
+          },
+          "tryit": {
+            "id": "e3940a36-b816-4eb9-ba2c-447b6c8d1993",
+            "label": "Try it",
+            "min": 30,
+            "blurb": "write Pose Cards, live build",
+            "goal": "Crews write Pose Cards and watch you build a model from them."
+          },
+          "reflect": {
+            "id": "2dc8ece0-efd0-4d57-8d00-9b964ec43741",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "hardest card to fool, project preview",
+            "goal": "Girls share what made a strong Pose Card and preview the breaking project."
+          }
+        }
+      },
+      "2": {
+        "name": "Breaking Down Breaking",
+        "minutes": 90,
+        "planId": "24c8066e-5a4e-4d75-9e14-8382c0e8d033",
+        "question": "How do we honor a dance's history while we teach a computer to recognize it?",
+        "steps": {
+          "warmup": {
+            "id": "b88ef88a-3ff2-42b4-a0a1-043a9f70752f",
+            "label": "Warm up",
+            "min": 18,
+            "blurb": "role rotation, B-Girl Sarah Bee",
+            "goal": "Crews rotate roles and notice the different kinds of breaking moves."
+          },
+          "learn": {
+            "id": "d4207afc-49af-42f1-90b9-e1d08cdaedbb",
+            "label": "Learn",
+            "min": 32,
+            "blurb": "four elements, where breaking came from, the project",
+            "goal": "Girls name the four elements, learn where breaking came from and hear the project."
+          },
+          "tryit": {
+            "id": "7c0060f7-fd19-4efc-a4c1-d5886809968d",
+            "label": "Try it",
+            "min": 30,
+            "blurb": "choose moves, write Pose Cards, seed recording",
+            "goal": "Crews choose three moves, write three Pose Cards and record their first move."
+          },
+          "reflect": {
+            "id": "e53d0329-c4b8-4e63-bf43-09e773eaf3b8",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "crew reports",
+            "goal": "Crews share their moves and their strongest Pose Card."
+          }
+        }
+      },
+      "3": {
+        "name": "Train the Machine",
+        "minutes": 90,
+        "planId": "0d0b908a-5f2a-4232-8952-8e43f08d20c5",
+        "question": "Why does a model work for your crew but fail for someone else?",
+        "steps": {
+          "warmup": {
+            "id": "a8430ee9-6f5a-4080-8f61-76961c0c607f",
+            "label": "Warm up",
+            "min": 15,
+            "blurb": "role rotation, recall, card check",
+            "goal": "Crews recall how machine learning works and check their Pose Cards."
+          },
+          "learn": {
+            "id": "08de326e-4cd7-4bbe-9ab7-3a8fe4a7f065",
+            "label": "Learn",
+            "sub": "Sweep 1",
+            "min": 30,
+            "blurb": "record all three moves, break",
+            "goal": "Each crew records its three moves and sees what the model gets right and wrong."
+          },
+          "tryit": {
+            "id": "db65531e-4615-4a09-84d9-15ad55eafb8e",
+            "label": "Try it",
+            "sub": "Sweep 2",
+            "min": 35,
+            "blurb": "fix the cards, record variety, outsider test",
+            "goal": "Crews fix their cards, record more variety and test the model on an outsider."
+          },
+          "reflect": {
+            "id": "77677432-56ee-49dc-93a7-e0d8fac82355",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "reflection, card lock",
+            "goal": "Crews name what changed and lock their three Pose Cards for the Showcase."
+          }
+        }
+      },
+      "4": {
+        "name": "Breaking Battle Showcase",
+        "minutes": 90,
+        "planId": "2a275df2-0112-4c4b-8a82-6296a77ffaca",
+        "question": "What did we build, and what does it teach us about who designs AI?",
+        "steps": {
+          "warmup": {
+            "id": "ea824e76-a4be-4fdf-abec-02cffb521b7e",
+            "label": "Warm up",
+            "min": 12,
+            "blurb": "performance roles, cypher warm-up",
+            "goal": "Crews set performance roles and warm up the cypher."
+          },
+          "learn": {
+            "id": "35f46ac3-8867-4909-b26e-db4e0bc0737d",
+            "label": "Learn",
+            "sub": "Cypher",
+            "min": 58,
+            "blurb": "audience briefing, the cypher",
+            "goal": "The audience learns how to score, and every crew performs its three moves."
+          },
+          "tryit": {
+            "id": "ea764c02-cbd6-46e6-b86e-e882d1b45502",
+            "label": "Try it",
+            "sub": "Awards",
+            "min": 8,
+            "blurb": "tally scores, three awards",
+            "goal": "Crews hear their Pose Cards one more time and celebrate the awards."
+          },
+          "reflect": {
+            "id": "5d7e4fa8-39d8-4c89-ac77-427aa8678098",
+            "label": "Reflect",
+            "min": 12,
+            "blurb": "crew reflection, celebrate",
+            "goal": "Girls reflect on what they built and celebrate the module."
+          }
+        }
+      }
+    }
   }
 }
