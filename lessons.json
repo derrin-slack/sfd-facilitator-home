@@ -1318,5 +1318,159 @@
         }
       }
     }
+  },
+  "I": {
+    "count": 4,
+    "base": "https://sfdclubs.disco.co/p/module-i-choreogpt-new-layout-draft/curriculum/overview?drawerTab=module&u=",
+    "lessons": {
+      "1": {
+        "name": "Dancing with AI",
+        "minutes": 90,
+        "planId": "3f54948a-b318-4858-b885-ef4e38c8825e",
+        "question": "What is AI, and what role do people play in shaping what it creates?",
+        "steps": {
+          "warmup": {
+            "id": "355aa248-95f9-4ee6-8e46-ff6ce03c90d8",
+            "label": "Warm up",
+            "min": 15,
+            "blurb": "crews and roles, what is HCI?",
+            "goal": "Crews form and girls notice how people and computers work together."
+          },
+          "learn": {
+            "id": "0c7e835b-d298-4b92-9dc2-a06a78faf2c1",
+            "label": "Learn",
+            "min": 20,
+            "blurb": "the Living Archive demo",
+            "goal": "Girls see how a choreographer partners with AI."
+          },
+          "tryit": {
+            "id": "ea5760a9-da28-4365-b283-c7f88bd7c0aa",
+            "label": "Try it",
+            "min": 40,
+            "blurb": "build your own phrase",
+            "goal": "Girls capture their poses, build a phrase and perform it."
+          },
+          "reflect": {
+            "id": "2e4326ca-d1e9-4c50-97c3-af739a383d01",
+            "label": "Reflect",
+            "min": 15,
+            "blurb": "choose a theme, homework",
+            "goal": "Girls choose a theme for their final piece."
+          }
+        }
+      },
+      "2": {
+        "name": "Meet ChoreoGPT",
+        "minutes": 90,
+        "planId": "476f3075-a58c-4ca5-83f8-4ac80bb6eaa3",
+        "question": "How do choreographers use structure, devices and group dynamics to tell a story?",
+        "steps": {
+          "warmup": {
+            "id": "da83c7f5-7ad0-4af8-a289-292cada997c2",
+            "label": "Warm up",
+            "min": 15,
+            "blurb": "crews and roles, what is choreography?",
+            "goal": "Girls build a shared meaning of choreography."
+          },
+          "learn": {
+            "id": "46f5d512-5ed9-4e6a-8f49-3863b95f5e37",
+            "label": "Learn",
+            "min": 25,
+            "blurb": "the SFD choreographic process",
+            "goal": "Girls learn intent, structure, devices and group dynamics."
+          },
+          "tryit": {
+            "id": "21a4c167-3cb7-429c-ae4f-aa98e69f5e76",
+            "label": "Try it",
+            "min": 45,
+            "blurb": "ChoreoGPT demo, apply it to your theme",
+            "goal": "Girls see how a clear prompt shapes AI output, then plan their own piece."
+          },
+          "reflect": {
+            "id": "a64ca7a2-4162-4674-8f54-b310fa7308bd",
+            "label": "Reflect",
+            "min": 5,
+            "blurb": "reflect, homework",
+            "goal": "Girls name how structure helped bring a theme to life."
+          }
+        }
+      },
+      "3": {
+        "name": "Your Story in Motion",
+        "minutes": 90,
+        "planId": "39222d9d-c7f1-4ee9-ab86-9284476b74cb",
+        "question": "How do I own my choreographic vision and use AI as a tool, not a crutch?",
+        "steps": {
+          "warmup": {
+            "id": "24239342-da00-4a66-9473-eb547ab8c41c",
+            "label": "Warm up",
+            "min": 5,
+            "blurb": "crews and roles, quick review",
+            "goal": "Crews regroup and remember what matters most today."
+          },
+          "learn": {
+            "id": "e2f7ef9a-0afc-42c6-9893-ac8cd5f8a172",
+            "label": "Learn",
+            "min": 5,
+            "blurb": "project requirements, Prompt Cards",
+            "goal": "Girls know what the final piece needs and how to ask ChoreoGPT for help."
+          },
+          "tryit": {
+            "id": "1c11ce94-272b-40a9-ba15-c4678649cea3",
+            "label": "Try it",
+            "sub": "Studio Time",
+            "min": 60,
+            "blurb": "build the piece with Prompt Cards",
+            "goal": "Crews build their choreography and use ChoreoGPT as a tool."
+          },
+          "reflect": {
+            "id": "6f55370f-8aa6-4fed-b655-6c85b7358a51",
+            "label": "Reflect",
+            "sub": "Rehearse",
+            "min": 20,
+            "blurb": "full run-through",
+            "goal": "Every crew runs the full piece at least once before the Showcase."
+          }
+        }
+      },
+      "4": {
+        "name": "Story in Motion Showcase",
+        "minutes": 90,
+        "planId": "62e0a037-960d-4597-93a2-d1194aee0e32",
+        "question": "How does what I created connect to choreographers of color who used every tool they had to tell their stories?",
+        "steps": {
+          "warmup": {
+            "id": "2a3675ea-9512-4782-8c76-2966e7ae6a48",
+            "label": "Warm up",
+            "min": 10,
+            "blurb": "crews and roles, culture connection",
+            "goal": "Girls connect their work to choreographers of color who used technology."
+          },
+          "learn": {
+            "id": "f232eb74-c9b9-48c3-b43f-14d3a139dd92",
+            "label": "Learn",
+            "sub": "Final Run-Through",
+            "min": 10,
+            "blurb": "last run, get ready",
+            "goal": "Crews run the piece once more and prepare the introduction."
+          },
+          "tryit": {
+            "id": "35828297-4240-419d-b44b-ad7270d5f161",
+            "label": "Try it",
+            "sub": "Showcase",
+            "min": 50,
+            "blurb": "performances and feedback",
+            "goal": "Every crew performs its story and gets feedback."
+          },
+          "reflect": {
+            "id": "3075406d-ff45-439c-b320-4a8755dfd2dc",
+            "label": "Reflect",
+            "min": 20,
+            "blurb": "final reflection, surveys",
+            "goal": "Girls reflect on AI and creativity and the module closes."
+          }
+        }
+      }
+    }
   }
 }
