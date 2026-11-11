@@ -1164,5 +1164,159 @@
         }
       }
     }
+  },
+  "H": {
+    "count": 4,
+    "base": "https://sfdclubs.disco.co/p/module-h-dance-shoe-design-new-layout-draft/curriculum/overview?drawerTab=module&u=",
+    "lessons": {
+      "1": {
+        "name": "Meet the Shoemakers",
+        "minutes": 90,
+        "planId": "123099be-9e5e-4a68-aee1-73b7ae4aeb7e",
+        "question": "How does a shoe's design affect how a dancer moves?",
+        "steps": {
+          "warmup": {
+            "id": "c87ea514-c687-4526-ac31-f10bc2b9cdc6",
+            "label": "Warm up",
+            "min": 20,
+            "blurb": "crews and roles, Shoe-and-Tell",
+            "goal": "Crews form and girls study shoes like engineers."
+          },
+          "learn": {
+            "id": "1ed0f01e-37aa-4c43-95cd-85eb67412909",
+            "label": "Learn",
+            "min": 15,
+            "blurb": "meet the designers",
+            "goal": "Girls meet designers of color who changed the shoe game."
+          },
+          "tryit": {
+            "id": "94ef52c0-988c-41e8-ab3f-9ae617e0b613",
+            "label": "Try it",
+            "min": 45,
+            "blurb": "shoe testing stations",
+            "goal": "Girls test shoes with dance moves and record what the materials do."
+          },
+          "reflect": {
+            "id": "82807168-d6f7-4a12-b8ce-e83fc8490b5c",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "pair share",
+            "goal": "Girls name the most important feature of a dance shoe."
+          }
+        }
+      },
+      "2": {
+        "name": "Design on Your Feet",
+        "minutes": 90,
+        "planId": "6ea62790-a743-4dd9-9b56-d1dc96450459",
+        "question": "What does a dancer really need from her shoes, and how do we turn that into a design?",
+        "steps": {
+          "warmup": {
+            "id": "b3692fa0-b00b-492f-b0e2-0294f1cd75de",
+            "label": "Warm up",
+            "min": 20,
+            "blurb": "crews and roles, empathy interviews",
+            "goal": "Girls interview a partner to learn what a dancer needs from her shoes."
+          },
+          "learn": {
+            "id": "ecafff2d-6867-4fbf-b0ed-21b1caa81368",
+            "label": "Learn",
+            "min": 20,
+            "blurb": "the design thinking process",
+            "goal": "Girls learn the five steps of design thinking."
+          },
+          "tryit": {
+            "id": "de5d467b-258b-46d9-a7c9-902b5c790f0d",
+            "label": "Try it",
+            "min": 45,
+            "blurb": "write user requirements, brainstorm",
+            "goal": "Pairs turn interview notes into requirements and brainstorm solutions."
+          },
+          "reflect": {
+            "id": "5a9de3bc-9e77-4a5d-8989-a303bd6e06cd",
+            "label": "Reflect",
+            "min": 5,
+            "blurb": "think, pair, share",
+            "goal": "Girls notice how their thinking about shoes changed."
+          }
+        }
+      },
+      "3": {
+        "name": "From Prototype to Performance",
+        "minutes": 90,
+        "planId": "612b2db3-796f-489c-9dd2-9d7f0f7807f8",
+        "question": "Does my design actually solve the problem I found for my dancer?",
+        "steps": {
+          "warmup": {
+            "id": "0f4018a5-dcc8-422f-9005-5f3030c3dcac",
+            "label": "Warm up",
+            "min": 10,
+            "blurb": "crews and roles, inspiration video",
+            "goal": "Crews form and girls get ideas for their build."
+          },
+          "learn": {
+            "id": "c0f9c2f3-96b4-479d-b323-a1df0f251af5",
+            "label": "Learn",
+            "sub": "Build",
+            "min": 50,
+            "blurb": "choose a path, build the prototype",
+            "goal": "Girls modify, build or sketch a shoe that meets their requirements."
+          },
+          "tryit": {
+            "id": "0d3e8dfa-51bc-499a-b8ee-020861f46a0d",
+            "label": "Try it",
+            "sub": "Test It Out",
+            "min": 20,
+            "blurb": "test with dance, Keep, Try, Change",
+            "goal": "Girls test their prototype and give each other feedback."
+          },
+          "reflect": {
+            "id": "24654c93-cfab-449e-a1ea-a8f468d681e4",
+            "label": "Reflect",
+            "min": 10,
+            "blurb": "preview the Showcase",
+            "goal": "Girls plan what they need for the Sole Showcase."
+          }
+        }
+      },
+      "4": {
+        "name": "Sole Showcase",
+        "minutes": 90,
+        "planId": "33edd3fc-d4dd-4c59-867b-3d888c8a841a",
+        "question": "How does what I built connect to a long tradition of design in my community?",
+        "steps": {
+          "warmup": {
+            "id": "1049bc9a-cc86-4a76-af7b-058fb6e75c1a",
+            "label": "Warm up",
+            "min": 10,
+            "blurb": "crews and roles, culture connection",
+            "goal": "Girls connect their design work to sneaker culture in their communities."
+          },
+          "learn": {
+            "id": "59c230c9-d380-4b5a-8738-b9763ab5b119",
+            "label": "Learn",
+            "sub": "Final Touches",
+            "min": 15,
+            "blurb": "finish and warm up",
+            "goal": "Crews finish their prototypes and get ready to pitch."
+          },
+          "tryit": {
+            "id": "a6738f7b-2cb1-4ccb-9e56-ef1ef406045c",
+            "label": "Try it",
+            "sub": "Sole Showcase",
+            "min": 50,
+            "blurb": "pitches and demos",
+            "goal": "Every crew pitches its design and shows it in action."
+          },
+          "reflect": {
+            "id": "30d7048b-23a9-4e9f-897f-0154f29a92fa",
+            "label": "Reflect",
+            "min": 15,
+            "blurb": "final reflection, surveys",
+            "goal": "Girls reflect on the module and the module closes."
+          }
+        }
+      }
+    }
   }
 }

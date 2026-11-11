@@ -1291,5 +1291,167 @@
         ]
       }
     }
+  },
+  "H": {
+    "1": {
+      "plan": {
+        "title": "4 tips for your first time",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Test the designer videos before class.",
+          "Clear the movement space early.",
+          "Don't skip the culture moment.",
+          "Keep testing in scientist mode."
+        ]
+      },
+      "warmup": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Take the full 8 minutes for roles in Lesson 1.",
+          "Push for one science word per shoe."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Model your own reaction first, in under 30 seconds."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Rhythm Keepers time each move.",
+          "Pair hesitant girls with a willing mover."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Write repeat themes on the board for Lesson 2."
+        ]
+      }
+    },
+    "2": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Test the Google Form before class.",
+          "Protect the interview time.",
+          "Bookmark the Canva template today."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Model one interview in front of the class."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Use Hype Squad to lift the energy."
+        ]
+      },
+      "tryit": {
+        "title": "2 tips for this step",
+        "sub": "",
+        "tips": [
+          "Quantity over quality in the brainstorm.",
+          "Offer the frame: The shoe must ___ so the dancer can ___."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Collect lanyards before girls leave."
+        ]
+      }
+    },
+    "3": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Stage supplies in labeled bins.",
+          "Treat the Sketch path as equal.",
+          "Ask which requirement each feature solves."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Ask what girls will take from the video."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Start with one feature in 15 minutes."
+        ]
+      },
+      "tryit": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Model Keep, Try, Change before girls give feedback."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Store prototypes safely for Lesson 4."
+        ]
+      }
+    },
+    "4": {
+      "plan": {
+        "title": "3 tips for this lesson",
+        "sub": "For volunteers and first-time facilitators. STEM teachers can skip ahead.",
+        "tips": [
+          "Set up a performance space before class.",
+          "Brief the Hype Squad ahead of time.",
+          "Plan 5 to 7 minutes per crew."
+        ]
+      },
+      "warmup": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Keep the culture moment joyful."
+        ]
+      },
+      "learn": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Pitch what you have, even if it isn't done."
+        ]
+      },
+      "tryit": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Point to a different girl for each feedback prompt."
+        ]
+      },
+      "reflect": {
+        "title": "1 tip for this step",
+        "sub": "",
+        "tips": [
+          "Leave time for the survey before stickers."
+        ]
+      }
+    }
   }
 }
