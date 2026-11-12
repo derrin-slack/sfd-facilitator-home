@@ -50,16 +50,17 @@ var LINKS = {
   ask: 'https://sfdclubs.disco.co/feed/RmVlZDo0NTE2MQ==/posts',
   moduleA: 'https://sfdclubs.disco.co/p/module-a-afrobeats-ai-facilitator-home-demo/dashboard',
   live: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MjM=',
-  steps: 'module-flow.html'
+  steps: 'module-flow.html',
+  video: '[welcome video link from Sol and Victoria]'
 };
 var STEPS = [
-  { id: 'mark', n: 1, c: 'var(--lav)', title: 'Bookmark Disco', text: 'Save this page so you can get back in one click. Press Ctrl+D, or Cmd+D on a Mac.' },
-  { id: 'hi', n: 2, c: 'var(--orange)', title: 'Say hi', text: 'Post one line in Share & Learn. Tell us your name and your Club.', cta: 'Say hi', href: LINKS.ask },
-  { id: 'date', n: 3, c: 'var(--cyan)', title: 'Save the date', text: 'Club Support Hours are every other Thursday, 2:30 to 4:30 PM ET.', cta: 'See Live Help', href: LINKS.live },
-  { id: 'steps', n: 4, c: 'var(--orange)', title: 'See how a module runs', text: 'Run the Pathway: five steps you repeat in every module so you can recognize and celebrate your girls.', cta: 'See the Pathway', href: LINKS.steps, scroll: 'module-flow' },
-  { id: 'pick', n: 5, c: 'var(--pink)', title: 'Pick your module', text: 'Compare the nine modules and open the one that fits your Club. Every module starts with Before You Teach.', cta: 'Pick a module', href: 'module-picker.html', scroll: 'module-picker' }
+  { id: 'watch', n: 1, c: 'var(--lav)', title: 'Watch the welcome', text: 'A 5-minute hello from the SFD team and a quick look at how Clubs work.', cta: 'Watch Now', href: LINKS.video },
+  { id: 'hi', n: 2, c: 'var(--orange)', title: 'Say hi and save the date', text: 'Post one line in Share & Learn with your name and your Club. Then save Club Support Hours: every other Thursday, 2:30 to 4:30 PM ET.', cta: 'Say hi', href: LINKS.ask, cta2: 'See Events', href2: LINKS.live },
+  { id: 'mark', n: 3, c: 'var(--cyan)', title: 'Bookmark Disco', text: 'Save this page so you can get back in one click. Press Ctrl+D, or Cmd+D on a Mac.' },
+  { id: 'steps', n: 4, c: 'var(--orange)', title: 'See how a module runs', text: 'Every module runs the same way: prep, teach, get help, and celebrate. See the five steps.', cta: 'See the Steps', href: LINKS.steps, scroll: 'module-flow' },
+  { id: 'pick', n: 5, c: 'var(--pink)', title: 'Pick your module', text: 'Find the module that fits your girls’ ages, then open it and start with Lesson 1.', cta: 'Pick a Module', href: 'module-picker.html', scroll: 'module-picker', alt: 'Download PDF', altHref: 'files/sfd-choosing-your-first-module.pdf', altNote: 'Want it on paper?' }
 ];
-var KEY = 'sfd-start-here-v1';
+var KEY = 'sfd-start-here-v2';
 var done = {};
 try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { done = {}; }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {} }
@@ -82,7 +83,16 @@ STEPS.forEach(function (s) {
   });
   chk.addEventListener('click', function () { done[s.id] = !done[s.id]; save(); render(); });
   top.appendChild(num); top.appendChild(chk);
-  el.appendChild(top); el.appendChild(h); el.appendChild(p); if (s.cta) { el.appendChild(a); }
+  el.appendChild(top); el.appendChild(h); el.appendChild(p);
+  if (s.cta) {
+    if (s.cta2) {
+      var pair = document.createElement('div'); pair.style.cssText = 'display:flex;flex-wrap:wrap;gap:10px;margin-top:auto';
+      a.style.marginTop = '0'; pair.appendChild(a);
+      var b = document.createElement('a'); b.className = 'btn ghost'; b.textContent = s.cta2; b.href = s.href2; b.target = '_top'; b.style.marginTop = '0';
+      b.addEventListener('click', function () { done[s.id] = true; save(); render(); });
+      pair.appendChild(b); el.appendChild(pair);
+    } else { el.appendChild(a); }
+  }
   if (s.alt) {
     var row = document.createElement('p'); row.style.cssText = 'margin-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px';
     var note = document.createElement('span'); note.className = 'muted'; note.textContent = s.altNote;

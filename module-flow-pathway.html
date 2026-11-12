@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Running the Innovator Pathway</title>
+<link rel="stylesheet" href="sfd.css">
+<style>
+.tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:22px 0 0}
+.tab{min-height:72px;padding:10px 12px;border:2px solid var(--line);border-bottom:6px solid var(--c);background:var(--card);color:var(--text);text-align:left;cursor:pointer;font:700 15px var(--body);display:flex;align-items:center;gap:10px}
+.tab b{font:700 26px/1 var(--head);color:var(--c)}
+.tab[aria-selected="true"]{background:var(--c);color:var(--black);border-color:var(--c)}
+.tab[aria-selected="true"] b{color:var(--black)}
+.panel{margin-top:12px;background:var(--card);border:2px solid var(--line);border-left:10px solid var(--c);padding:24px;display:flex;flex-direction:column;gap:12px;min-height:220px}
+.panel h2{font-size:clamp(24px,3.4vw,32px)}
+.when{align-self:flex-start;background:var(--c);color:var(--black);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px}
+.panel p.txt{color:var(--soft);font-size:18px;line-height:1.45;max-width:62ch}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:14px}
+@media (max-width:760px){.tabs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:480px){.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<!-- Saved Nov 12, 2026: Innovator Pathway version. Swap back in as module-flow.html when modules go live Nov 30. -->
+<div class="bar" aria-hidden="true"></div>
+<main class="wrap">
+<p class="eyebrow">Running the Innovator Pathway</p>
+<h1>Run the Pathway</h1>
+<p class="sub">Click a step to see what to do.</p>
+<div class="tabs" role="tablist" aria-label="Pathway steps" id="tabs"></div>
+<section class="panel" role="tabpanel" id="panel" tabindex="0" aria-live="polite"></section>
+<div class="nav">
+<button class="btn ghost" type="button" id="back">Back</button>
+<button class="btn" type="button" id="next">Next step</button>
+</div>
+</main>
+<script>
+var D = function (id) { return 'https://drive.google.com/file/d/' + id + '/view'; };
+var LINKS = {
+  printables: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTk=',
+  tracker: 'https://docs.google.com/spreadsheets/d/1wbdRNiXUiJjmzWQQBfeAx1ZXFonrgFxC4Ens494OV-4/copy',
+  modules: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MTg=',
+  paperTracker: D('1hbrnJCqvVgVshUy6cUM8lpIN5y_QD2ya'),
+  passport: D('1e8gAQhYP3gwQEkYWApJToESQQOd3_7mz'),
+  lanyards: D('1lqvnToNW92xC4gD-fChfWJCixYfgCF-P'),
+  milestones: D('1tFT7N9o0RVCOWF3tgpRBuL0U7pMOs94P'),
+  survey: 'https://stemfromdance.jotform.com/260905277241860',
+  facSurvey: 'https://stemfromdance.jotform.com/260894470706868',
+  certificate: 'https://docs.google.com/document/d/1Tz7e69TitPfGaO0ugsnaAhgH4IzqoxHdOjejykQ_syY/copy'
+};
+// top: true opens in the Disco window. Everything else opens in a new tab.
+var STEPS = [
+  { c: 'var(--orange)', short: 'Set up', when: 'Before Module 1', title: 'Set up',
+    text: 'Print a media release and a Pathway Passport for each girl, plus a set of role lanyards for each crew.',
+    ctas: [{ t: 'Media release', href: 'files/sfd-media-release.pdf' }, { t: 'Passports', href: LINKS.passport }, { t: 'Lanyards', href: LINKS.lanyards }] },
+  { c: 'var(--pink)', short: 'Watch & listen', when: 'Every session', title: 'Watch & listen',
+    text: 'Follow the Milestone Moments on each Module Overview. They tell you when to watch for each milestone.',
+    ctas: [{ t: 'My Modules', href: LINKS.modules, top: true }] },
+  { c: 'var(--lav)', short: 'Sticker', when: 'When she earns it', title: 'Sticker',
+    text: 'She adds the milestone sticker to her Passport. Make it a moment: name what she did.',
+    ctas: [{ t: 'Milestone Guide', href: LINKS.milestones }] },
+  { c: 'var(--cyan)', short: 'Check the box', when: 'Same day', title: 'Check the box',
+    text: 'Check her box on your Club Tracker. The sheet shows “Where she is” on the way to SFD Innovator.',
+    ctas: [{ t: 'Copy tracker', href: LINKS.tracker }, { t: 'Paper tracker', href: LINKS.paperTracker }] },
+  { c: 'var(--orange)', short: 'Celebrate', when: 'End of module & year', title: 'Celebrate',
+    text: 'Wrap up each module: stickers, tracker and the Impact Index survey. SFD Innovators get a sticker and a certificate. Then take your own Post-Module Survey.',
+    ctas: [{ t: 'Student survey', href: LINKS.survey }, { t: 'Your survey', href: LINKS.facSurvey }, { t: 'Certificate', href: LINKS.certificate }] }
+];
+var N = STEPS.length, cur = 0, tabs = document.getElementById('tabs'), panel = document.getElementById('panel');
+STEPS.forEach(function (s, i) {
+  var t = document.createElement('button');
+  t.type = 'button'; t.className = 'tab'; t.id = 'tab' + i; t.setAttribute('role', 'tab');
+  t.setAttribute('aria-controls', 'panel'); t.style.setProperty('--c', s.c);
+  t.innerHTML = '<b>' + (i + 1) + '</b><span></span>'; t.querySelector('span').textContent = s.short;
+  t.addEventListener('click', function () { show(i); });
+  t.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { show((i + 1) % N); tabs.children[(i + 1) % N].focus(); }
+    if (e.key === 'ArrowLeft') { show((i + N - 1) % N); tabs.children[(i + N - 1) % N].focus(); }
+  });
+  tabs.appendChild(t);
+});
+function show(i) {
+  cur = i; var s = STEPS[i];
+  [].forEach.call(tabs.children, function (t, j) { t.setAttribute('aria-selected', j === i ? 'true' : 'false'); t.tabIndex = j === i ? 0 : -1; });
+  panel.style.setProperty('--c', s.c); panel.setAttribute('aria-labelledby', 'tab' + i);
+  panel.innerHTML = '';
+  var e = document.createElement('p'); e.className = 'eyebrow'; e.textContent = 'Step ' + (i + 1) + ' of ' + N;
+  var h = document.createElement('h2'); h.textContent = s.title;
+  var w = document.createElement('span'); w.className = 'when'; w.textContent = s.when;
+  var p = document.createElement('p'); p.className = 'txt'; p.textContent = s.text;
+  var row = document.createElement('div'); row.className = 'ctas';
+  s.ctas.forEach(function (c, k) {
+    var a = document.createElement('a'); a.className = k === 0 ? 'btn' : 'btn ghost'; a.textContent = c.t; a.href = c.href;
+    if (c.top) { a.target = '_top'; } else { a.target = '_blank'; a.rel = 'noopener'; }
+    row.appendChild(a);
+  });
+  panel.appendChild(e); panel.appendChild(h); panel.appendChild(w); panel.appendChild(p); panel.appendChild(row);
+  document.getElementById('back').style.visibility = i === 0 ? 'hidden' : 'visible';
+  document.getElementById('next').textContent = i === N - 1 ? 'Start over' : 'Next step';
+}
+document.getElementById('next').addEventListener('click', function () { show(cur === N - 1 ? 0 : cur + 1); });
+document.getElementById('back').addEventListener('click', function () { if (cur > 0) show(cur - 1); });
+show(0);
+</script>
+</body>
+</html>

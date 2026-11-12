@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Running the Innovator Pathway</title>
+<title>How a module runs</title>
 <link rel="stylesheet" href="sfd.css">
 <style>
 .tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:22px 0 0}
@@ -24,10 +24,10 @@
 <body>
 <div class="bar" aria-hidden="true"></div>
 <main class="wrap">
-<p class="eyebrow">Running the Innovator Pathway</p>
-<h1>Run the Pathway</h1>
-<p class="sub">Click a step to see what to do.</p>
-<div class="tabs" role="tablist" aria-label="Pathway steps" id="tabs"></div>
+<p class="eyebrow">How a module runs</p>
+<h1>Your five steps</h1>
+<p class="sub">Every module runs the same way. Click a step to see what to do.</p>
+<div class="tabs" role="tablist" aria-label="Module steps" id="tabs"></div>
 <section class="panel" role="tabpanel" id="panel" tabindex="0" aria-live="polite"></section>
 <div class="nav">
 <button class="btn ghost" type="button" id="back">Back</button>
@@ -46,25 +46,27 @@ var LINKS = {
   milestones: D('1tFT7N9o0RVCOWF3tgpRBuL0U7pMOs94P'),
   survey: 'https://stemfromdance.jotform.com/260905277241860',
   facSurvey: 'https://stemfromdance.jotform.com/260894470706868',
+  live: 'https://sfdclubs.disco.co/page-app/UHJvZHVjdEFwcDozODI2MjM=',
+  share: 'https://sfdclubs.disco.co/feed/RmVlZDo0NTE2MQ==/posts',
   certificate: 'https://docs.google.com/document/d/1Tz7e69TitPfGaO0ugsnaAhgH4IzqoxHdOjejykQ_syY/copy'
 };
 // top: true opens in the Disco window. Everything else opens in a new tab.
 var STEPS = [
-  { c: 'var(--orange)', short: 'Set up', when: 'Before Module 1', title: 'Set up',
-    text: 'Print a media release and a Pathway Passport for each girl, plus a set of role lanyards for each crew.',
-    ctas: [{ t: 'Media release', href: 'files/sfd-media-release.pdf' }, { t: 'Passports', href: LINKS.passport }, { t: 'Lanyards', href: LINKS.lanyards }] },
-  { c: 'var(--pink)', short: 'Watch & listen', when: 'Every session', title: 'Watch & listen',
-    text: 'Follow the Milestone Moments on each Module Overview. They tell you when to watch for each milestone.',
-    ctas: [{ t: 'My Modules', href: LINKS.modules, top: true }] },
-  { c: 'var(--lav)', short: 'Sticker', when: 'When she earns it', title: 'Sticker',
-    text: 'She adds the milestone sticker to her Passport. Make it a moment: name what she did.',
-    ctas: [{ t: 'Milestone Guide', href: LINKS.milestones }] },
-  { c: 'var(--cyan)', short: 'Check the box', when: 'Same day', title: 'Check the box',
-    text: 'Check her box on your Club Tracker. The sheet shows “Where she is” on the way to SFD Innovator.',
-    ctas: [{ t: 'Copy tracker', href: LINKS.tracker }, { t: 'Paper tracker', href: LINKS.paperTracker }] },
-  { c: 'var(--orange)', short: 'Celebrate', when: 'End of module & year', title: 'Celebrate',
-    text: 'Wrap up each module: stickers, tracker and the Impact Index survey. SFD Innovators get a sticker and a certificate. Then take your own Post-Module Survey.',
-    ctas: [{ t: 'Student survey', href: LINKS.survey }, { t: 'Your survey', href: LINKS.facSurvey }, { t: 'Certificate', href: LINKS.certificate }] }
+  { c: 'var(--orange)', short: 'Pick', when: 'Before you start', title: 'Pick your module',
+    text: 'Choose the module that fits your girls’ ages. Open it from My Modules and start with Lesson 1.',
+    ctas: [{ t: 'My Modules', href: LINKS.modules, top: true }, { t: 'Module Guide', href: 'files/sfd-choosing-your-first-module.pdf' }] },
+  { c: 'var(--pink)', short: 'Prep', when: 'Before each session', title: 'Get ready',
+    text: 'Read the lesson plan, gather your materials and print what you need. Most sessions take 90 minutes to 2 hours.',
+    ctas: [{ t: 'Printables', href: LINKS.printables, top: true }] },
+  { c: 'var(--lav)', short: 'Teach', when: 'Every session', title: 'Teach in four parts',
+    text: 'Every lesson runs the same way: Warm up, Learn, Try it and Reflect. Follow the lesson plan step by step. You don’t need to be an expert.',
+    ctas: [{ t: 'Session Guide', href: 'files/sfd-how-to-run-a-session.pdf' }] },
+  { c: 'var(--cyan)', short: 'Get help', when: 'Anytime', title: 'Get help',
+    text: 'Join Club Support Hours every other Thursday, 2:30 to 4:30 PM ET. Or post a question in Share & Learn anytime.',
+    ctas: [{ t: 'Live Help', href: LINKS.live, top: true }, { t: 'Share & Learn', href: LINKS.share, top: true }] },
+  { c: 'var(--orange)', short: 'Celebrate', when: 'End of module', title: 'Celebrate',
+    text: 'Show off what your girls made. Share a photo in Share & Learn, then take your Post-Module Survey.',
+    ctas: [{ t: 'Your Survey', href: LINKS.facSurvey }, { t: 'Share & Learn', href: LINKS.share, top: true }] }
 ];
 var N = STEPS.length, cur = 0, tabs = document.getElementById('tabs'), panel = document.getElementById('panel');
 STEPS.forEach(function (s, i) {
