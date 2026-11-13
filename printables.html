@@ -23,6 +23,12 @@ a.card2:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
 .body p{color:var(--soft);font-size:15px;line-height:1.4}
 .go{margin-top:auto;padding-top:8px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;color:var(--text)}
 .go span{border-bottom:2px solid var(--c)}
+.card2.soon{display:flex;background:var(--card);border:2px dashed #4A4552;color:var(--text);min-height:128px;opacity:.85;cursor:default}
+.card2.soon .art{background:#3A3640}
+.card2.soon .go{color:var(--lav)}
+.card2.soon .go span{border-bottom:0}
+.tag{display:inline-block;background:var(--lav);color:var(--black);font-weight:700;font-size:12px;letter-spacing:.08em;padding:3px 8px;vertical-align:3px}
+.body .top{display:flex;align-items:flex-start;gap:10px}.body .top h3{flex:1 1 auto}
 @media (max-width:600px){.cards{grid-template-columns:1fr}.art{flex-basis:84px}}
 </style>
 </head>
@@ -31,7 +37,7 @@ a.card2:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
 <main class="wrap">
 <p class="eyebrow" id="ey">Print and go</p>
 <h1 id="ttl">Printables</h1>
-<p class="sub">Click a card to open it. Everything happens in your Club. Nothing to log, upload or send in.</p>
+<p class="sub">Click a card to open it. Everything happens in your Club. Nothing to log, upload or send in. Cards marked <span class="tag">NOV 30</span> arrive with the updated modules.</p>
 <div id="groups"></div>
 </main>
 <script>
@@ -54,26 +60,27 @@ var ICON = {
 var GROUPS = [
   { title: 'Plan your module', c: 'var(--lav)', note: 'Not sure where to start? Begin here.', items: [
     { t: 'Choosing Your First Module', d: 'Three quick questions, plus all nine modules on three pages.', icon: 'compass', go: 'Open PDF', href: 'files/sfd-choosing-your-first-module.pdf' },
-    { t: 'Club Supply Lists', d: 'What to buy, print and have on hand for each module, plus a Core Club Kit.', icon: 'list', go: 'Open PDF', href: 'files/sfd-club-supply-lists.pdf' }
+    { t: 'Club Supply Lists', d: 'What to buy, print and have on hand for each module, plus a Core Club Kit.', icon: 'list', go: 'Open PDF', href: 'files/sfd-club-supply-lists.pdf' },
+    { t: 'How to Run a Session', d: 'Warm up, Learn, Try it and Reflect, on one page.', icon: 'steps', go: 'Open PDF', href: 'files/sfd-how-to-run-a-session.pdf' }
   ] },
   { title: 'Print for your Club', c: 'var(--orange)', note: 'Print these before Module 1.', items: [
-    { t: 'Pathway Passport', d: 'One per girl. Hers to keep.', icon: 'passport', go: 'Open PDF', href: D('1e8gAQhYP3gwQEkYWApJToESQQOd3_7mz') },
-    { t: 'Milestone Stickers', d: 'Print on Avery 6450 (1 inch) and 22807 (2 inch) round labels.', icon: 'sticker', go: 'Open PDF', href: D('1l4ZCwmXeulSACpHR_WvidrHsTJeTxJKj') },
-    { t: 'Role Lanyard Cards', d: 'One set per crew.', icon: 'lanyard', go: 'Open PDF', href: D('1lqvnToNW92xC4gD-fChfWJCixYfgCF-P') },
+    { soon: true, t: 'Pathway Passport', d: 'One per girl. Hers to keep.', icon: 'passport', go: 'Open PDF', href: D('1e8gAQhYP3gwQEkYWApJToESQQOd3_7mz') },
+    { soon: true, t: 'Milestone Stickers', d: 'Print on Avery 6450 (1 inch) and 22807 (2 inch) round labels.', icon: 'sticker', go: 'Open PDF', href: D('1l4ZCwmXeulSACpHR_WvidrHsTJeTxJKj') },
+    { soon: true, t: 'Role Lanyard Cards', d: 'One set per crew.', icon: 'lanyard', go: 'Open PDF', href: D('1lqvnToNW92xC4gD-fChfWJCixYfgCF-P') },
     { t: 'Media Release', d: 'One per girl. Her parent or guardian chooses yes or no to photos and video.', icon: 'camera', go: 'Open PDF', href: 'files/sfd-media-release.pdf' },
-    { t: 'Club Tracker', d: 'A Google Sheet that counts for you. Make your own copy. Needs a Google account.', icon: 'sheet', go: 'Make a copy', href: 'https://docs.google.com/spreadsheets/d/1wbdRNiXUiJjmzWQQBfeAx1ZXFonrgFxC4Ens494OV-4/copy' },
-    { t: 'Club Tracker (paper)', d: 'Prefer paper? Print this one instead.', icon: 'printer', go: 'Open PDF', href: D('1hbrnJCqvVgVshUy6cUM8lpIN5y_QD2ya') }
+    { soon: true, t: 'Club Tracker', d: 'A Google Sheet that counts for you. Make your own copy. Needs a Google account.', icon: 'sheet', go: 'Make a copy', href: 'https://docs.google.com/spreadsheets/d/1wbdRNiXUiJjmzWQQBfeAx1ZXFonrgFxC4Ens494OV-4/copy' },
+    { soon: true, t: 'Club Tracker (paper)', d: 'Prefer paper? Print this one instead.', icon: 'printer', go: 'Open PDF', href: D('1hbrnJCqvVgVshUy6cUM8lpIN5y_QD2ya') }
   ] },
   { title: 'How the Pathway works', c: 'var(--pink)', note: 'Quick guides for you, your team and families.', items: [
-    { t: 'Your Five Steps', d: 'Running the Innovator Pathway, on one page.', icon: 'steps', go: 'Open PDF', href: D('1tFT7N9o0RVCOWF3tgpRBuL0U7pMOs94P') },
-    { t: 'Milestone Guide', d: 'Every milestone at a glance.', icon: 'list', go: 'Open PDF', href: D('1QhzjXgYr4fF94WUatiDzXABlyo_c3SWy') },
-    { t: 'Map for Your Team', d: 'What happens when, for facilitators, staff and partners.', icon: 'map', go: 'Open PDF', href: D('1tQLr59XmTWkb2dkNNR-iTPlJ6xNzD_7X') },
-    { t: 'Map for Families', d: 'Share it with girls and their families.', icon: 'map', go: 'Open PDF', href: D('1-wQwXWgBBccWSlQlMxUzJDjmaUjyJjm7') }
+    { soon: true, t: 'Your Five Steps', d: 'Running the Innovator Pathway, on one page.', icon: 'steps', go: 'Open PDF', href: D('1tFT7N9o0RVCOWF3tgpRBuL0U7pMOs94P') },
+    { soon: true, t: 'Milestone Guide', d: 'Every milestone at a glance.', icon: 'list', go: 'Open PDF', href: D('1QhzjXgYr4fF94WUatiDzXABlyo_c3SWy') },
+    { soon: true, t: 'Map for Your Team', d: 'What happens when, for facilitators, staff and partners.', icon: 'map', go: 'Open PDF', href: D('1tQLr59XmTWkb2dkNNR-iTPlJ6xNzD_7X') },
+    { soon: true, t: 'Map for Families', d: 'Share it with girls and their families.', icon: 'map', go: 'Open PDF', href: D('1-wQwXWgBBccWSlQlMxUzJDjmaUjyJjm7') }
   ] },
   { title: 'Wrap up and celebrate', c: 'var(--cyan)', note: 'Two quick surveys at the end of every module, plus a certificate for each new SFD Innovator.', items: [
     { t: 'Club Student Survey', d: 'Students take this. It is how SFD gets the Impact Index.', icon: 'survey', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260905277241860' },
     { t: 'Post-Module Survey', d: 'For you, the facilitator. Tell SFD how the module went.', icon: 'chat', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260894470706868' },
-    { t: 'SFD Innovator Certificate', d: 'Optional. Make your own copy, type over the [brackets], then print it for her. Needs a Google account.', icon: 'award', go: 'Make a copy', href: 'https://docs.google.com/document/d/1Tz7e69TitPfGaO0ugsnaAhgH4IzqoxHdOjejykQ_syY/copy' }
+    { soon: true, t: 'SFD Innovator Certificate', d: 'Optional. Make your own copy, type over the [brackets], then print it for her. Needs a Google account.', icon: 'award', go: 'Make a copy', href: 'https://docs.google.com/document/d/1Tz7e69TitPfGaO0ugsnaAhgH4IzqoxHdOjejykQ_syY/copy' }
   ] }
 ];
 var framed = false; try { framed = window.self !== window.top; } catch (e) { framed = true; }
@@ -85,11 +92,14 @@ GROUPS.forEach(function (g) {
   var n = document.createElement('p'); n.className = 'note'; n.textContent = g.note; sec.appendChild(n);
   var grid = document.createElement('div'); grid.className = 'cards';
   g.items.forEach(function (it) {
-    var a = document.createElement('a'); a.className = 'card2'; a.href = it.href; a.target = '_blank'; a.rel = 'noopener';
-    a.setAttribute('aria-label', it.t + '. ' + it.d + ' ' + it.go + ', opens in a new tab');
+    var a;
+    if (it.soon) { a = document.createElement('div'); a.className = 'card2 soon'; a.setAttribute('aria-label', it.t + '. ' + it.d + ' Coming November 30.'); }
+    else { a = document.createElement('a'); a.className = 'card2'; a.href = it.href; a.target = '_blank'; a.rel = 'noopener';
+    a.setAttribute('aria-label', it.t + '. ' + it.d + ' ' + it.go + ', opens in a new tab'); }
     a.innerHTML = '<div class="art" aria-hidden="true"><svg width="56" height="56" viewBox="0 0 64 64" fill="none" stroke="#080609" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">' + ICON[it.icon] + '</svg></div>' +
       '<div class="body"><h3></h3><p></p><div class="go"><span></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>';
-    a.querySelector('h3').textContent = it.t; a.querySelector('p').textContent = it.d; a.querySelector('.go span').textContent = it.go;
+    a.querySelector('h3').textContent = it.t; a.querySelector('p').textContent = it.d; a.querySelector('.go span').textContent = it.soon ? 'Coming November 30' : it.go;
+    if (it.soon) { var h3 = a.querySelector('h3'); var top = document.createElement('div'); top.className = 'top'; h3.parentNode.insertBefore(top, h3); top.appendChild(h3); var tg = document.createElement('span'); tg.className = 'tag'; tg.textContent = 'NOV 30'; top.appendChild(tg); var arr = a.querySelector('.go svg'); if (arr) arr.remove(); }
     grid.appendChild(a);
   });
   sec.appendChild(grid); box.appendChild(sec);

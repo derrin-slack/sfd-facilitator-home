@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Printables</title>
+<link rel="stylesheet" href="sfd.css">
+<style>
+.group{margin-top:26px}
+.group h2{display:flex;align-items:center;gap:12px;font-size:clamp(22px,3vw,28px)}
+.group h2::before{content:"";width:14px;height:14px;background:var(--c)}
+.group .note{color:var(--soft);margin:6px 0 14px}
+.cards{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.cards>a:last-child:nth-child(odd){grid-column:1/-1}
+a.card2{display:flex;background:var(--card);border:2px solid var(--line);color:var(--text);text-decoration:none;min-height:128px;transition:transform .15s,border-color .15s}
+a.card2:hover,a.card2:focus-visible{border-color:var(--c);transform:translateY(-3px)}
+a.card2:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.art{flex:0 0 104px;background:var(--c);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.art::after{content:"";position:absolute;left:0;right:0;bottom:-26px;height:60px;background:rgba(8,6,9,.12);transform:skewY(-15deg)}
+.art svg{position:relative;z-index:1}
+.body{padding:16px 18px;display:flex;flex-direction:column;gap:6px;flex:1 1 auto}
+.body h3{font-size:20px;line-height:1.15}
+.body p{color:var(--soft);font-size:15px;line-height:1.4}
+.go{margin-top:auto;padding-top:8px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;color:var(--text)}
+.go span{border-bottom:2px solid var(--c)}
+@media (max-width:600px){.cards{grid-template-columns:1fr}.art{flex-basis:84px}}
+</style>
+</head>
+<body>
+<!-- Saved Nov 12, 2026: full Printables page. Swap in as printables.html when modules go live Nov 30. -->
+<div class="bar" aria-hidden="true"></div>
+<main class="wrap">
+<p class="eyebrow" id="ey">Print and go</p>
+<h1 id="ttl">Printables</h1>
+<p class="sub">Click a card to open it. Everything happens in your Club. Nothing to log, upload or send in.</p>
+<div id="groups"></div>
+</main>
+<script>
+var D = function (id) { return 'https://drive.google.com/file/d/' + id + '/view'; };
+var ICON = {
+  passport: '<path d="M14 8h28a4 4 0 0 1 4 4v40a4 4 0 0 1-4 4H14z"/><circle cx="30" cy="27" r="7"/><path d="M21 44h18"/>',
+  sticker: '<circle cx="32" cy="32" r="22"/><path d="M32 19l4 8.5 9 1.2-6.6 6.2 1.7 9-8.1-4.4-8.1 4.4 1.7-9-6.6-6.2 9-1.2z"/>',
+  lanyard: '<path d="M20 6l12 18 12-18"/><rect x="18" y="24" width="28" height="34" rx="3"/><path d="M26 38h12M26 46h8"/>',
+  sheet: '<rect x="12" y="10" width="40" height="44" rx="2"/><path d="M12 22h40M12 34h40M12 46h40M26 10v44M39 10v44"/>',
+  printer: '<path d="M20 26V10h24v16"/><rect x="10" y="26" width="44" height="18" rx="2"/><path d="M20 38h24v16H20z"/>',
+  steps: '<rect x="10" y="12" width="10" height="10"/><path d="M26 17h28"/><rect x="10" y="28" width="10" height="10"/><path d="M26 33h28"/><rect x="10" y="44" width="10" height="10"/><path d="M26 49h28"/>',
+  list: '<circle cx="16" cy="18" r="3"/><circle cx="16" cy="32" r="3"/><circle cx="16" cy="46" r="3"/><path d="M26 18h26M26 32h26M26 46h26"/>',
+  map: '<path d="M8 14l16-6 16 6 16-6v42l-16 6-16-6-16 6z"/><path d="M24 8v42M40 14v42"/>',
+  camera: '<rect x="8" y="18" width="48" height="34" rx="4"/><path d="M22 18l4-6h12l4 6"/><circle cx="32" cy="35" r="9"/>',
+  chat: '<path d="M10 14h44v28H30l-12 10V42h-8z"/><path d="M20 25h24M20 33h16"/>',
+  award: '<circle cx="32" cy="24" r="14"/><path d="M32 16l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.2-4.1 5.8-.8z"/><path d="M23 35l-5 21 9-5 5 7 5-7 9 5-5-21"/>',
+  compass: '<circle cx="32" cy="32" r="22"/><path d="M40 24l-5 11-11 5 5-11z"/>',
+  survey: '<rect x="14" y="10" width="36" height="46" rx="3"/><path d="M24 10V6h16v4"/><path d="M22 28l5 5 9-10M22 44h20"/>'
+};
+var GROUPS = [
+  { title: 'Plan your module', c: 'var(--lav)', note: 'Not sure where to start? Begin here.', items: [
+    { t: 'Choosing Your First Module', d: 'Three quick questions, plus all nine modules on three pages.', icon: 'compass', go: 'Open PDF', href: 'files/sfd-choosing-your-first-module.pdf' },
+    { t: 'Club Supply Lists', d: 'What to buy, print and have on hand for each module, plus a Core Club Kit.', icon: 'list', go: 'Open PDF', href: 'files/sfd-club-supply-lists.pdf' }
+  ] },
+  { title: 'Print for your Club', c: 'var(--orange)', note: 'Print these before Module 1.', items: [
+    { t: 'Pathway Passport', d: 'One per girl. Hers to keep.', icon: 'passport', go: 'Open PDF', href: D('1e8gAQhYP3gwQEkYWApJToESQQOd3_7mz') },
+    { t: 'Milestone Stickers', d: 'Print on Avery 6450 (1 inch) and 22807 (2 inch) round labels.', icon: 'sticker', go: 'Open PDF', href: D('1l4ZCwmXeulSACpHR_WvidrHsTJeTxJKj') },
+    { t: 'Role Lanyard Cards', d: 'One set per crew.', icon: 'lanyard', go: 'Open PDF', href: D('1lqvnToNW92xC4gD-fChfWJCixYfgCF-P') },
+    { t: 'Media Release', d: 'One per girl. Her parent or guardian chooses yes or no to photos and video.', icon: 'camera', go: 'Open PDF', href: 'files/sfd-media-release.pdf' },
+    { t: 'Club Tracker', d: 'A Google Sheet that counts for you. Make your own copy. Needs a Google account.', icon: 'sheet', go: 'Make a copy', href: 'https://docs.google.com/spreadsheets/d/1wbdRNiXUiJjmzWQQBfeAx1ZXFonrgFxC4Ens494OV-4/copy' },
+    { t: 'Club Tracker (paper)', d: 'Prefer paper? Print this one instead.', icon: 'printer', go: 'Open PDF', href: D('1hbrnJCqvVgVshUy6cUM8lpIN5y_QD2ya') }
+  ] },
+  { title: 'How the Pathway works', c: 'var(--pink)', note: 'Quick guides for you, your team and families.', items: [
+    { t: 'Your Five Steps', d: 'Running the Innovator Pathway, on one page.', icon: 'steps', go: 'Open PDF', href: D('1tFT7N9o0RVCOWF3tgpRBuL0U7pMOs94P') },
+    { t: 'Milestone Guide', d: 'Every milestone at a glance.', icon: 'list', go: 'Open PDF', href: D('1QhzjXgYr4fF94WUatiDzXABlyo_c3SWy') },
+    { t: 'Map for Your Team', d: 'What happens when, for facilitators, staff and partners.', icon: 'map', go: 'Open PDF', href: D('1tQLr59XmTWkb2dkNNR-iTPlJ6xNzD_7X') },
+    { t: 'Map for Families', d: 'Share it with girls and their families.', icon: 'map', go: 'Open PDF', href: D('1-wQwXWgBBccWSlQlMxUzJDjmaUjyJjm7') }
+  ] },
+  { title: 'Wrap up and celebrate', c: 'var(--cyan)', note: 'Two quick surveys at the end of every module, plus a certificate for each new SFD Innovator.', items: [
+    { t: 'Club Student Survey', d: 'Students take this. It is how SFD gets the Impact Index.', icon: 'survey', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260905277241860' },
+    { t: 'Post-Module Survey', d: 'For you, the facilitator. Tell SFD how the module went.', icon: 'chat', go: 'Open survey', href: 'https://stemfromdance.jotform.com/260894470706868' },
+    { t: 'SFD Innovator Certificate', d: 'Optional. Make your own copy, type over the [brackets], then print it for her. Needs a Google account.', icon: 'award', go: 'Make a copy', href: 'https://docs.google.com/document/d/1Tz7e69TitPfGaO0ugsnaAhgH4IzqoxHdOjejykQ_syY/copy' }
+  ] }
+];
+var framed = false; try { framed = window.self !== window.top; } catch (e) { framed = true; }
+if (framed || /[?&]bare/.test(location.search)) { document.getElementById('ey').hidden = true; document.getElementById('ttl').hidden = true; }
+var box = document.getElementById('groups');
+GROUPS.forEach(function (g) {
+  var sec = document.createElement('section'); sec.className = 'group'; sec.style.setProperty('--c', g.c);
+  var h = document.createElement('h2'); h.textContent = g.title; sec.appendChild(h);
+  var n = document.createElement('p'); n.className = 'note'; n.textContent = g.note; sec.appendChild(n);
+  var grid = document.createElement('div'); grid.className = 'cards';
+  g.items.forEach(function (it) {
+    var a = document.createElement('a'); a.className = 'card2'; a.href = it.href; a.target = '_blank'; a.rel = 'noopener';
+    a.setAttribute('aria-label', it.t + '. ' + it.d + ' ' + it.go + ', opens in a new tab');
+    a.innerHTML = '<div class="art" aria-hidden="true"><svg width="56" height="56" viewBox="0 0 64 64" fill="none" stroke="#080609" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">' + ICON[it.icon] + '</svg></div>' +
+      '<div class="body"><h3></h3><p></p><div class="go"><span></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>';
+    a.querySelector('h3').textContent = it.t; a.querySelector('p').textContent = it.d; a.querySelector('.go span').textContent = it.go;
+    grid.appendChild(a);
+  });
+  sec.appendChild(grid); box.appendChild(sec);
+});
+</script>
+</body>
+</html>

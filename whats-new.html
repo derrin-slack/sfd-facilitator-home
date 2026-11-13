@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coming November 30</title>
+<link rel="stylesheet" href="sfd.css">
+<style>
+.list{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+details{background:var(--card);border:2px solid var(--line);border-left:8px solid var(--c)}
+details[open]{border-color:#3A3640;border-left-color:var(--c)}
+summary{list-style:none;cursor:pointer;min-height:56px;display:flex;align-items:center;gap:14px;padding:10px 16px;font-weight:700;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary .n{width:32px;height:32px;flex:0 0 32px;border-radius:50%;background:var(--c);color:var(--black);display:flex;align-items:center;justify-content:center;font-size:15px}
+summary .t{flex:1 1 auto}
+summary svg{flex:0 0 20px;transition:transform .2s}
+details[open] summary svg{transform:rotate(180deg)}
+summary:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.inner{display:flex;flex-wrap:wrap;gap:18px;padding:4px 16px 18px 62px;align-items:flex-start}
+.inner img{flex:1 1 300px;min-width:0;max-width:460px;width:100%;height:auto;border:1px solid var(--line)}
+.txt{flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.lbl{font-size:12px;font-weight:700;letter-spacing:.12em}
+.txt p{margin:4px 0 0;font-size:16px;line-height:1.5}
+@media (max-width:600px){.inner{padding-left:16px}}
+</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"></div>
+<main class="wrap">
+<p class="eyebrow" style="color:var(--pinkText)">Coming November 30</p>
+<h1>Here's what's new, and why</h1>
+<p class="sub">Clearer lesson pages, simpler navigation, and updates to support your facilitation. Open each one for a closer look.</p>
+<ul class="list" id="list"></ul>
+</main>
+<script>
+var ITEMS = [
+  { c: 'var(--orange)', t: 'A header on every module', img: 'module-header', alt: 'Module A home page with the Facilitator quick links header',
+    what: 'Every module opens with the same quick links: launch steps, printables and help.', why: 'You find what you need in one click, in any module.' },
+  { c: 'var(--pink)', t: 'Before You Teach, in every module', img: 'before-you-teach', alt: 'Before You Teach section with four short pages',
+    what: 'Four short pages before Lesson 1: the module in 5 minutes, your guides, crew roles and what to celebrate.', why: 'You walk in ready in about 15 minutes.' },
+  { c: 'var(--cyan)', t: 'Jump to any part of a lesson', img: 'lesson-tabs', alt: 'Lesson header with tabs for Lesson Plan, Warm up, Learn, Try it and Reflect',
+    what: 'Each lesson page has clickable tabs: Lesson Plan, Warm up, Learn, Try it and Reflect.', why: 'Lost your place mid-session? One tap gets you back.' },
+  { c: 'var(--lav)', t: 'Simpler lesson pages', img: 'simple-lesson', alt: 'A lesson page with Do this steps, a video and a Dance to STEM link',
+    what: 'Set up, Do this and Say this, with a time for every step and a Dance to STEM link.', why: 'Less reading, more teaching.' },
+  { c: 'var(--orange)', t: 'More printables', img: 'printables', alt: 'The Printables page with print-in-one-click cards',
+    what: 'Pathway Passports, Milestone Stickers, Crew Role Cards and the Club Tracker join the Printables page.', why: 'Everything you print lives in one place.' },
+  { c: 'var(--pink)', t: 'Pathway Milestone badges', img: 'milestones', alt: 'Celebrate Milestones page with a module sticker and four crew role stickers',
+    what: 'Girls earn a sticker for each module and each crew role. A page in every module shows what to watch for, and when.', why: 'You can recognize growth on the spot.' },
+  { c: 'var(--cyan)', t: 'The SFD Innovator Pathway', img: 'pathway', alt: 'Five steps guide: Set up, Watch and listen, Sticker, Check the box, Celebrate',
+    what: 'Five steps you repeat in every module, from set up to celebrate, building to an SFD Innovator certificate.', why: 'Your girls see their progress across the whole year.' }
+];
+var list = document.getElementById('list');
+ITEMS.forEach(function (it, i) {
+  var li = document.createElement('li');
+  var d = document.createElement('details'); d.style.setProperty('--c', it.c); if (i === 0) d.open = true;
+  var s = document.createElement('summary');
+  s.innerHTML = '<span class="n" aria-hidden="true"></span><span class="t"></span><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E2E2DF" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
+  s.querySelector('.n').textContent = i + 1; s.querySelector('.t').textContent = it.t;
+  var inner = document.createElement('div'); inner.className = 'inner';
+  var img = document.createElement('img'); img.src = 'files/whats-new/' + it.img + '.jpg'; img.alt = it.alt; img.loading = 'lazy';
+  var txt = document.createElement('div'); txt.className = 'txt';
+  txt.innerHTML = '<div><span class="lbl" style="color:var(--cyan)">WHAT’S NEW</span><p class="w"></p></div><div><span class="lbl" style="color:var(--pinkText)">WHY IT HELPS</span><p class="y" style="color:var(--soft)"></p></div>';
+  txt.querySelector('.w').textContent = it.what; txt.querySelector('.y').textContent = it.why;
+  inner.appendChild(img); inner.appendChild(txt);
+  d.appendChild(s); d.appendChild(inner); li.appendChild(d); list.appendChild(li);
+});
+</script>
+</body>
+</html>
