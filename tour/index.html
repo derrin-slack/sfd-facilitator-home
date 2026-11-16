@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Club Home Tour</title>
+<link rel="stylesheet" href="../sfd.css">
+<style>
+body{background:var(--black)}
+.tour{max-width:1100px;margin:0 auto;padding:22px 16px 26px;position:relative}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.top h1{font-size:clamp(26px,4vw,40px)}
+.skip{color:var(--soft);font-weight:700;font-size:14px;text-decoration:underline;background:none;border:0;cursor:pointer;padding:6px 0}
+.stage{position:relative;border:2px solid var(--line);background:#000;overflow:hidden;aspect-ratio:1400/852}
+.stage img{display:block;width:100%;height:100%;object-fit:cover}
+.spot{position:absolute;border:3px solid var(--cyan);box-shadow:0 0 0 9999px rgba(8,6,9,.62),0 0 28px rgba(112,226,247,.55);transition:all .45s ease;pointer-events:none}
+.cap{margin-top:12px;background:var(--card);border:2px solid var(--line);border-left:10px solid var(--c,var(--orange));padding:18px 20px;display:grid;grid-template-columns:1fr auto;gap:14px 20px;align-items:center}
+.cap .k{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.cap h2{font-size:clamp(22px,3vw,30px)}
+.cap p{color:var(--soft);font-size:17px;margin-top:6px;max-width:60ch}
+.ctl{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.dots{grid-column:1/-1;display:flex;gap:8px;align-items:center}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--line);border:0;padding:0;cursor:pointer}
+.dot[aria-current="step"]{width:28px;border-radius:6px;background:var(--c,var(--orange))}
+.go{margin-left:auto;color:var(--pinkText);font-weight:700;font-size:15px}
+.go:hover{color:var(--text)}
+.btn[disabled]{opacity:.4;cursor:default}
+@media (max-width:640px){.cap{grid-template-columns:1fr}.ctl{justify-content:flex-start}}
+/* Video frames, 1920 by 1080 */
+body.v{width:1920px;height:1080px;overflow:hidden}
+.vf{position:relative;width:1920px;height:1080px;background:var(--black);overflow:hidden}
+.vf .bar{height:10px}
+.vf .brand{position:absolute;left:80px;top:52px;display:flex;align-items:center;gap:22px}
+.vf .brand img{height:52px}
+.vf .brand span{font-weight:700;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+.vf .shot{position:absolute;left:80px;top:150px;width:1240px;height:755px;border:3px solid var(--line);overflow:hidden;background:#000}
+.vf .shot img{width:100%;height:100%;display:block}
+.vf .side{position:absolute;left:1380px;top:150px;width:460px;height:755px;display:flex;flex-direction:column;gap:18px}
+.vf .num{font-family:var(--head);font-size:120px;line-height:.9;color:var(--c)}
+.vf .k{font-weight:700;font-size:20px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)}
+.vf h2{font-size:58px;line-height:1.02}
+.vf p{font-size:30px;line-height:1.35;color:var(--soft)}
+.vf .dots{margin-top:auto;gap:12px}
+.vf .dot{width:14px;height:14px}
+.vf .dot[aria-current="step"]{width:44px;border-radius:8px}
+.vf .foot{position:absolute;left:80px;right:80px;bottom:52px;display:flex;justify-content:space-between;color:var(--muted);font-size:22px}
+.vf.card .mid{position:absolute;left:160px;right:160px;top:50%;transform:translateY(-50%)}
+.vf.card .mid .k{font-size:24px;margin-bottom:22px}
+.vf.card h1{font-size:128px;line-height:1}
+.vf.card .mid p{font-size:40px;margin-top:30px;max-width:30ch}
+.vf.card .wedge{position:absolute;right:0;top:0;width:640px;height:1080px;background:linear-gradient(45deg,var(--orange),#FF8A3D);clip-path:polygon(32% 0,100% 0,100% 100%,0 100%)}
+.vf.card .stripe{position:absolute;right:560px;top:0;width:30px;height:1080px;background:var(--cyan);transform:skewX(-15deg)}
+.vf.card .mid{right:600px}
+.vf.card h1{font-size:104px}
+.vf .url{display:inline-block;margin-top:40px;background:var(--text);color:var(--black);font-weight:700;font-size:38px;padding:16px 28px}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+var D = 'https://sfdclubs.disco.co';
+// Hotspot boxes are in screenshot pixels (1400 by 852).
+var STOPS = [
+  { img: 'home', c: 'var(--orange)', k: 'Your homepage', t: 'Start on For You', d: 'Every visit starts here: your Five Steps to Launch, upcoming events and quick help.', box: [100, 138, 232, 36], href: D + '/home' },
+  { img: 'steps', c: 'var(--pink)', k: 'Five Steps to Launch', t: 'Check off five steps', d: 'Watch, say hi, bookmark, see how modules run and pick your module. About 20 minutes.', box: [402, 190, 643, 425], href: D + '/home' },
+  { img: 'how', c: 'var(--lav)', k: 'How Modules Run', t: 'Every module, same five steps', d: 'Pick, prep, teach, get help and celebrate. Click a step to see what to do.', box: [418, 614, 890, 68], href: D + '/page-app/UHJvZHVjdEFwcDozODI2MTc=' },
+  { img: 'modules', c: 'var(--cyan)', k: 'My Modules', t: 'Find your module', d: 'Choose your students’ grade and what they love. Your best match comes up first.', box: [403, 425, 908, 320], href: D + '/page-app/UHJvZHVjdEFwcDozODI2MTg=' },
+  { img: 'printables', c: 'var(--orange)', k: 'Printables', t: 'Print in one click', d: 'Guides, supply lists and surveys, all in one place.', box: [419, 562, 876, 252], href: D + '/page-app/UHJvZHVjdEFwcDozODI2MTk=' },
+  { img: 'live', c: 'var(--pink)', k: 'Live Help', t: 'Talk to a real person', d: 'Club Support Hours run every other Thursday, 2:30 to 4:30 PM ET. Drop in with any question.', box: [381, 617, 963, 180], href: D + '/page-app/UHJvZHVjdEFwcDozODI2MjM=' },
+  { img: 'ask', c: 'var(--lav)', k: 'Ask SFD and Share & Learn', t: 'Ask, share and connect', d: 'Post questions in Ask SFD. Say hi and share your wins in Share & Learn.', box: [100, 476, 232, 62], href: D + '/channel/Q2hhdENoYW5uZWw6OTU0NjE=' }
+];
+var q = new URLSearchParams(location.search);
+var app = document.getElementById('app');
+function pct(b) { return { left: b[0] / 14 + '%', top: b[1] / 8.52 + '%', width: b[2] / 14 + '%', height: b[3] / 8.52 + '%' }; }
+function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+function dots(i, onClick) {
+  var w = el('div', 'dots'); w.setAttribute('aria-label', 'Tour stops');
+  STOPS.forEach(function (s, k) {
+    var b = el('button', 'dot'); b.type = 'button'; b.setAttribute('aria-label', 'Stop ' + (k + 1) + ': ' + s.k);
+    if (k === i) b.setAttribute('aria-current', 'step');
+    if (onClick) b.onclick = function () { onClick(k); }; else b.tabIndex = -1;
+    w.appendChild(b);
+  });
+  return w;
+}
+
+if (q.has('video')) {
+  // Still frames for the video. video=0 title, 1 to 7 stops, 8 end. spot=0 hides the spotlight.
+  document.body.className = 'v';
+  var n = +q.get('video');
+  var f = el('div', 'vf'); f.appendChild(el('div', 'bar'));
+  if (n === 0 || n === 8) {
+    f.className = 'vf card';
+    f.appendChild(el('div', 'wedge')); f.appendChild(el('div', 'stripe'));
+    var mid = el('div', 'mid');
+    var logo = new Image(); logo.src = 'img/logo-white.png'; logo.style.height = '64px'; logo.style.marginBottom = '48px'; logo.style.display = 'block'; mid.appendChild(logo);
+    if (n === 0) {
+      mid.appendChild(el('p', 'k', 'For SFD Club facilitators'));
+      mid.appendChild(el('h1', '', 'Your Club Home, in one minute'));
+      mid.appendChild(el('p', '', 'A quick look at where everything lives in Disco.'));
+    } else {
+      mid.appendChild(el('p', 'k', 'You’re ready'));
+      mid.appendChild(el('h1', '', 'Start with For You'));
+      mid.appendChild(el('p', '', 'Log in and work through your Five Steps to Launch.'));
+      mid.appendChild(el('span', 'url', 'sfdclubs.disco.co'));
+    }
+    f.appendChild(mid);
+  } else {
+    var s = STOPS[n - 1];
+    f.style.setProperty('--c', s.c);
+    var br = el('div', 'brand'); var lg = new Image(); lg.src = 'img/logo-white.png'; br.appendChild(lg); br.appendChild(el('span', '', 'Club Home tour')); f.appendChild(br);
+    var sh = el('div', 'shot'); var im = new Image(); im.src = 'img/' + s.img + '.jpg'; sh.appendChild(im);
+    if (q.get('spot') !== '0') { var sp = el('div', 'spot'); Object.assign(sp.style, pct(s.box)); sh.appendChild(sp); }
+    f.appendChild(sh);
+    var side = el('div', 'side');
+    side.appendChild(el('div', 'num', String(n)));
+    side.appendChild(el('p', 'k', s.k));
+    side.appendChild(el('h2', '', s.t));
+    side.appendChild(el('p', '', s.d));
+    side.appendChild(dots(n - 1));
+    f.appendChild(side);
+  }
+  app.appendChild(f);
+} else {
+  // Clickable tour
+  var i = 0;
+  var wrap = el('main', 'tour'); wrap.appendChild(el('div', 'bar'));
+  var head = el('div', 'top');
+  var tl = el('div'); tl.appendChild(el('p', 'eyebrow', 'Club Home tour')); tl.appendChild(el('h1', '', 'Your Club Home, in one minute'));
+  head.appendChild(tl);
+  var restart = el('button', 'skip', 'Start over'); restart.type = 'button'; restart.onclick = function () { show(0); };
+  head.appendChild(restart);
+  wrap.appendChild(head);
+  var stage = el('div', 'stage'); var img = new Image(); img.alt = ''; stage.appendChild(img);
+  var spot = el('div', 'spot'); stage.appendChild(spot); wrap.appendChild(stage);
+  var cap = el('section', 'cap'); cap.setAttribute('aria-live', 'polite');
+  var txt = el('div'); var kk = el('p', 'k'); var hh = el('h2'); var pp = el('p'); txt.appendChild(kk); txt.appendChild(hh); txt.appendChild(pp);
+  var ctl = el('div', 'ctl');
+  var back = el('button', 'btn ghost', 'Back'); back.type = 'button'; back.onclick = function () { show(i - 1); };
+  var next = el('button', 'btn', 'Next'); next.type = 'button'; next.onclick = function () { if (i === STOPS.length - 1) { window.top.location.href = D + '/home'; } else { show(i + 1); } };
+  ctl.appendChild(back); ctl.appendChild(next);
+  cap.appendChild(txt); cap.appendChild(ctl);
+  var dw = el('div'); cap.appendChild(dw);
+  wrap.appendChild(cap); app.appendChild(wrap);
+  STOPS.forEach(function (s) { var p = new Image(); p.src = 'img/' + s.img + '.jpg'; });
+  function show(k) {
+    i = Math.max(0, Math.min(STOPS.length - 1, k)); var s = STOPS[i];
+    cap.style.setProperty('--c', s.c);
+    img.src = 'img/' + s.img + '.jpg'; img.alt = 'Screenshot: ' + s.k + ' in Disco';
+    Object.assign(spot.style, pct(s.box));
+    kk.textContent = 'Stop ' + (i + 1) + ' of ' + STOPS.length + ' · ' + s.k; hh.textContent = s.t; pp.textContent = s.d;
+    back.disabled = i === 0;
+    next.textContent = i === STOPS.length - 1 ? 'Finish' : 'Next';
+    var nd = dots(i, show); var go = el('a', 'go', 'Open Page ↗'); go.href = s.href; go.target = '_top'; nd.appendChild(go);
+    cap.replaceChild(nd, cap.lastChild);
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });
+  show(0);
+}
+</script>
+</body>
+</html>

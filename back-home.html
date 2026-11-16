@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back to For You</title>
+<link rel="stylesheet" href="sfd.css">
+<style>
+html,body{overflow:hidden;background:transparent}
+a.bk{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:0;padding:18px 22px 18px 26px;background:var(--black);border:2px solid var(--line);color:var(--text);text-decoration:none;overflow:hidden}
+a.bk::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(180deg,var(--orange),var(--pink))}
+a.bk:hover{border-color:var(--cyan)}
+a.bk:hover .btn{background:var(--cyan);border-color:var(--cyan)}
+.t{flex:1 1 260px;min-width:0}
+.k{font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin:0 0 4px}
+.h{font-family:var(--head);font-weight:700;font-size:clamp(20px,3vw,26px);line-height:1.1;margin:0}
+.s{color:var(--soft);font-size:15px;margin:6px 0 0}
+.btn{flex:0 0 auto;pointer-events:none}
+</style>
+</head>
+<body>
+<a class="bk" href="https://sfdclubs.disco.co/home" target="_top">
+<div class="t">
+<p class="k">Step 1 of 5 · Watch the welcome</p>
+<p class="h">Done watching? Back to your Five Steps.</p>
+<p class="s">Check off Step 1 on For You, then say hi in Share &amp; Learn.</p>
+</div>
+<span class="btn">Back to For You ↗</span>
+</a>
+</body>
+</html>
