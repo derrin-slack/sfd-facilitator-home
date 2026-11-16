@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="sfd.css">
 <style>
 html,body{overflow:hidden;background:transparent}
-a.bk{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:0;padding:18px 22px 18px 26px;background:var(--black);border:2px solid var(--line);color:var(--text);text-decoration:none;overflow:hidden}
+a.bk{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:nowrap;margin:0;padding:18px 22px 18px 26px;background:var(--black);border:2px solid var(--line);color:var(--text);text-decoration:none;overflow:hidden}
 a.bk::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(180deg,var(--orange),var(--pink))}
 a.bk:hover{border-color:var(--cyan)}
 a.bk:hover .btn{background:var(--cyan);border-color:var(--cyan)}
@@ -16,6 +16,11 @@ a.bk:hover .btn{background:var(--cyan);border-color:var(--cyan)}
 .h{font-family:var(--head);font-weight:700;font-size:clamp(20px,3vw,26px);line-height:1.1;margin:0}
 .s{color:var(--soft);font-size:15px;margin:6px 0 0}
 .btn{flex:0 0 auto;pointer-events:none}
+.t{flex:1 1 auto}
+/* Narrow embeds: keep the button beside the text and drop the subtitle so nothing gets cut off */
+@media (max-width:760px){a.bk{gap:14px;padding:14px 16px 14px 22px}.h{font-size:20px}.s{font-size:14px}}
+@media (max-width:600px){.s{display:none}.k{font-size:11px}.btn{min-height:40px;padding:0 14px;font-size:14px}}
+@media (max-width:420px){.k{display:none}.h{font-size:17px}}
 </style>
 </head>
 <body>
