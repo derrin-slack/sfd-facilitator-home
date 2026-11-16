@@ -27,6 +27,9 @@ body{background:var(--black)}
 .go:hover{color:var(--text)}
 .btn[disabled]{opacity:.4;cursor:default}
 @media (max-width:640px){.cap{grid-template-columns:1fr}.ctl{justify-content:flex-start}}
+/* Inside Disco: no page header, fixed width so the embed height holds */
+.embed .tour{max-width:900px;padding-top:16px}
+.embed .top{display:none}
 /* Video frames, 1920 by 1080 */
 body.v{width:1920px;height:1080px;overflow:hidden}
 .vf{position:relative;width:1920px;height:1080px;background:var(--black);overflow:hidden}
@@ -124,6 +127,7 @@ if (q.has('video')) {
   app.appendChild(f);
 } else {
   // Clickable tour
+  if (q.has('embed')) document.body.className = 'embed';
   var i = 0;
   var wrap = el('main', 'tour'); wrap.appendChild(el('div', 'bar'));
   var head = el('div', 'top');
