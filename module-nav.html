@@ -37,7 +37,7 @@ body{background:var(--black)}
 <main class="wrap">
 <div class="top">
 <div>
-<p class="eyebrow" id="eyebrow">Facilitator Home</p>
+<p class="eyebrow" id="eyebrow">Club Home</p>
 <h1>Run the Pathway, every module</h1>
 </div>
 <nav class="links" aria-label="Facilitator quick links">
@@ -113,7 +113,7 @@ var LINKS = {
 };
 var key = (new URLSearchParams(location.search).get('m') || 'A').toUpperCase();
 var M = MODULES[key] || {};
-if (M.name) { document.getElementById('eyebrow').textContent = 'Facilitator Home · ' + M.name; }
+if (M.name) { document.getElementById('eyebrow').textContent = 'Club Home · ' + M.name; }
 
 // tag: short label in the colored box. dl: a file download. top: opens in the Disco window.
 var STEPS = [
